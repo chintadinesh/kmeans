@@ -14,7 +14,9 @@ struct Args {
                 // If -c is not specified, your program should output the labels of all points. 
   static int s; // -s seed: an integer specifying the seed for rand(). 
                 // This is used by the autograder to simplify the correctness checking process. 
+  static bool help;
 
+  static void parse_args(int argc, char* argv[]);
   friend std::ostream & operator<<(std::ostream &os, const Args &args); 
 };
 }
