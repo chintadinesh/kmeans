@@ -5,7 +5,7 @@ BIN_DIR = bin
 INC_DIR = inc
 APP_DIR = app
 
-CC = g++
+CC = g++ -std=c++17
 
 SRCS = $(wildcard $(SRC_DIR)/*.c*)
 $(info SRCS : $(SRCS))
