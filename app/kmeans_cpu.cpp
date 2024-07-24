@@ -11,10 +11,10 @@ int main(int argc, char* argv[]){
 
   cout << utils::Args(); 
 
-  if(Args::i != "tmp.txt"){
-    auto d = parseInput(Args::i);
-    cout << d;
-  }
+  if(Args::i == "tmp.txt") return 0;
+
+  auto d = parseInput(Args::i);
+  d.randomCentroid(Args::k);
 
   return 0;
 }
