@@ -14,7 +14,8 @@ int main(int argc, char* argv[]){
   if(Args::i == "tmp.txt") return 0;
 
   auto d = parseInput(Args::i);
-  d.randomCentroid(Args::k);
+  auto cnt = d.randomCentroids(Args::k);
+  print_centroids(cnt);
 
   return 0;
 }
