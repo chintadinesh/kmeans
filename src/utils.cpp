@@ -48,7 +48,7 @@ Centroids averageLabeledCentroids(const Data &d, const Labels &l, const Centroid
   Centroids new_c;
   vector<unsigned> sizes = vector<unsigned>(old_c.size(), 0);
   for(const auto &ci: old_c) 
-    new_c.emplace_back( vector<double>(Args::d,0l) );
+    new_c.emplace_back( vector<double>(ci.size(),0l) );
   for(int i = 0; i < l.size(); ++i){
     new_c[l[i]] += d[i];
     sizes[l[i]]++;
@@ -77,6 +77,7 @@ void kmeans_srand(unsigned int seed) { _next = seed; }
 
 double Point::equilDist(const Point &p2) const {
   double d = 0l;
+  cout <<  "INFO: " << dims_.size() << ' ' << p2.dims_.size() << '\n';
   assert(dims_.size() == p2.dims_.size());
   for(int i = 0; i < dims_.size(); ++i) d += (dims_[i] - p2.dims_[i])*(dims_[i] - p2.dims_[i]);
   return sqrtl(d);
@@ -104,6 +105,8 @@ Data parseInput(const string &input_file){
   int np = stoi(line);
 
   while(getline(file, line)) result.emplace_back( parseDoubles(line) );
+
+  Args::d = result[0].size();
 
   file.close();
   return result;
@@ -137,7 +140,7 @@ Centroids Problem::solve(){
   PerfTracker pt {tt_m_};
 
   bool done = false;
-  while(iters_++){
+  while(!done){
     auto old_c = c_;
 
     // labels is a mapping from each point in the dataset 
@@ -148,6 +151,8 @@ Centroids Problem::solve(){
     // of all the points that map to each 
     // centroid
     c_ = averageLabeledCentroids(d_, labels, old_c);
+    cout << "ITER = " << iters_ << '\n';
+    print_centroids(c_);
     done = iters_ > max_iters_ || converged(c_, old_c);
   }
 

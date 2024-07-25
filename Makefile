@@ -5,7 +5,7 @@ BIN_DIR = bin
 INC_DIR = inc
 APP_DIR = app
 
-CC = g++ -std=c++17
+CC = g++ -std=c++17 -g
 
 SRCS = $(wildcard $(SRC_DIR)/*.c*)
 $(info SRCS : $(SRCS))
@@ -25,7 +25,7 @@ $(info BINS : $(BINS))
 all: $(BINS) $(OBJ_DIR) $(LIB_DIR) $(BIN_DIR) 
 
 
-$(BIN_DIR)/%: $(OBJ_DIR)/%.o $(LIBS) 
+$(BIN_DIR)/%: $(OBJ_DIR)/%.o $(LIBS) run 
 	$(CC) $(CFLAGS) $(LDFLAGS) -I$(INC_DIR) -o $@ $^ 
 
 $(LIB_DIR)/%.o: $(SRC_DIR)/%.c* 

@@ -11,6 +11,7 @@ namespace utils {
   public:
     explicit Point(const std::vector<double> &pt) : dims_{pt} {}
     double equilDist(const Point &p2) const;
+    unsigned size() const {return dims_.size();}
     Point & operator+=(const Point &p2){
       for(int i = 0;i < p2.dims_.size(); ++i)
         dims_[i] += p2.dims_[i];

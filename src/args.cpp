@@ -4,13 +4,13 @@ using namespace std;
 
 namespace utils {
 
-int Args::k = 0;
-int Args::d = 1;
+unsigned Args::k = 0;
+unsigned Args::d = 1;
 std::string  Args::i = "tmp.txt";
-int Args::m = 150; 
+unsigned Args::m = 150; 
 double Args::t = 1e-6;
 bool Args::c = false;
-int Args::s = 1;
+unsigned Args::s = 1;
 bool Args::help = false;
 
 std::ostream & operator<<(std::ostream &os, const Args &args){

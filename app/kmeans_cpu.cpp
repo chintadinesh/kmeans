@@ -15,7 +15,13 @@ int main(int argc, char* argv[]){
 
   auto d = parseInput(Args::i);
   auto cnt = d.randomCentroids(Args::k);
+  cout << "########### Initial Centroids\n";
   print_centroids(cnt);
+
+  Problem problem {d, cnt, Args::m, Args::k};
+  const auto final_cnt = problem.solve();
+  cout << "########### Final Centroids\n";
+  print_centroids(final_cnt);
 
   return 0;
 }
