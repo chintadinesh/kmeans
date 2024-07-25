@@ -1,5 +1,5 @@
-#include "../inc/args.hpp"
-#include "../inc/utils.hpp"
+#include "args.hpp"
+#include "utils.hpp"
 
 using namespace utils;
 using namespace std;

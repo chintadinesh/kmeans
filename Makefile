@@ -1,50 +1,27 @@
-SRC_DIR = src
-OBJ_DIR = obj
-LIB_DIR = lib
-BIN_DIR = bin
-INC_DIR = inc
-APP_DIR = app
+# Define the compiler
+CXX = clang++
+# Define compiler flags
+CXXFLAGS = -Wall -g -std=c++17
+# Define the output executable
+TARGET = kmeans_cpu
+# Find all source files
+SRCS = $(wildcard *.cpp)
+# Define the object files
+OBJS = $(SRCS:.cpp=.o)
 
-CC = g++ -std=c++17 -g
+# Default rule
+all: $(TARGET)
 
-SRCS = $(wildcard $(SRC_DIR)/*.c*)
-$(info SRCS : $(SRCS))
+# Rule to build the target
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
-APPS = $(wildcard $(APP_DIR)/*.c*) 
-$(info APPS : $(APPS))
+# Rule to compile .cpp files into .o files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-LIBS = $(patsubst $(SRC_DIR)/%.cpp,$(LIB_DIR)/%.o,$(SRCS))
-$(info LIBS : $(LIBS))
-
-OBJS = $(patsubst $(APP_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(APPS))
-$(info OBJS : $(OBJS))
-
-BINS = $(patsubst $(OBJ_DIR)/%.o,$(BIN_DIR)/%,$(OBJS))
-$(info BINS : $(BINS))
-
-all: $(BINS) $(OBJ_DIR) $(LIB_DIR) $(BIN_DIR) 
-
-
-$(BIN_DIR)/%: $(OBJ_DIR)/%.o $(LIBS) run 
-	$(CC) $(CFLAGS) $(LDFLAGS) -I$(INC_DIR) -o $@ $^ 
-
-$(LIB_DIR)/%.o: $(SRC_DIR)/%.c* 
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c -o $@ $<
-
-$(OBJ_DIR)/%.o: $(APP_DIR)/%.c* 
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c -o $@ $<
-
-$(LIB_DIR):
-	mkdir $(LIB_DIR)
-
-$(OBJ_DIR):
-	mkdir $(OBJ_DIR)
-
-$(BIN_DIR):
-	mkdir $(BIN_DIR)
-
+# Rule to clean up build files
 clean:
-	rm -f $(BIN_DIR)/* $(OBJ_DIR)/* $(LIB_DIR)/*
+	rm -f $(TARGET) $(OBJS)
 
-run:
-	bin/kmeans_cpu
+.PHONY: all clean

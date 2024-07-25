@@ -1,4 +1,4 @@
-#include "../inc/args.hpp"
+#include "args.hpp"
 
 using namespace std;
 

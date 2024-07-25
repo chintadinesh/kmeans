@@ -6,3 +6,4 @@ cscope.out
 .vscode/settings.json
 .vscode/tasks.json
 makefile.buildLog
+*.o

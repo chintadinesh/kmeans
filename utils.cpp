@@ -3,8 +3,8 @@
 #include <sstream>
 #include <string>
 #include <cassert>
-#include "../inc/utils.hpp"
-#include "../inc/args.hpp"
+#include "utils.hpp"
+#include "args.hpp"
 
 using namespace std;
 namespace {
@@ -102,7 +102,6 @@ Data parseInput(const string &input_file){
   }
   
   getline(file, line);
-  int np = stoi(line);
 
   while(getline(file, line)) result.emplace_back( parseDoubles(line) );
 

@@ -60,14 +60,13 @@ namespace utils {
     const Data &d_;
     Centroids c_;
     const unsigned max_iters_;
-    const unsigned k_;
     /// @brief  number of iterations took for solving
     unsigned iters_ {};
     bool solved = false;
 
   public:
     Problem(const Data &d, const Centroids &c, const unsigned max_iters, const unsigned k)
-      : d_{d}, c_{c}, max_iters_{max_iters}, k_{k} {}
+      : d_{d}, c_{c}, max_iters_{max_iters} {}
     Centroids solve();
     Centroids result(){ return solved ? c_ : solve(); }
 
