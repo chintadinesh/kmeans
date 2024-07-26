@@ -8,7 +8,7 @@ unsigned Args::k = 0;
 unsigned Args::d = 1;
 std::string  Args::i = "tmp.txt";
 unsigned Args::m = 150; 
-double Args::t = 1e-6;
+long double Args::t = 1e-12;
 bool Args::c = false;
 unsigned Args::s = 1;
 bool Args::help = false;
@@ -52,8 +52,8 @@ void Args::parse_args(int argc, char* argv[]){
       m = std::stoi(argv[++j]);
     } else if ((arg == "-t") && j + 1 < argc) {
       t = std::stoi(argv[++j]);
-    } else if ((arg == "-c") && j + 1 < argc) {
-      c = std::stoi(argv[++j]);
+    } else if (arg == "-c") {
+      c = true;
     } else if ((arg == "-s") && j + 1 < argc) {
       s = std::stoi(argv[++j]);
     } 

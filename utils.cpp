@@ -7,6 +7,9 @@
 #include "args.hpp"
 
 using namespace std;
+
+extern utils::DebugStream dbg;
+
 namespace {
 using namespace utils;
 unsigned long int _next = 1;
@@ -22,7 +25,7 @@ std::vector<double> parseDoubles(const string &line){
   return result;
 }
 
-Labels findNearestCentroids(const Data &d, const Centroids &c)
+Labels findNearestCentroids(const Data &d, const LongCentroids &c)
 {
   Labels l {};
   for(int i = 0; i < d.size(); ++i){
@@ -30,7 +33,7 @@ Labels findNearestCentroids(const Data &d, const Centroids &c)
     double min_d = HUGE_VAL;
     int ci = -1;
     for(int i = 0; i < c.size(); ++i) {
-      const auto cd = pi.equilDist(c[ci]);
+      const auto cd = pi.equilDist(c[i]);
       if (cd < min_d){
         ci = i;
         min_d = cd;
@@ -42,13 +45,15 @@ Labels findNearestCentroids(const Data &d, const Centroids &c)
   return l;
 }
 
-Centroids averageLabeledCentroids(const Data &d, const Labels &l, const Centroids &old_c)
+LongCentroids averageLabeledCentroids(const Data &d, const Labels &l, const LongCentroids &old_c)
 {
   assert(d.size() == l.size());
-  Centroids new_c;
+  LongCentroids new_c;
   vector<unsigned> sizes = vector<unsigned>(old_c.size(), 0);
+
   for(const auto &ci: old_c) 
-    new_c.emplace_back( vector<double>(ci.size(),0l) );
+    new_c.emplace_back( vector<long double>(ci.size(),0l) );
+
   for(int i = 0; i < l.size(); ++i){
     new_c[l[i]] += d[i];
     sizes[l[i]]++;
@@ -57,11 +62,19 @@ Centroids averageLabeledCentroids(const Data &d, const Labels &l, const Centroid
   return new_c;
 }
 
-bool converged(const Centroids &c, const Centroids &oldc)
+template<typename C1, typename C2>
+bool converged(const C1 &c, const C2 &oldc)
 {
   assert(c.size() == oldc.size());
-  for(int i = 0; i < c.size(); ++i) if(c[i].equilDist(oldc[i]) > Args::t) return false;
-  return true;
+  bool res = true;
+  dbg << "Dist = " << std::setprecision(20);
+  for(int i = 0; i < c.size(); ++i){
+    const auto dist = c[i].equilDist(oldc[i]);
+    dbg << dist << ' ';
+    if(dist > Args::t) res &= false;
+  }
+  dbg << '\n';
+  return res;
 }
 
 } // unnamed namespace
@@ -75,16 +88,32 @@ unsigned kmeans_rand() {
 
 void kmeans_srand(unsigned int seed) { _next = seed; }
 
-double Point::equilDist(const Point &p2) const {
-  double d = 0l;
-  cout <<  "INFO: " << dims_.size() << ' ' << p2.dims_.size() << '\n';
-  assert(dims_.size() == p2.dims_.size());
-  for(int i = 0; i < dims_.size(); ++i) d += (dims_[i] - p2.dims_[i])*(dims_[i] - p2.dims_[i]);
+template<typename ElemType>
+template<typename LongType> 
+long double Point<ElemType>::equilDist(const Point<LongType> &p2) const {
+  long double d = 0;
+  assert(size() == p2.size());
+  for(int i = 0; i < dims_.size(); ++i){
+    long double delta = static_cast<long double>(dims_[i]) - p2.dims_[i];
+    d += delta * delta;
+  }
   return sqrtl(d);
 }
 
-std::ostream & operator<<(std::ostream &os, const Point &point){
-  for(const auto i: point.dims_) cout << i << ' ';
+template<typename ElemType>
+DebugStream& operator<<(DebugStream &os, const Point<ElemType> &point){
+  for(const auto i: point.dims_) os << i << ' ';
+  os << '\n';
+  return os;
+}
+template
+DebugStream& operator<<(DebugStream &os, const DoublePoint &point);
+template
+DebugStream& operator<<(DebugStream &os, const LongPoint &point);
+
+template<typename ElemType>
+std::ostream & operator<<(std::ostream &os, const Point<ElemType> &point){
+  for(const auto i: point.dims_) os << i << ' ';
   os << '\n';
   return os;
 }
@@ -111,7 +140,7 @@ Data parseInput(const string &input_file){
   return result;
 }
 
-ostream & operator<<(ostream &os, const Data &data){
+DebugStream & operator<<(DebugStream &os, const Data &data){
   os << "Size = " << data.size() << '\n';
   for(const auto &p: data.points_) os << p;
   return os;
@@ -126,37 +155,44 @@ Centroids Data::randomCentroids(const unsigned n_clu){
   return c;
 }
 
-ostream & print_centroids(std::ostream &os, const Centroids &ctrs) {
-  for(unsigned i = 0; i < ctrs.size(); ++i) os << i << ' ' << ctrs[i];
+template<typename Stream, typename C>
+Stream & print_centroids(Stream &os, const C &ctrs){
+  for(unsigned i = 0; i < ctrs.size(); ++i) os << ctrs[i];
   return os;
 }
 
-void print_centroids(const Centroids &ctrs) {
-  print_centroids(std::cout, ctrs);
-}
+template 
+DebugStream & print_centroids(DebugStream &os, const Centroids &ctrs);
+template 
+std::ostream & print_centroids(std::ostream &os, const Centroids &ctrs);
+template 
+DebugStream & print_centroids(DebugStream &os, const LongCentroids &ctrs);
+template 
+std::ostream & print_centroids(std::ostream &os, const LongCentroids &ctrs);
 
-Centroids Problem::solve(){
+Labels Problem::solve(){
   PerfTracker pt {tt_m_};
 
+  Labels l;
   bool done = false;
   while(!done){
-    auto old_c = c_;
+    LongCentroids old_c = c_;
 
     // labels is a mapping from each point in the dataset 
     // to the nearest (euclidean distance) centroid
-    auto labels = findNearestCentroids(d_, c_);
+    l = findNearestCentroids(d_, c_);
 
     // the new centroids are the average 
     // of all the points that map to each 
     // centroid
-    c_ = averageLabeledCentroids(d_, labels, old_c);
-    cout << "ITER = " << iters_ << '\n';
-    print_centroids(c_);
-    done = iters_ > max_iters_ || converged(c_, old_c);
+    c_ = averageLabeledCentroids(d_, l, old_c);
+    dbg << "ITER = " << iters_ << '\n';
+    //print_centroids(dbg, c_);
+    done = ++iters_ > max_iters_ || converged(c_, old_c);
   }
 
   solved = true;
-  return c_;
+  return l;
 }
 
-}
+} // namespace utils
