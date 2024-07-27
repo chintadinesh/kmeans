@@ -3,6 +3,8 @@
 #include <sstream>
 #include <string>
 #include <cassert>
+#include <random>
+
 #include "utils.hpp"
 #include "args.hpp"
 
@@ -77,16 +79,28 @@ bool converged(const C1 &c, const C2 &oldc)
   return res;
 }
 
-} // unnamed namespace
-
-namespace utils {
-
 unsigned kmeans_rand() {
   _next = _next * 1103515245 + 12345;
   return (unsigned int)(_next/65536) % (_kmeans_rmax+1);
 }
 
+} // unnamed namespace
+
+namespace utils {
+
 void kmeans_srand(unsigned int seed) { _next = seed; }
+
+Centroids randomCentroids(const unsigned n_clu, const unsigned dim){
+  std::mt19937 gen(_next); // Seed the generator
+  std::uniform_real_distribution<> dis(0.0, 1.0); // Define the range
+  Centroids res;
+  for(size_t i = 0; i < n_clu; ++i){
+    std::vector<double> vec(dim);
+    for (size_t i = 0; i < dim; ++i) vec[i] = dis(gen); 
+    res.emplace_back(vec);
+  }
+  return res;
+}
 
 template<typename ElemType>
 template<typename LongType> 
@@ -98,6 +112,18 @@ long double Point<ElemType>::equilDist(const Point<LongType> &p2) const {
     d += delta * delta;
   }
   return sqrtl(d);
+}
+
+template<typename ElemType>
+template<typename LongType> 
+long double Point<ElemType>::minDist(const Point<LongType> &p2) const {
+  long double d = HUGE_VALL;
+  assert(size() == p2.size());
+  for(int i = 0; i < dims_.size(); ++i){
+    long double delta = std::abs(static_cast<long double>(dims_[i]) - p2.dims_[i]);
+    if(delta < d) d = delta;
+  }
+  return d;
 }
 
 template<typename ElemType>
@@ -155,6 +181,27 @@ Centroids Data::randomCentroids(const unsigned n_clu){
   return c;
 }
 
+Centroids Data::randomCentroidsExcl(const unsigned n_clu){
+  Centroids c {};
+  for (int i=0; i<n_clu; i++){
+    while(1){
+      unsigned index = kmeans_rand() % size();
+      double dist = HUGE_VAL;
+      for(const auto &p: c){
+        auto tmp = points_[index].equilDist(p);
+        if(tmp<dist) dist = tmp;    // lowest distance
+        if(dist < 0.01l) break;  // this point already in cluster
+      }
+
+      if(dist < 0.01l) continue;
+
+      c.push_back(points_[index]);
+      break;
+    }
+  }
+  return c;
+}
+
 template<typename Stream, typename C>
 Stream & print_centroids(Stream &os, const C &ctrs){
   for(unsigned i = 0; i < ctrs.size(); ++i) os << ctrs[i];
@@ -189,6 +236,7 @@ Labels Problem::solve(){
     dbg << "ITER = " << iters_ << '\n';
     //print_centroids(dbg, c_);
     done = ++iters_ > max_iters_ || converged(c_, old_c);
+    //done = ++iters_ > max_iters_;
   }
 
   solved = true;

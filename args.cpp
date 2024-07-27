@@ -10,6 +10,7 @@ std::string  Args::i = "tmp.txt";
 unsigned Args::m = 150; 
 long double Args::t = 1e-12;
 bool Args::c = false;
+bool Args::r = false;
 unsigned Args::s = 1;
 bool Args::help = false;
 
@@ -21,7 +22,8 @@ std::ostream & operator<<(std::ostream &os, const Args &args){
         << " -m : " << args.m << '\n'
         << " -t : " << args.t << '\n'
         << " -c : " << args.c << '\n'
-        << " -s : " << args.s << '\n';
+        << " -s : " << args.s << '\n'
+        << " -r: " << args.r << '\n';
   return os;
 }
 
@@ -39,7 +41,9 @@ void Args::parse_args(int argc, char* argv[]){
             << "      If -c is specified, your program should output the centroids of all clusters. \n"
             << "      If -c is not specified, your program should output the labels of all points.\n"
             << " -s seed: an integer specifying the seed for rand(). \n"
-            << "      This is used by the autograder to simplify the correctness checking process.\n";
+            << "      This is used by the autograder to simplify the correctness checking process.\n"
+            << " -r randomly choose centroids from 0 to 1. Avoid choosing\n" 
+            << "      centroids from within the points. This is to avoid local minima.";
       help = true;
       return;
     } else if ((arg == "-k") && j + 1 < argc) {
@@ -54,6 +58,8 @@ void Args::parse_args(int argc, char* argv[]){
       t = std::stoi(argv[++j]);
     } else if (arg == "-c") {
       c = true;
+    } else if (arg == "-r") {
+      r = true;
     } else if ((arg == "-s") && j + 1 < argc) {
       s = std::stoi(argv[++j]);
     } 

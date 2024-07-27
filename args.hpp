@@ -14,6 +14,8 @@ struct Args {
                 // If -c is not specified, your program should output the labels of all points. 
   static unsigned s; // -s seed: an integer specifying the seed for rand(). 
                 // This is used by the autograder to simplify the correctness checking process. 
+  static bool r; // -r randomly choose centroids from 0 to 1. Avoid choosing 
+                // centroids from within the points. This is to avoid local minima.
   static bool help;
 
   static void parse_args(int argc, char* argv[]);

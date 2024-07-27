@@ -26,6 +26,8 @@ namespace utils {
 
     template<typename LongType>
     long double equilDist(const Point<LongType> &p2) const;
+    template<typename LongType>
+    long double minDist(const Point<LongType> &p2) const;
 
     unsigned size() const {return dims_.size();}
     void push_back(const  ElemType &e){dims_.push_back(e);}
@@ -71,6 +73,7 @@ namespace utils {
     DoublePoint & operator[](const unsigned i) {return points_[i];}
 
     Centroids randomCentroids(const unsigned n_clu);
+    Centroids randomCentroidsExcl(const unsigned n_clu);
 
     friend DebugStream & operator<<(DebugStream &os, const Data &data);
   };
@@ -137,4 +140,8 @@ namespace utils {
   Stream & print_centroids(Stream &os, const C &ctrs);
 
   Data parseInput(const std::string &input_file);
+
+  Centroids randomCentroids(const unsigned n_clu, const unsigned dim);
+
+  void kmeans_srand(unsigned int seed);
 }
