@@ -16,9 +16,12 @@ int main(int argc, char* argv[]){
 
   if(Args::i == "tmp.txt") return 0;
 
-  auto d = parseInput(Args::i);
-  Centroids cnt = Args::r ? randomCentroids(Args::k, Args::d) 
-                          : d.randomCentroidsExcl(Args::k);
+  Data d {Args::i};
+  dbg << "Data = \n";
+  for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
+
+  DoubleCentroids cnt = Args::r ? randomCentroids(Args::k, Args::d) 
+                                : d.randomCentroids(Args::k);
   dbg << "########### Initial Centroids\n";
   print_centroids(dbg, cnt);
 
@@ -27,14 +30,11 @@ int main(int argc, char* argv[]){
     print_centroids(init_cent, cnt);
   }
 
-  LongCentroids lcnt;
-  for(const auto &i: cnt) lcnt.emplace_back(i);
-
-  Problem problem {d, lcnt, Args::m};
-  const auto labels = problem.solve();
+  Kmeans kmeans {d, cnt, Args::m};
+  const auto labels = kmeans.fit();
   dbg << "########### Final Centroids\n";
-  print_centroids(dbg, problem.result());
-  if(Args::c) print_centroids(cout, problem.result());
+  print_centroids(dbg, kmeans.result());
+  if(Args::c) print_centroids(cout, kmeans.result());
   else for(const auto i: labels) cout << i << '\n';
 
   return 0;

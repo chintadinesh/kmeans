@@ -1,11 +1,12 @@
 #include "args.hpp"
+#include <filesystem>
 
 using namespace std;
 
 namespace utils {
 
 unsigned Args::k = 0;
-unsigned Args::d = 1;
+unsigned Args::d = 0;
 std::string  Args::i = "tmp.txt";
 unsigned Args::m = 150; 
 long double Args::t = 1e-12;
@@ -47,27 +48,31 @@ void Args::parse_args(int argc, char* argv[]){
       help = true;
       return;
     } else if ((arg == "-k") && j + 1 < argc) {
-      k = std::stoi(argv[++j]);
+      k = stoi(argv[++j]);
     } else if ((arg == "-d") && j + 1 < argc) {
-      d = std::stoi(argv[++j]);
+      d = stoi(argv[++j]);
     } else if ((arg == "-i") && j + 1 < argc) {
       i = string(argv[++j]);
     } else if ((arg == "-m") && j + 1 < argc) {
-      m = std::stoi(argv[++j]);
+      m = stoi(argv[++j]);
     } else if ((arg == "-t") && j + 1 < argc) {
-      t = std::stoi(argv[++j]);
+      t = stod(argv[++j]);
     } else if (arg == "-c") {
       c = true;
     } else if (arg == "-r") {
       r = true;
     } else if ((arg == "-s") && j + 1 < argc) {
-      s = std::stoi(argv[++j]);
+      s = stoi(argv[++j]);
     } 
     else {
-        std::cerr << "Unknown option: " << arg << "\n";
+        cerr << "Unknown option: " << arg << "\n";
         return;
     }
   }
+
+  if(k<=0) cerr << "Invalid clusters: " << k << '\n';
+  if(d<=0) cerr << "Invalid dimensions: " << d << '\n';
+  if(!filesystem::exists(i)) cerr << "Input file does not exist: " << i << '\n';
 }
 
 }
