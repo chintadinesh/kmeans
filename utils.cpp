@@ -256,7 +256,6 @@ template KmeansCpu<double>::KmeansCpu(const Data &d,
 
 template<typename ElemType>
 Labels KmeansCpu<ElemType>::fit(){
-  PerfTracker pt {tt_m_};
 
   auto &c = KmeansBase<KmeansCpu<ElemType>, ElemType>::c_;
   auto &old_c = KmeansBase<KmeansCpu<ElemType>, ElemType>::old_c_;
@@ -268,26 +267,36 @@ Labels KmeansCpu<ElemType>::fit(){
   old_c = c;
 
   Labels l(d.size(),0);
-  while(true){
-    // labels is a mapping from each point in the dataset 
-    // to the nearest (euclidean distance) centroid
-    findNearestCentroids(l, d, old_c);
+  {
+    PerfTracker pt {tt_m_};
+    while(true){
+      // labels is a mapping from each point in the dataset 
+      // to the nearest (euclidean distance) centroid
+      findNearestCentroids(l, d, old_c);
 
-    // the new centroids are the average 
-    // of all the points that map to each 
-    // centroid
-    averageLabeledCentroids(d, l, old_c, c);
-    dbg << "ITER = " << iters << '\n';
-    //print_centroids(dbg, c_);
-    if(++iters > max_iters || converged(c, old_c)) break;
-    //done = ++iters_ > max_iters_;
+      // the new centroids are the average 
+      // of all the points that map to each 
+      // centroid
+      averageLabeledCentroids(d, l, old_c, c);
+      dbg << "ITER = " << iters << '\n';
+      //print_centroids(dbg, c_);
+      if(++iters > max_iters || converged(c, old_c)) break;
+      //done = ++iters_ > max_iters_;
 
-    old_c = c;    
+      std::swap(old_c, c);    
+    }
   }
 
   solved = true;
   return l;
 }
 template Labels KmeansCpu<double>::fit();
+
+template<typename ElemType>
+KmeansCpu<ElemType>::~KmeansCpu(){
+  dbg << "Time Take by CPU = "
+      << std::chrono::duration_cast<std::chrono::milliseconds>(tt_m_).count() << '\n';
+}
+template KmeansCpu<double>::~KmeansCpu();
 
 } // namespace utils

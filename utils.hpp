@@ -169,13 +169,12 @@ public:
     using Ptdur = std::chrono::duration<double, std::milli>; 
     struct PerfTracker {
       std::chrono::time_point<std::chrono::high_resolution_clock> start_;
-      std::chrono::time_point<std::chrono::high_resolution_clock> end_;
       Ptdur &ml_;
 
       PerfTracker(Ptdur &ml)
         : start_{std::chrono::high_resolution_clock::now()},  ml_{ml}{}
       ~PerfTracker(){
-        ml_ += std::chrono::high_resolution_clock::now() - end_;
+        ml_ += std::chrono::high_resolution_clock::now() - start_;
       }
     };
 
@@ -189,6 +188,22 @@ public:
       return KmeansBase<KmeansCpu<ElemType>, ElemType>::solved_ 
               ? KmeansBase<KmeansCpu<ElemType>, ElemType>::c_ 
               : (fit(), KmeansBase<KmeansCpu<ElemType>, ElemType>::c_); 
+    }
+    ~KmeansCpu() override;
+  };
+
+  template<typename ElemType>
+  class KmeansGpu : public KmeansBase<KmeansGpu<ElemType>, ElemType>
+  {
+  public:
+    KmeansGpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
+      : KmeansBase<KmeansGpu<ElemType>, ElemType>(d, random, n_clu, max_iters)
+    {}
+    Labels fit();
+    Centroids<ElemType> & result(){ 
+      return KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_ 
+              ? KmeansBase<KmeansGpu<ElemType>, ElemType>::c_ 
+              : (fit(), KmeansBase<KmeansGpu<ElemType>, ElemType>::c_); 
     }
   };
 
