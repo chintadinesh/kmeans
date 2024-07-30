@@ -267,6 +267,7 @@ Labels KmeansCpu<ElemType>::fit(){
   old_c = c;
 
   Labels l(d.size(),0);
+
   {
     PerfTracker pt {tt_m_};
     while(true){
@@ -295,7 +296,8 @@ template Labels KmeansCpu<double>::fit();
 template<typename ElemType>
 KmeansCpu<ElemType>::~KmeansCpu(){
   dbg << "Time Take by CPU = "
-      << std::chrono::duration_cast<std::chrono::milliseconds>(tt_m_).count() << '\n';
+      << std::chrono::duration_cast<std::chrono::milliseconds>(tt_m_).count() 
+      << " ms \n";
 }
 template KmeansCpu<double>::~KmeansCpu();
 
