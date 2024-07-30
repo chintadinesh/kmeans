@@ -43,10 +43,8 @@ namespace utils {
     }
 #endif
 
-    template<typename LongType>
-    long double equilDist(const Point<LongType> &p2) const;
-    template<typename LongType>
-    long double minDist(const Point<LongType> &p2) const;
+    ElemType equilDist(const Point &p2) const;
+    ElemType minDist(const Point &p2) const;
 
     size_t size() const {return size_;}
     //void push_back(const  ElemType &e){elems_.push_back(e);}
@@ -103,18 +101,6 @@ namespace utils {
       return *this;
     }
 
-    Centroids(Centroids<ElemType> &&c) 
-      : n_clu_{c.n_clu_}, dim_{c.dim_}, elems_{std::move(c.elems_)}
-    {}
-    Centroids & operator=(Centroids<ElemType> &&c) {
-      if(&c != this){
-        n_clu_ = c.n_clu_;
-        dim_ = c.dim_;
-        elems_.reset(c.elems_.get());
-      }
-      return *this;
-    }
-
     Point<ElemType> operator[](const unsigned i) const {
       assert(i < n_clu_);
       return Point<ElemType>{elems_.get() + i*dim_, dim_};
@@ -135,7 +121,8 @@ namespace utils {
     explicit Data(const std::string &file_name);
     ~Data(){delete[] all_elems_;}
 
-    unsigned size() const {return size_;} 
+    const unsigned size() const {return size_;} 
+    const unsigned dim() const {return dim_;} 
 
     const DoublePoint operator[](const unsigned i) const {
       assert(i<size_);
@@ -146,15 +133,39 @@ namespace utils {
       return DoublePoint {&all_elems_[dim_*i], dim_};
     }
 
-    DoubleCentroids randomCentroids(const unsigned n_clu);
+    DoubleCentroids randomCentroids(const unsigned n_clu) const;
 
     friend DebugStream & operator<<(DebugStream &os, const Data &data);
   };
 
   using Labels = std::vector<unsigned>;
 
+  // interface class for kmeans algorithm
+  template<class Concrete, typename ElemType>
+  class KmeansBase {
+protected:
+    const Data &d_;
+    Centroids<ElemType> c_;
+    Centroids<ElemType> old_c_;
+
+    const unsigned max_iters_;
+    unsigned iters_ {};
+    bool solved_ = false;
+
+public:
+    KmeansBase(const Data &d, 
+              const bool random,
+              const size_t n_clu,
+              const unsigned max_iters);
+    Labels fit() { static_cast<Concrete>(*this).fit(); }
+    Centroids<ElemType> & result(){return static_cast<Concrete>(*this).result();}
+    // I am not sure how destructors are made virtual in CRTP.
+    virtual ~KmeansBase() = default;
+  };
+
   template<typename ElemType>
-  class Kmeans {
+  class KmeansCpu : public KmeansBase<KmeansCpu<ElemType>, ElemType>
+  {
     using Ptdur = std::chrono::duration<double, std::milli>; 
     struct PerfTracker {
       std::chrono::time_point<std::chrono::high_resolution_clock> start_;
@@ -169,18 +180,16 @@ namespace utils {
     };
 
     Ptdur tt_m_ {};
-    const Data &d_;
-    Centroids<ElemType> &c_;
-    const unsigned max_iters_;
-    /// @brief  number of iterations took for solving
-    unsigned iters_ {};
-    bool solved = false;
-
   public:
-    Kmeans(const Data &d, Centroids<ElemType> &c, const unsigned max_iters)
-      : d_{d}, c_{c}, max_iters_{max_iters} { }
+    KmeansCpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
+      : KmeansBase<KmeansCpu<ElemType>, ElemType>(d, random, n_clu, max_iters)
+    {}
     Labels fit();
-    Centroids<ElemType> result(){ return solved ? c_ : (fit(), c_); }
+    Centroids<ElemType> & result(){ 
+      return KmeansBase<KmeansCpu<ElemType>, ElemType>::solved_ 
+              ? KmeansBase<KmeansCpu<ElemType>, ElemType>::c_ 
+              : (fit(), KmeansBase<KmeansCpu<ElemType>, ElemType>::c_); 
+    }
   };
 
   class DebugStream {

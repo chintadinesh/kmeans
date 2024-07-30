@@ -29,9 +29,8 @@ double * parseDoubles(const string &line, double *dst_ptr){
 }
 
 template<typename ElemType>
-Labels findNearestCentroids(const Data &d, const Centroids<ElemType> &c)
+void findNearestCentroids(Labels &l, const Data &d, const Centroids<ElemType> &c)
 {
-  Labels l {};
   for(int j = 0; j < d.size(); ++j){
     const auto &pi = d[j];
     double min_d = HUGE_VAL;
@@ -44,9 +43,8 @@ Labels findNearestCentroids(const Data &d, const Centroids<ElemType> &c)
       }
     }
     assert(ci != -1);
-    l.push_back(ci);
+    l[j] = ci;
   }
-  return l;
 }
 
 template<typename ElemType>
@@ -108,24 +106,22 @@ DoubleCentroids randomCentroids(const unsigned n_clu, const unsigned dim){
 
 /* Point */
 template<typename ElemType>
-template<typename LongType> 
-long double Point<ElemType>::equilDist(const Point<LongType> &p2) const {
-  long double d = 0;
+ElemType Point<ElemType>::equilDist(const Point &p2) const {
+  ElemType d = 0;
   assert(size() == p2.size());
   for(int i = 0; i < size(); ++i){
-    long double delta = static_cast<long double>(elems_[i]) - p2.elems_[i];
+    double delta = elems_[i] - p2.elems_[i];
     d += delta * delta;
   }
-  return sqrtl(d);
+  return sqrt(d);
 }
 
 template<typename ElemType>
-template<typename LongType> 
-long double Point<ElemType>::minDist(const Point<LongType> &p2) const {
-  long double d = HUGE_VALL;
+ElemType Point<ElemType>::minDist(const Point &p2) const {
+  double d = HUGE_VALL;
   assert(size() == p2.size());
   for(int i = 0; i < size(); ++i){
-    long double delta = std::abs(static_cast<long double>(elems_[i]) - p2.elems_[i]);
+    double delta = std::abs(elems_[i] - p2.elems_[i]);
     if(delta < d) d = delta;
   }
   return d;
@@ -182,7 +178,7 @@ Data::Data(const string &input_file)
   file.close();
 }
 
-DoubleCentroids Data::randomCentroids(const unsigned n_clu){
+DoubleCentroids Data::randomCentroids(const unsigned n_clu) const {
   DoubleCentroids c {n_clu, dim_};
   dbg << __func__ << '\n';
   for (int i=0; i<n_clu; i++){
@@ -233,34 +229,65 @@ DebugStream & print_centroids(DebugStream &os, const DoubleCentroids &ctrs);
 template 
 std::ostream & print_centroids(std::ostream &os, const DoubleCentroids &ctrs);
 
+
+
+template<class Concrete, typename ElemType>
+KmeansBase<Concrete, ElemType>::KmeansBase(const Data &d, 
+                                          const bool random,
+                                          const size_t n_clu,
+                                          const unsigned max_iters)
+  : d_{d}, c_{n_clu, d.dim()}, old_c_{n_clu, d.dim()}, max_iters_{max_iters} 
+{
+  c_ = random ? randomCentroids(n_clu, d.dim()) 
+              : d.randomCentroids(n_clu);
+  old_c_ = c_;
+  dbg << "########### Initial Centroids\n";
+  print_centroids(dbg, c_);
+
+  {
+    DebugStream init_cent {"initial.txt"};
+    print_centroids(init_cent, c_);
+  }
+}
+template KmeansCpu<double>::KmeansCpu(const Data &d, 
+                                    const bool random,
+                                    const size_t n_clu,
+                                    const unsigned max_iters);
+
 template<typename ElemType>
-Labels Kmeans<ElemType>::fit(){
+Labels KmeansCpu<ElemType>::fit(){
   PerfTracker pt {tt_m_};
 
-  Centroids<ElemType> old_c{c_};
+  auto &c = KmeansBase<KmeansCpu<ElemType>, ElemType>::c_;
+  auto &old_c = KmeansBase<KmeansCpu<ElemType>, ElemType>::old_c_;
+  auto &d = KmeansBase<KmeansCpu<ElemType>, ElemType>::d_;
+  auto &solved = KmeansBase<KmeansCpu<ElemType>, ElemType>::solved_;
+  auto &iters = KmeansBase<KmeansCpu<ElemType>, ElemType>::iters_;
+  auto &max_iters = KmeansBase<KmeansCpu<ElemType>, ElemType>::max_iters_;
 
-  Labels l;
+  old_c = c;
+
+  Labels l(d.size(),0);
   while(true){
     // labels is a mapping from each point in the dataset 
     // to the nearest (euclidean distance) centroid
-    l = findNearestCentroids(d_, old_c);
+    findNearestCentroids(l, d, old_c);
 
     // the new centroids are the average 
     // of all the points that map to each 
     // centroid
-    averageLabeledCentroids(d_, l, old_c, c_);
-    dbg << "ITER = " << iters_ << '\n';
+    averageLabeledCentroids(d, l, old_c, c);
+    dbg << "ITER = " << iters << '\n';
     //print_centroids(dbg, c_);
-    if(++iters_ > max_iters_ || converged(c_, old_c)) break;
+    if(++iters > max_iters || converged(c, old_c)) break;
     //done = ++iters_ > max_iters_;
 
-    old_c = c_;    
+    old_c = c;    
   }
 
   solved = true;
   return l;
 }
-template Labels Kmeans<double>::fit();
-template Labels Kmeans<long double>::fit();
+template Labels KmeansCpu<double>::fit();
 
 } // namespace utils

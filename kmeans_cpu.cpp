@@ -20,22 +20,14 @@ int main(int argc, char* argv[]){
   dbg << "Data = \n";
   for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
 
-  DoubleCentroids cnt = Args::r ? randomCentroids(Args::k, Args::d) 
-                                : d.randomCentroids(Args::k);
-  dbg << "########### Initial Centroids\n";
-  print_centroids(dbg, cnt);
-
-  {
-    DebugStream init_cent {"initial.txt"};
-    print_centroids(init_cent, cnt);
-  }
-
-  Kmeans kmeans {d, cnt, Args::m};
+  KmeansCpu<double> kmeans {d, Args::r, Args::k, Args::m};
   const auto labels = kmeans.fit();
+
   dbg << "########### Final Centroids\n";
   print_centroids(dbg, kmeans.result());
+
   if(Args::c) print_centroids(cout, kmeans.result());
-  else for(const auto i: labels) cout << i << '\n';
+  else for(size_t i = 0; i < labels.size(); ++i) cout << labels[i] << '\n';
 
   return 0;
 }
