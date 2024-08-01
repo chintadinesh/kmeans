@@ -7,6 +7,7 @@
 
 #include "utils.hpp"
 #include "args.hpp"
+#include "gpu.hpp"
 
 using namespace std;
 
@@ -31,11 +32,11 @@ double * parseDoubles(const string &line, double *dst_ptr){
 template<typename ElemType>
 void findNearestCentroids(Labels &l, const Data &d, const Centroids<ElemType> &c)
 {
-  for(int j = 0; j < d.size(); ++j){
+  for(unsigned j = 0; j < d.size(); ++j){
     const auto &pi = d[j];
     double min_d = HUGE_VAL;
     int ci = -1;
-    for(int i = 0; i < c.size(); ++i) {
+    for(unsigned i = 0; i < c.size(); ++i) {
       const auto cd = pi.equilDist(c[i]);
       if (cd < min_d){
         ci = i;
@@ -58,11 +59,11 @@ void averageLabeledCentroids(const Data &d,
 
   vector<unsigned> sizes = vector<unsigned>(old_c.size(), 0);
 
-  for(int i = 0; i < l.size(); ++i){
+  for(unsigned i = 0; i < l.size(); ++i){
     new_c[l[i]] += d[i];
     sizes[l[i]]++;
   }
-  for(int i = 0; i < new_c.size(); ++i) new_c[i] /= sizes[i]; 
+  for(unsigned i = 0; i < new_c.size(); ++i) new_c[i] /= sizes[i]; 
 }
 
 template<typename C1, typename C2>
@@ -70,8 +71,7 @@ bool converged(const C1 &c, const C2 &oldc)
 {
   assert(c.size() == oldc.size());
   bool res = true;
-  dbg << "Dist = " << std::setprecision(20);
-  for(int i = 0; i < c.size(); ++i){
+  for(unsigned i = 0; i < c.size(); ++i){
     const auto dist = c[i].equilDist(oldc[i]);
     dbg << dist << ' ';
     if(dist > Args::t) res &= false;
@@ -122,7 +122,6 @@ bool convergedGpu(const C1 &c, const C2 &oldc)
 {
   assert(c.size() == oldc.size());
   bool res = true;
-  dbg << "Dist = " << std::setprecision(20);
   for(int i = 0; i < c.size(); ++i){
     const auto dist = c[i].equilDist(oldc[i]);
     dbg << dist << ' ';
@@ -161,7 +160,7 @@ template<typename ElemType>
 ElemType Point<ElemType>::equilDist(const Point &p2) const {
   ElemType d = 0;
   assert(size() == p2.size());
-  for(int i = 0; i < size(); ++i){
+  for(unsigned i = 0; i < size(); ++i){
     double delta = elems_[i] - p2.elems_[i];
     d += delta * delta;
   }
@@ -181,7 +180,7 @@ ElemType Point<ElemType>::minDist(const Point &p2) const {
 
 template<typename ElemType>
 DebugStream& operator<<(DebugStream &os, const Point<ElemType> &point){
-  for(int i = 0; i < point.size(); ++i) os << point.elems_[i] << ' ';
+  for(size_t i = 0; i < point.size(); ++i) os << point.elems_[i] << ' ';
   os << '\n';
   return os;
 }
@@ -192,7 +191,7 @@ DebugStream& operator<<(DebugStream &os, const LongPoint &point);
 
 template<typename ElemType>
 std::ostream & operator<<(std::ostream &os, const Point<ElemType> &point){
-  for(int i = 0; i < point.size(); ++i) os << point.elems_[i] << ' ';
+  for(size_t i = 0; i < point.size(); ++i) os << point.elems_[i] << ' ';
   os << '\n';
   return os;
 }
@@ -233,7 +232,7 @@ Data::Data(const string &input_file)
 DoubleCentroids Data::randomCentroids(const unsigned n_clu) const {
   DoubleCentroids c {n_clu, dim_};
   dbg << __func__ << '\n';
-  for (int i=0; i<n_clu; i++){
+  for (unsigned i=0; i<n_clu; i++){
     unsigned index = kmeans_rand() % size();
     c[i].copy(operator[](index));
   }
@@ -352,50 +351,5 @@ KmeansCpu<ElemType>::~KmeansCpu(){
       << " ms \n";
 }
 template KmeansCpu<double>::~KmeansCpu();
-
-/* KmeansGpu */
-template<typename ElemType>
-Labels KmeansGpu<ElemType>::fit(){
-
-  auto &c = KmeansBase<KmeansGpu<ElemType>, ElemType>::c_;
-  auto &old_c = KmeansBase<KmeansGpu<ElemType>, ElemType>::old_c_;
-  auto &d = KmeansBase<KmeansGpu<ElemType>, ElemType>::d_;
-  auto &solved = KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_;
-  auto &iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::iters_;
-  auto &max_iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::max_iters_;
-
-  stgy_->init(d.ptr(), 
-              c.ptr(), 
-              sizeof(double)*d.size()*d.dim(), 
-              sizeof(double)*c.size()*c.dim());
-
-  Labels l(d.size(), 0);
-
-  while(true){
-    // labels is a mapping from each point in the dataset 
-    // to the nearest (euclidean distance) centroid
-    stgy_->findNearestCentroids();
-
-    // the new centroids are the average 
-    // of all the points that map to each 
-    // centroid
-    stgy_->averageLabeledCentroids();
-    dbg << "ITER = " << iters << '\n';
-    //print_centroids(dbg, c_);
-    if(++iters > max_iters || converged(c, old_c)) break;
-    //done = ++iters_ > max_iters_;
-
-    stgy_->swap();
-  }
-
-  stgy_->collect(c.ptr(), 
-                &l[0], 
-                sizeof(double)*c.dim()*c.size(), 
-                sizeof(unsigned)*d.size());
-
-  solved = true;
-  return l;
-}
-template Labels KmeansGpu<double>::fit();
 
 } // namespace utils

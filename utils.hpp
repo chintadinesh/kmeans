@@ -1,20 +1,12 @@
 #pragma once
 
 #include <cassert>
+#include <memory>
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <chrono>
-
-#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)
-{
-   if (code != cudaSuccess) 
-   {
-      fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
-      if (abort) exit(code);
-   }
-}
+#include <cstring>
 
 namespace utils {
 
@@ -54,11 +46,11 @@ namespace utils {
   public:
     Point(ElemType *dst_ptr, size_t size) : elems_{dst_ptr}, size_{size} {}
 
-    Point(const Point &p1) = delete;
-    Point & operator=(const Point &p1) = delete;
+    //Point(const Point &p1) = delete;
+    //Point & operator=(const Point &p1) = delete;
 
-    Point(Point &&p1) = delete;
-    Point & operator=(Point &&p1) = delete;
+    //Point(Point &&p1) = delete;
+    //Point & operator=(Point &&p1) = delete;
 
     void copy(const Point &p) {
       assert(size_ == p.size_);
@@ -70,15 +62,6 @@ namespace utils {
       return *this;
     }
     
-#if 0
-    template<typename DstElemType>
-    operator Point<DstElemType>() const {
-      Point<DstElemType> rp;
-      for(const auto &e: elems_) rp.push_back(static_cast<DstElemType>(e));
-      return rp;
-    }
-#endif
-
     ElemType equilDist(const Point &p2) const;
     ElemType minDist(const Point &p2) const;
 
@@ -87,13 +70,13 @@ namespace utils {
 
     template<typename AddElemType = double>
     Point & operator+=(const Point<AddElemType> &p2){
-      for(int i = 0;i < p2.size(); ++i)
+      for(size_t i = 0;i < p2.size(); ++i)
         elems_[i] += p2.elems_[i];
       return *this;
     }
 
     Point & operator/=(const unsigned div){
-      for(int i = 0;i < size(); ++i)
+      for(size_t i = 0;i < size(); ++i)
         elems_[i] /= div;
       return *this;
     }
@@ -145,9 +128,9 @@ namespace utils {
       return Point<ElemType>{elems_.get() + i*dim_, dim_};
     }
 
-    const size_t size() const {return n_clu_;}
-    const size_t dim() const {return dim_;}
-    const ElemType *ptr() const {return elems_.get();}
+    size_t size() const {return n_clu_;}
+    size_t dim() const {return dim_;}
+    ElemType *ptr() const {return elems_.get();}
     ElemType *ptr() {return elems_.get();}
     void reset() {memset(elems_.get(), 0, sizeof(ElemType)*n_clu_*dim_);}
 
@@ -166,9 +149,9 @@ namespace utils {
     explicit Data(const std::string &file_name);
     ~Data(){delete[] all_elems_;}
 
-    const unsigned size() const {return size_;} 
-    const unsigned dim() const {return dim_;} 
-    const double *ptr() const {return all_elems_;}
+    unsigned size() const {return size_;} 
+    unsigned dim() const {return dim_;} 
+    double *ptr() const {return all_elems_;}
     double *ptr() {return all_elems_;}
 
     const DoublePoint operator[](const unsigned i) const {
@@ -213,8 +196,8 @@ public:
               const bool random,
               const size_t n_clu,
               const unsigned max_iters);
-    Labels fit() override { static_cast<Concrete>(*this).fit(); }
-    Centroids<ElemType> & result() override {return static_cast<Concrete>(*this).result();}
+    Labels fit() override { return static_cast<Concrete*>(this)->fit(); }
+    Centroids<ElemType> & result() override {return static_cast<Concrete*>(this)->result();}
   };
 
   template<typename ElemType>
@@ -264,66 +247,6 @@ public:
     bool converged() override;
     void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override {};
     void swap() override {}
-  };
-
-  // all the memory is global memory
-  class KmeansStrategyGpuGlobalBase : public KmeansStrategy 
-  {
-    double *data_device_;
-    double *c_device_;
-    double *old_c_device_;
-    unsigned *labels_;
-  public:
-    KmeansStrategyGpuGlobalBase(const size_t dim, const size_t sz, const size_t k){
-      gpuErrchk( cudaMalloc(&data_device_, sizeof(double)*dim*sz) );
-      gpuErrchk( cudaMalloc(&c_device_, sizeof(double)*dim*k) );
-      gpuErrchk( cudaMalloc(&old_c_device_, sizeof(double)*dim*k) );
-      gpuErrchk( cudaMalloc(&labels_, sizeof(unsigned)*sz) );
-    }
-    void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override {
-      gpuErrchk( cudaMemCpy(data_device_, d, data_sz, cudaHostToDevice) );
-      gpuErrchk( cudaMemCpy(c_device_, c, c_sz, cudaHostToDevice) );
-      gpuErrchk( cudaMemCpy(old_c_device_, c, c_sz, cudaHostToDevice) );
-    }
-    void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override {
-      gpuErrchk( cudaMemCpy(c, c_device_, c_sz, cudaDeviceToHost) );
-      gpuErrchk( cudaMemCpy(l, labels_, l_sz, cudaDeviceToHost) );
-    }
-    void swap() override { std::swap(c_device_, old_c_device_); }
-    ~KmeansStrategyGpuGlobalBase() override {
-      gpuErrchk( cudaFree(data_device_) );
-      gpuErrchk( cudaFree(c_device_) );
-      gpuErrchk( cudaFree(old_c_device_) );
-      gpuErrchk( cudaFree(labels_) );
-    }
-  };
-
-  class KmeansStrategyGpuBaseline : public KmeansStrategyGpuGlobalBase 
-  {
-    void findNearestCentroids() override ;
-    void averageLabeledCentroids() override;
-    bool converged() override;
-  };
-
-  class KmeansStrategyGpuSharedBase : public KmeansStrategy 
-  {
-    double *data_device_;
-  };
-
-  template<typename ElemType>
-  class KmeansGpu : public KmeansBase<KmeansGpu<ElemType>, ElemType>
-  {
-    KmeansStrategy * stgy_;
-  public:
-    KmeansGpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
-      : KmeansBase<KmeansGpu<ElemType>, ElemType>(d, random, n_clu, max_iters)
-    {}
-    Labels fit() override ;
-    Centroids<ElemType> & result() override { 
-      return KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_ 
-              ? KmeansBase<KmeansGpu<ElemType>, ElemType>::c_ 
-              : (fit(), KmeansBase<KmeansGpu<ElemType>, ElemType>::c_); 
-    }
   };
 
   template<typename Stream, typename C>
