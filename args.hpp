@@ -16,6 +16,7 @@ struct Args {
                 // This is used by the autograder to simplify the correctness checking process. 
   static bool r; // -r randomly choose centroids from 0 to 1. Avoid choosing 
                 // centroids from within the points. This is to avoid local minima.
+  static bool gpu; // --gpu Run the gpu algirithm. 
   static bool help;
 
   static void parse_args(int argc, char* argv[]);

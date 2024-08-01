@@ -20,13 +20,14 @@ int main(int argc, char* argv[]){
   dbg << "Data = \n";
   for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
 
-  KmeansCpu<double> kmeans {d, Args::r, Args::k, Args::m};
-  const auto labels = kmeans.fit();
+  std::unique_ptr<Kmeans> kmeans {new KmeansCpu<double> {d, Args::r, Args::k, Args::m}};
 
-  dbg << "########### Final Centroids\n";
-  print_centroids(dbg, kmeans.result());
+  const auto labels = kmeans->fit();
 
-  if(Args::c) print_centroids(cout, kmeans.result());
+  dbg << "########### Final CPU Centroids\n";
+  print_centroids(dbg, kmeans->result());
+
+  if(Args::c) print_centroids(cout, kmeans->result());
   else for(size_t i = 0; i < labels.size(); ++i) cout << labels[i] << '\n';
 
   return 0;

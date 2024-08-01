@@ -14,6 +14,7 @@ bool Args::c = false;
 bool Args::r = false;
 unsigned Args::s = 1;
 bool Args::help = false;
+bool Args::gpu = false;
 
 std::ostream & operator<<(std::ostream &os, const Args &args){
   os << "args: \n"
@@ -44,7 +45,8 @@ void Args::parse_args(int argc, char* argv[]){
             << " -s seed: an integer specifying the seed for rand(). \n"
             << "      This is used by the autograder to simplify the correctness checking process.\n"
             << " -r randomly choose centroids from 0 to 1. Avoid choosing\n" 
-            << "      centroids from within the points. This is to avoid local minima.";
+            << "      centroids from within the points. This is to avoid local minima.\n"
+            << " --gpu Run the gpu algirithm."; 
       help = true;
       return;
     } else if ((arg == "-k") && j + 1 < argc) {
@@ -61,6 +63,8 @@ void Args::parse_args(int argc, char* argv[]){
       c = true;
     } else if (arg == "-r") {
       r = true;
+    } else if (arg == "--gpu") {
+      gpu = true;
     } else if ((arg == "-s") && j + 1 < argc) {
       s = stoi(argv[++j]);
     } 

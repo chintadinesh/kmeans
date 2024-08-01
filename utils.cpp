@@ -80,6 +80,58 @@ bool converged(const C1 &c, const C2 &oldc)
   return res;
 }
 
+template<typename ElemType>
+void findNearestCentroidsGpu(Labels &l, const Data &d, const Centroids<ElemType> &c)
+{
+  for(int j = 0; j < d.size(); ++j){
+    const auto &pi = d[j];
+    double min_d = HUGE_VAL;
+    int ci = -1;
+    for(int i = 0; i < c.size(); ++i) {
+      const auto cd = pi.equilDist(c[i]);
+      if (cd < min_d){
+        ci = i;
+        min_d = cd;
+      }
+    }
+    assert(ci != -1);
+    l[j] = ci;
+  }
+}
+
+template<typename ElemType>
+void averageLabeledCentroidsGpu(const Data &d, 
+                            const Labels &l, 
+                            const Centroids<ElemType> &old_c,
+                            Centroids<ElemType> &new_c)
+{
+  assert(d.size() == l.size());
+  new_c.reset();
+
+  vector<unsigned> sizes = vector<unsigned>(old_c.size(), 0);
+
+  for(int i = 0; i < l.size(); ++i){
+    new_c[l[i]] += d[i];
+    sizes[l[i]]++;
+  }
+  for(int i = 0; i < new_c.size(); ++i) new_c[i] /= sizes[i]; 
+}
+
+template<typename C1, typename C2>
+bool convergedGpu(const C1 &c, const C2 &oldc)
+{
+  assert(c.size() == oldc.size());
+  bool res = true;
+  dbg << "Dist = " << std::setprecision(20);
+  for(int i = 0; i < c.size(); ++i){
+    const auto dist = c[i].equilDist(oldc[i]);
+    dbg << dist << ' ';
+    if(dist > Args::t) res &= false;
+  }
+  dbg << '\n';
+  return res;
+}
+
 unsigned kmeans_rand() {
   _next = _next * 1103515245 + 12345;
   return (unsigned int)(_next/65536) % (_kmeans_rmax+1);
@@ -300,5 +352,50 @@ KmeansCpu<ElemType>::~KmeansCpu(){
       << " ms \n";
 }
 template KmeansCpu<double>::~KmeansCpu();
+
+/* KmeansGpu */
+template<typename ElemType>
+Labels KmeansGpu<ElemType>::fit(){
+
+  auto &c = KmeansBase<KmeansGpu<ElemType>, ElemType>::c_;
+  auto &old_c = KmeansBase<KmeansGpu<ElemType>, ElemType>::old_c_;
+  auto &d = KmeansBase<KmeansGpu<ElemType>, ElemType>::d_;
+  auto &solved = KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_;
+  auto &iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::iters_;
+  auto &max_iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::max_iters_;
+
+  stgy_->init(d.ptr(), 
+              c.ptr(), 
+              sizeof(double)*d.size()*d.dim(), 
+              sizeof(double)*c.size()*c.dim());
+
+  Labels l(d.size(), 0);
+
+  while(true){
+    // labels is a mapping from each point in the dataset 
+    // to the nearest (euclidean distance) centroid
+    stgy_->findNearestCentroids();
+
+    // the new centroids are the average 
+    // of all the points that map to each 
+    // centroid
+    stgy_->averageLabeledCentroids();
+    dbg << "ITER = " << iters << '\n';
+    //print_centroids(dbg, c_);
+    if(++iters > max_iters || converged(c, old_c)) break;
+    //done = ++iters_ > max_iters_;
+
+    stgy_->swap();
+  }
+
+  stgy_->collect(c.ptr(), 
+                &l[0], 
+                sizeof(double)*c.dim()*c.size(), 
+                sizeof(unsigned)*d.size());
+
+  solved = true;
+  return l;
+}
+template Labels KmeansGpu<double>::fit();
 
 } // namespace utils
