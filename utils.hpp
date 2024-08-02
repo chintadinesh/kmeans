@@ -175,16 +175,16 @@ namespace utils {
     virtual Labels fit() = 0;
     // TODO: get rid of the template parameter
     virtual Centroids<double> & result() = 0;
-    virtual ~Kmeans() = 0;
+    virtual ~Kmeans() {};
   };
 
   // interface class for kmeans algorithm
-  template<class Concrete, typename ElemType>
+  template<class Concrete>
   class KmeansBase : public Kmeans {
 protected:
     const Data &d_;
-    Centroids<ElemType> c_;
-    Centroids<ElemType> old_c_;
+    Centroids<double> c_;
+    Centroids<double> old_c_;
     Labels l_;
 
     const unsigned max_iters_;
@@ -197,11 +197,11 @@ public:
               const size_t n_clu,
               const unsigned max_iters);
     Labels fit() override { return static_cast<Concrete*>(this)->fit(); }
-    Centroids<ElemType> & result() override {return static_cast<Concrete*>(this)->result();}
+    Centroids<double> & result() override {return static_cast<Concrete*>(this)->result();}
+    ~KmeansBase() override {}
   };
 
-  template<typename ElemType>
-  class KmeansCpu : public KmeansBase<KmeansCpu<ElemType>, ElemType>
+  class KmeansCpu : public KmeansBase<KmeansCpu>
   {
     using Ptdur = std::chrono::duration<double, std::milli>; 
     struct PerfTracker {
@@ -218,13 +218,13 @@ public:
     Ptdur tt_m_ {};
   public:
     KmeansCpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
-      : KmeansBase<KmeansCpu<ElemType>, ElemType>(d, random, n_clu, max_iters)
+      : KmeansBase<KmeansCpu>(d, random, n_clu, max_iters)
     {}
     Labels fit() override ;
-    Centroids<ElemType> & result() override { 
-      return KmeansBase<KmeansCpu<ElemType>, ElemType>::solved_ 
-              ? KmeansBase<KmeansCpu<ElemType>, ElemType>::c_ 
-              : (fit(), KmeansBase<KmeansCpu<ElemType>, ElemType>::c_); 
+    Centroids<double> & result() override { 
+      return KmeansBase<KmeansCpu>::solved_ 
+              ? KmeansBase<KmeansCpu>::c_ 
+              : (fit(), KmeansBase<KmeansCpu>::c_); 
     }
     ~KmeansCpu() override;
   };

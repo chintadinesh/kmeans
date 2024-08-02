@@ -7,7 +7,6 @@
 
 #include "utils.hpp"
 #include "args.hpp"
-#include "gpu.hpp"
 
 using namespace std;
 
@@ -282,11 +281,11 @@ std::ostream & print_centroids(std::ostream &os, const DoubleCentroids &ctrs);
 
 
 
-template<class Concrete, typename ElemType>
-KmeansBase<Concrete, ElemType>::KmeansBase(const Data &d, 
-                                          const bool random,
-                                          const size_t n_clu,
-                                          const unsigned max_iters)
+template<class Concrete>
+KmeansBase<Concrete>::KmeansBase(const Data &d, 
+                                const bool random,
+                                const size_t n_clu,
+                                const unsigned max_iters)
   : d_{d}, c_{n_clu, d.dim()}, old_c_{n_clu, d.dim()}, max_iters_{max_iters} 
 {
   c_ = random ? randomCentroids(n_clu, d.dim()) 
@@ -300,20 +299,19 @@ KmeansBase<Concrete, ElemType>::KmeansBase(const Data &d,
     print_centroids(init_cent, c_);
   }
 }
-template KmeansCpu<double>::KmeansCpu(const Data &d, 
-                                    const bool random,
-                                    const size_t n_clu,
-                                    const unsigned max_iters);
+template KmeansBase<KmeansCpu>::KmeansBase( const Data &d, 
+                                const bool random,
+                                const size_t n_clu,
+                                const unsigned max_iters);
 
-template<typename ElemType>
-Labels KmeansCpu<ElemType>::fit(){
+Labels KmeansCpu::fit(){
 
-  auto &c = KmeansBase<KmeansCpu<ElemType>, ElemType>::c_;
-  auto &old_c = KmeansBase<KmeansCpu<ElemType>, ElemType>::old_c_;
-  auto &d = KmeansBase<KmeansCpu<ElemType>, ElemType>::d_;
-  auto &solved = KmeansBase<KmeansCpu<ElemType>, ElemType>::solved_;
-  auto &iters = KmeansBase<KmeansCpu<ElemType>, ElemType>::iters_;
-  auto &max_iters = KmeansBase<KmeansCpu<ElemType>, ElemType>::max_iters_;
+  auto &c = KmeansBase<KmeansCpu>::c_;
+  auto &old_c = KmeansBase<KmeansCpu>::old_c_;
+  auto &d = KmeansBase<KmeansCpu>::d_;
+  auto &solved = KmeansBase<KmeansCpu>::solved_;
+  auto &iters = KmeansBase<KmeansCpu>::iters_;
+  auto &max_iters = KmeansBase<KmeansCpu>::max_iters_;
 
   old_c = c;
 
@@ -342,14 +340,8 @@ Labels KmeansCpu<ElemType>::fit(){
   solved = true;
   return l;
 }
-template Labels KmeansCpu<double>::fit();
 
-template<typename ElemType>
-KmeansCpu<ElemType>::~KmeansCpu(){
-  dbg << "Time Take by CPU = "
-      << std::chrono::duration_cast<std::chrono::milliseconds>(tt_m_).count() 
-      << " ms \n";
+KmeansCpu::~KmeansCpu(){
 }
-template KmeansCpu<double>::~KmeansCpu();
 
 } // namespace utils

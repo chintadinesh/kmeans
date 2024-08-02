@@ -27,13 +27,14 @@ CUOBJS = $(CUSRCS:.cu=.o)
 # Directories
 INCLUDES := -I/usr/local/cuda/include
 LIBDIRS := -L/usr/local/cuda/lib64
+CULIBS := -lcudart -lcuda
 
 # Default rule
 all: $(TARGET)
 
 # Rule to build the target
 $(TARGET): $(OBJS) $(CUOBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(CUOBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(CUOBJS) $(CULIBS)
 
 # Rule to compile .cpp files into .o files
 %.o: %.cpp
