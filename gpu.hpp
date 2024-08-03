@@ -58,19 +58,18 @@ namespace utils {
   {
   };
 
-  template<typename ElemType>
-  class KmeansGpu : public KmeansBase<KmeansGpu<ElemType>, ElemType>
+  class KmeansGpu : public KmeansBase<KmeansGpu>
   {
     KmeansStrategy * stgy_;
   public:
     KmeansGpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
-      : KmeansBase<KmeansGpu<ElemType>, ElemType>(d, random, n_clu, max_iters)
+      : KmeansBase<KmeansGpu>(d, random, n_clu, max_iters)
     {}
     Labels fit() override ;
-    Centroids<ElemType> & result() override { 
-      return KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_ 
-              ? KmeansBase<KmeansGpu<ElemType>, ElemType>::c_ 
-              : (fit(), KmeansBase<KmeansGpu<ElemType>, ElemType>::c_); 
+    Centroids<double> & result() override { 
+      return KmeansBase<KmeansGpu>::solved_ 
+              ? KmeansBase<KmeansGpu>::c_ 
+              : (fit(), KmeansBase<KmeansGpu>::c_); 
     }
   };
 }

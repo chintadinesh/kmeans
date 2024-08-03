@@ -20,7 +20,7 @@ int main(int argc, char* argv[]){
   dbg << "Data = \n";
   for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
 
-  std::unique_ptr<Kmeans> kmeans {new KmeansCpu {d, Args::r, Args::k, Args::m}};
+  std::unique_ptr<Kmeans> kmeans {kmeansFactory(d, Args::r, Args::k, Args::m)};
 
   const auto labels = kmeans->fit();
 

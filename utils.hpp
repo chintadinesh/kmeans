@@ -42,7 +42,7 @@ namespace utils {
   class Point {
     /// @brief magnitude in each dimension
     ElemType *elems_; 
-    size_t size_;
+    size_t size_; // dim
   public:
     Point(ElemType *dst_ptr, size_t size) : elems_{dst_ptr}, size_{size} {}
 
@@ -97,9 +97,6 @@ namespace utils {
   using DoublePoint = Point<double>;
 
   template<typename ElemType>
-  class KmeansGpu;
-
-  template<typename ElemType>
   class Centroids {
     size_t n_clu_;
     size_t dim_;
@@ -133,8 +130,6 @@ namespace utils {
     ElemType *ptr() const {return elems_.get();}
     ElemType *ptr() {return elems_.get();}
     void reset() {memset(elems_.get(), 0, sizeof(ElemType)*n_clu_*dim_);}
-
-    friend KmeansGpu<double>;
   };
 
   using DoubleCentroids = Centroids<double>;
@@ -166,8 +161,6 @@ namespace utils {
     DoubleCentroids randomCentroids(const unsigned n_clu) const;
 
     friend DebugStream & operator<<(DebugStream &os, const Data &data);
-
-    friend KmeansGpu<double>;
   };
 
   class Kmeans {
@@ -201,34 +194,8 @@ public:
     ~KmeansBase() override {}
   };
 
-  class KmeansCpu : public KmeansBase<KmeansCpu>
-  {
-    using Ptdur = std::chrono::duration<double, std::milli>; 
-    struct PerfTracker {
-      std::chrono::time_point<std::chrono::high_resolution_clock> start_;
-      Ptdur &ml_;
 
-      PerfTracker(Ptdur &ml)
-        : start_{std::chrono::high_resolution_clock::now()},  ml_{ml}{}
-      ~PerfTracker(){
-        ml_ += std::chrono::high_resolution_clock::now() - start_;
-      }
-    };
-
-    Ptdur tt_m_ {};
-  public:
-    KmeansCpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
-      : KmeansBase<KmeansCpu>(d, random, n_clu, max_iters)
-    {}
-    Labels fit() override ;
-    Centroids<double> & result() override { 
-      return KmeansBase<KmeansCpu>::solved_ 
-              ? KmeansBase<KmeansCpu>::c_ 
-              : (fit(), KmeansBase<KmeansCpu>::c_); 
-    }
-    ~KmeansCpu() override;
-  };
-
+  // interface for Kmeans strategy
   struct KmeansStrategy {
     virtual void init(const double *d, const double *c, const size_t d_szz, const size_t c_sz) = 0;
     virtual void findNearestCentroids() = 0;
@@ -239,20 +206,12 @@ public:
     virtual ~KmeansStrategy() = 0;
   };
 
-  // TODO: refactor CPU code to use this strategy
-  class KmeansStrategyCpu : public KmeansStrategy {
-    void init(const double *d, const double *c, const size_t d_szz, const size_t c_sz) override {}
-    void findNearestCentroids() override ;
-    void averageLabeledCentroids() override;
-    bool converged() override;
-    void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override {};
-    void swap() override {}
-  };
-
   template<typename Stream, typename C>
   Stream & print_centroids(Stream &os, const C &ctrs);
 
   DoubleCentroids randomCentroids(const unsigned n_clu, const unsigned dim);
 
   void kmeans_srand(unsigned int seed);
+
+  Kmeans * kmeansFactory( const Data &d, bool random, size_t n_clu, unsigned max_iters);
 }

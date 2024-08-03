@@ -11,7 +11,7 @@ CXXFLAGS = -Wall -std=c++17
 NVCCFLAGS = -std=c++14
 
 # Define the output executable
-TARGET = kmeans_cpu
+TARGET = kmeans
 # Find all source files
 SRCS = $(wildcard *.cpp)
 
@@ -49,13 +49,13 @@ clean:
 	rm -f $(TARGET) $(OBJS)
 
 run:
-	@./kmeans_cpu -k 16 -d 16 -i input/random-n2048-d16-c16.txt 
+	@./kmeans -k 16 -d 16 -i input/random-n2048-d16-c16.txt 
 
 runc:
-	@./kmeans_cpu -k 16 -d 16 -i input/random-n2048-d16-c16.txt -c
+	@./kmeans -k 16 -d 16 -i input/random-n2048-d16-c16.txt -c
 
 run1: run
 run2:
-	@./kmeans_cpu -k 3 -i input/random-n2048-d16-c16.txt
+	@./kmeans -k 3 -i input/random-n2048-d16-c16.txt
 
 .PHONY: all clean

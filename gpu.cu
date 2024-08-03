@@ -5,14 +5,13 @@ extern utils::DebugStream dbg;
 namespace utils {
 
 /* KmeansGpu */
-template<typename ElemType>
-Labels KmeansGpu<ElemType>::fit(){
+Labels KmeansGpu::fit(){
 
-  auto &c = KmeansBase<KmeansGpu<ElemType>, ElemType>::c_;
-  auto &d = KmeansBase<KmeansGpu<ElemType>, ElemType>::d_;
-  auto &solved = KmeansBase<KmeansGpu<ElemType>, ElemType>::solved_;
-  auto &iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::iters_;
-  auto &max_iters = KmeansBase<KmeansGpu<ElemType>, ElemType>::max_iters_;
+  auto &c = KmeansBase<KmeansGpu>::c_;
+  auto &d = KmeansBase<KmeansGpu>::d_;
+  auto &solved = KmeansBase<KmeansGpu>::solved_;
+  auto &iters = KmeansBase<KmeansGpu>::iters_;
+  auto &max_iters = KmeansBase<KmeansGpu>::max_iters_;
 
   stgy_->init(d.ptr(), 
               c.ptr(), 
@@ -46,6 +45,5 @@ Labels KmeansGpu<ElemType>::fit(){
   solved = true;
   return l;
 }
-template Labels KmeansGpu<double>::fit();
 
 }
