@@ -34,7 +34,7 @@ all: $(TARGET)
 
 # Rule to build the target
 $(TARGET): $(OBJS) $(CUOBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(CUOBJS) $(CULIBS)
+	$(CXX) $(LIBDIRS) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(CUOBJS) $(CULIBS)
 
 # Rule to compile .cpp files into .o files
 %.o: %.cpp
@@ -42,7 +42,7 @@ $(TARGET): $(OBJS) $(CUOBJS)
 
 # Rule to compile .cu files into .o files
 %.o: %.cu
-	$(NVCC) $(NVCCFLAGS) -c $< -o $@
+	$(NVCC) $(LIBDIRS) $(INCLUDES) $(NVCCFLAGS) -c $< -o $@
 
 # Rule to clean up build files
 clean:
