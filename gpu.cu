@@ -94,12 +94,14 @@ namespace utils {
 
 bool KmeansStrategyGpuGlobalBase::converged(double *host_c, double *host_old_c) 
 {
+  dbg << __func__ << '\n';
   gpuErrchk( cudaMemcpy(host_c, c_device_, c_sz_, cudaMemcpyDeviceToHost) );
   return utils::converged(host_c, host_old_c, c_sz_, dim_);
 }
 
 void KmeansStrategyGpuBaseline::findNearestCentroids() 
 {
+  dbg << __func__ << '\n';
   classify<<<1, d_sz_>>>(labels_, 
                         data_device_, 
                         old_c_device_, 
@@ -110,6 +112,7 @@ void KmeansStrategyGpuBaseline::findNearestCentroids()
 
 void KmeansStrategyGpuBaseline::averageLabeledCentroids() 
 {
+  dbg << __func__ << '\n';
   update<<<1, 
           d_sz_, 
           sizeof(int)*c_sz_ + sizeof(double)*c_sz_*dim_>>>

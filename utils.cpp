@@ -221,7 +221,10 @@ KmeansBase<KmeansCpu>::KmeansBase(const Data &d,
                                 const unsigned max_iters);
 
 Kmeans * kmeansFactory( const Data &d, const bool random, const size_t n_clu, const unsigned max_iters){
-  if(Args::gpu) return new KmeansGpu{d, random, n_clu, max_iters}; 
+  if(Args::gpu) {
+    KmeansStrategyGpuBaseline *stgy = new KmeansStrategyGpuBaseline {d.size(), n_clu, d.dim()};
+    return new KmeansGpu{d, random, n_clu, max_iters, stgy}; 
+  }
   else return new KmeansCpu{d, random, n_clu, max_iters}; 
 }
 

@@ -64,6 +64,10 @@ namespace utils {
     using KmeansStrategyGpuGlobalBase::dim_;
 
   public:
+    KmeansStrategyGpuBaseline(const size_t sz, const size_t k, const size_t dim)
+      : KmeansStrategyGpuGlobalBase(sz, k, dim)
+    {}
+
     void findNearestCentroids() override ;
     void averageLabeledCentroids() override;
     ~KmeansStrategyGpuBaseline() override {}
@@ -71,10 +75,14 @@ namespace utils {
 
   class KmeansGpu : public KmeansBase<KmeansGpu>
   {
-    KmeansStrategy * stgy_;
+    std::unique_ptr<KmeansStrategy> stgy_;
   public:
-    KmeansGpu(const Data &d, const bool random, const size_t n_clu, const unsigned max_iters)
-      : KmeansBase<KmeansGpu>(d, random, n_clu, max_iters)
+    KmeansGpu(const Data &d, 
+              const bool random, 
+              const size_t n_clu, 
+              const unsigned max_iters,
+              KmeansStrategy * stgy)
+      : KmeansBase<KmeansGpu>(d, random, n_clu, max_iters), stgy_{stgy}
     {}
     Labels fit() override ;
     Centroids<double> & result() override { 
