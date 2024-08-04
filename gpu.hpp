@@ -23,7 +23,7 @@ namespace utils {
   {
   protected:
     double *data_device_, *c_device_, *old_c_device_;
-    size_t *labels_;
+    unsigned *labels_;
     const size_t d_sz_, c_sz_, dim_;
   public:
     KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim)
@@ -32,16 +32,16 @@ namespace utils {
       gpuErrchk( cudaMalloc((void**)&data_device_, sizeof(double)*dim*sz) );
       gpuErrchk( cudaMalloc((void**)&c_device_, sizeof(double)*dim*k) );
       gpuErrchk( cudaMalloc((void**)&old_c_device_, sizeof(double)*dim*k) );
-      gpuErrchk( cudaMalloc((void**)&labels_, sizeof(unsigned)*sz) );
+      gpuErrchk( cudaMalloc((void**)&labels_, sizeof(signed)*sz) );
     }
     void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override {
-      gpuErrchk( cudaMemcpy(data_device_, d, data_sz, cudaMemcpyHostToDevice) );
-      gpuErrchk( cudaMemcpy(c_device_, c, c_sz, cudaMemcpyHostToDevice) );
-      gpuErrchk( cudaMemcpy(old_c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(data_device_, d, sizeof(double)*data_sz*dim_, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(c_device_, c, sizeof(double)*c_sz*dim_, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(old_c_device_, c, sizeof(double)*c_sz*dim_, cudaMemcpyHostToDevice) );
     }
     void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override {
-      gpuErrchk( cudaMemcpy(c, c_device_, c_sz, cudaMemcpyDeviceToHost) );
-      gpuErrchk( cudaMemcpy(l, labels_, l_sz, cudaMemcpyDeviceToHost) );
+      gpuErrchk( cudaMemcpy(c, c_device_, sizeof(double)*c_sz*dim_, cudaMemcpyDeviceToHost) );
+      gpuErrchk( cudaMemcpy(l, labels_, sizeof(size_t)*d_sz_, cudaMemcpyDeviceToHost) );
     }
     bool converged(double *host_c, double *host_old_c) override;
     void swap() override { std::swap(c_device_, old_c_device_); }

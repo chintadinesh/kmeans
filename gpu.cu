@@ -4,7 +4,7 @@ extern utils::DebugStream dbg;
 
 namespace {
 
-__global__ void classify(size_t *l,
+__global__ void classify(unsigned *l,
                         const double *d, 
                         const double *c, 
                         const size_t d_sz,
@@ -17,7 +17,7 @@ __global__ void classify(size_t *l,
 
   const double *point = &d[tid*dim];
 
-  size_t res = 0;
+  unsigned res = 0;
   double min_d = HUGE_VAL;
   for(size_t cl = 0; cl < c_sz; ++cl){
     double diff = 0;
@@ -47,7 +47,7 @@ __device__ double atomicAddDouble(double* address, double val) {
 
 __global__ void update(double *c, 
                       const double *d, 
-                      const size_t *l,
+                      const unsigned *l,
                       const size_t c_sz,
                       const size_t d_sz,
                       const size_t dim)
@@ -95,7 +95,7 @@ namespace utils {
 bool KmeansStrategyGpuGlobalBase::converged(double *host_c, double *host_old_c) 
 {
   dbg << __func__ << '\n';
-  gpuErrchk( cudaMemcpy(host_c, c_device_, c_sz_, cudaMemcpyDeviceToHost) );
+  gpuErrchk( cudaMemcpy(host_c, c_device_, sizeof(double)*c_sz_*dim_, cudaMemcpyDeviceToHost) );
   return utils::converged(host_c, host_old_c, c_sz_, dim_);
 }
 
@@ -164,7 +164,7 @@ Labels KmeansGpu::fit(){
   stgy_->collect(c.ptr(), 
                 &l[0], 
                 sizeof(double)*c.dim()*c.size(), 
-                sizeof(unsigned)*d.size());
+                sizeof(size_t)*d.size());
 
   solved = true;
   return l;
