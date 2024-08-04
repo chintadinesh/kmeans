@@ -19,8 +19,11 @@ int main(int argc, char* argv[]){
   Data d {Args::i};
   //dbg << "Data = \n";
   //for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
+  cerr << "Read data successfully\n";
 
   std::unique_ptr<Kmeans> kmeans {kmeansFactory(d, Args::r, Args::k, Args::m)};
+
+  cerr << "Kmeans created\n";
 
   const auto labels = kmeans->fit();
 
