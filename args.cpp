@@ -25,7 +25,8 @@ std::ostream & operator<<(std::ostream &os, const Args &args){
         << " -t : " << args.t << '\n'
         << " -c : " << args.c << '\n'
         << " -s : " << args.s << '\n'
-        << " -r: " << args.r << '\n';
+        << " -r: " << args.r << '\n'
+        << " --gpu: " << args.gpu << '\n';
   return os;
 }
 

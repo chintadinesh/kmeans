@@ -124,6 +124,8 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
 /* KmeansGpu */
 Labels KmeansGpu::fit(){
 
+  dbg << __func__ << '\n';
+
   auto &c = KmeansBase<KmeansGpu>::c_;
   auto &old_c = KmeansBase<KmeansGpu>::old_c_;
   auto &d = KmeansBase<KmeansGpu>::d_;

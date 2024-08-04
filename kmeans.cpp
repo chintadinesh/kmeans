@@ -17,8 +17,8 @@ int main(int argc, char* argv[]){
   if(Args::i == "tmp.txt") return 0;
 
   Data d {Args::i};
-  dbg << "Data = \n";
-  for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
+  //dbg << "Data = \n";
+  //for(size_t i = 0; i < d.size(); ++i) dbg << d[i] << '\n';
 
   std::unique_ptr<Kmeans> kmeans {kmeansFactory(d, Args::r, Args::k, Args::m)};
 
