@@ -8,3 +8,4 @@ cscope.out
 makefile.buildLog
 *.o
 kmeans_cpu
+kmeans

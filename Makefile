@@ -38,7 +38,7 @@ $(TARGET): $(OBJS) $(CUOBJS)
 
 # Rule to compile .cpp files into .o files
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $< -o $@
 
 # Rule to compile .cu files into .o files
 %.o: %.cu
