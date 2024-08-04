@@ -48,25 +48,15 @@ void averageLabeledCentroids(const Data &d,
   for(unsigned i = 0; i < new_c.size(); ++i) new_c[i] /= sizes[i]; 
 }
 
-template<typename C1, typename C2>
-bool converged(const C1 &c, const C2 &oldc)
-{
-  assert(c.size() == oldc.size());
-  bool res = true;
-  for(unsigned i = 0; i < c.size(); ++i){
-    const auto dist = c[i].equilDist(oldc[i]);
-    dbg << dist << ' ';
-    if(dist > Args::t) res &= false;
-  }
-  dbg << '\n';
-  return res;
-}
-
-
 }
 
 namespace utils 
 {
+
+inline bool converged(const Centroids<double> &c, const Centroids<double> &old_c){
+  return converged(c.ptr(), old_c.ptr(), c.size(), c.dim());
+}
+
 
 Labels KmeansCpu::fit(){
 

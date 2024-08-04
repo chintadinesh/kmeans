@@ -2,13 +2,13 @@
 CXX = clang++
 
 # Define the compiler
-NVCC = nvcc
+NVCC = /usr/local/cuda/bin/nvcc
 
 # Define compiler flags
 CXXFLAGS = -Wall -std=c++17
 
 # Define nvcc compiler flags
-NVCCFLAGS = -std=c++14
+NVCCFLAGS = -std=c++17
 
 # Define the output executable
 TARGET = kmeans
@@ -46,7 +46,7 @@ $(TARGET): $(OBJS) $(CUOBJS)
 
 # Rule to clean up build files
 clean:
-	rm -f $(TARGET) $(OBJS)
+	rm -f $(TARGET) $(OBJS) $(CUOBJS)
 
 run:
 	@./kmeans -k 16 -d 16 -i input/random-n2048-d16-c16.txt 

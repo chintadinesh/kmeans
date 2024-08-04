@@ -129,6 +129,20 @@ Data::Data(const string &input_file)
   file.close();
 }
 
+bool converged(double *c, double  *oldc, const size_t c_sz, const size_t dim)
+{
+  bool res = true;
+  for(unsigned i = 0; i < c_sz; ++i){
+    Point<double> p {&c[i*dim], dim};
+    Point<double> old_p {&oldc[i*dim], dim};
+    const auto dist = old_p.equilDist(p);
+    dbg << dist << ' ';
+    if(dist > Args::t) res &= false;
+  }
+  dbg << '\n';
+  return res;
+}
+
 DoubleCentroids Data::randomCentroids(const unsigned n_clu) const {
   DoubleCentroids c {n_clu, dim_};
   dbg << __func__ << '\n';
