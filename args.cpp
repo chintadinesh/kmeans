@@ -15,6 +15,7 @@ bool Args::r = false;
 unsigned Args::s = 1;
 bool Args::help = false;
 bool Args::gpu = false;
+bool Args::debug = false;
 
 std::ostream & operator<<(std::ostream &os, const Args &args){
   os << "args: \n"
@@ -26,7 +27,8 @@ std::ostream & operator<<(std::ostream &os, const Args &args){
         << " -c : " << args.c << '\n'
         << " -s : " << args.s << '\n'
         << " -r: " << args.r << '\n'
-        << " --gpu: " << args.gpu << '\n';
+        << " --gpu: " << args.gpu << '\n'
+        << " --debug: " << args.debug << '\n';
   return os;
 }
 
@@ -40,14 +42,15 @@ void Args::parse_args(int argc, char* argv[]){
             << " -i inputfilename: a string specifying the input filename.\n"
             << " -m max_num_iter: an integer specifying the maximum number of iterations.\n"
             << " -t threshold: a double specifying the threshold for convergence test.\n"
-            << " -c: a flag to control the output of your program.\n" 
+            << " -c a flag to control the output of your program.\n" 
             << "      If -c is specified, your program should output the centroids of all clusters. \n"
             << "      If -c is not specified, your program should output the labels of all points.\n"
             << " -s seed: an integer specifying the seed for rand(). \n"
             << "      This is used by the autograder to simplify the correctness checking process.\n"
             << " -r randomly choose centroids from 0 to 1. Avoid choosing\n" 
             << "      centroids from within the points. This is to avoid local minima.\n"
-            << " --gpu Run the gpu algirithm."; 
+            << " --gpu Run Kmeans on gpu."
+            << " --debug Redirect debug info to cerr."; 
       help = true;
       return;
     } else if ((arg == "-k") && j + 1 < argc) {
@@ -66,6 +69,8 @@ void Args::parse_args(int argc, char* argv[]){
       r = true;
     } else if (arg == "--gpu") {
       gpu = true;
+    } else if (arg == "--debug") {
+      debug = true;
     } else if ((arg == "-s") && j + 1 < argc) {
       s = stoi(argv[++j]);
     } 

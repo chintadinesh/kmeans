@@ -17,6 +17,7 @@ struct Args {
   static bool r; // -r randomly choose centroids from 0 to 1. Avoid choosing 
                 // centroids from within the points. This is to avoid local minima.
   static bool gpu; // --gpu Run the gpu algirithm. 
+  static bool debug; // --redirect the debug to err stream
   static bool help;
 
   static void parse_args(int argc, char* argv[]);

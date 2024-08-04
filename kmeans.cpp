@@ -10,6 +10,8 @@ int main(int argc, char* argv[]){
   Args::parse_args(argc, argv);
   if(Args::help)
     return 0;
+  
+  if(Args::debug) dbg.setOutputStream(cerr);
 
   dbg << utils::Args(); 
   kmeans_srand(Args::s);
