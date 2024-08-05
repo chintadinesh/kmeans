@@ -70,13 +70,13 @@ namespace utils {
       cudaEventCreate(&stop);
     }
     void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override {
-      gpuErrchk( cudaMemcpy(data_device_, d, sizeof(double)*data_sz*dim_, cudaMemcpyHostToDevice) );
-      gpuErrchk( cudaMemcpy(c_device_, c, sizeof(double)*c_sz*dim_, cudaMemcpyHostToDevice) );
-      gpuErrchk( cudaMemcpy(old_c_device_, c, sizeof(double)*c_sz*dim_, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(data_device_, d, data_sz, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+      gpuErrchk( cudaMemcpy(old_c_device_, c, c_sz, cudaMemcpyHostToDevice) );
     }
     void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override {
-      gpuErrchk( cudaMemcpy(c, c_device_, sizeof(double)*c_sz*dim_, cudaMemcpyDeviceToHost) );
-      gpuErrchk( cudaMemcpy(l, labels_, sizeof(size_t)*d_sz_, cudaMemcpyDeviceToHost) );
+      gpuErrchk( cudaMemcpy(c, c_device_, c_sz, cudaMemcpyDeviceToHost) );
+      gpuErrchk( cudaMemcpy(l, labels_, d_sz_, cudaMemcpyDeviceToHost) );
     }
     bool converged(double *host_c, double *host_old_c) override;
     void swap() override { std::swap(c_device_, old_c_device_); }

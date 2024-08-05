@@ -173,7 +173,7 @@ Labels KmeansGpu::fit(){
   stgy_->collect(c.ptr(), 
                 &l[0], 
                 sizeof(double)*c.dim()*c.size(), 
-                sizeof(size_t)*d.size());
+                sizeof(unsigned)*d.size());
 
   solved = true;
   return l;
