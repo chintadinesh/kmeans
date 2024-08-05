@@ -3,8 +3,12 @@
 #include <driver_types.h>
 #include <cuda_device_runtime_api.h>
 #include <cuda_runtime_api.h>
+#include <map>
+#include <utility>
 
 #include "utils.hpp"
+
+extern utils::DebugStream dbg;
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 
@@ -21,11 +25,39 @@ namespace utils {
   // all the memory is global memory
   class KmeansStrategyGpuGlobalBase : public KmeansStrategy 
   {
+  public:
+    enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, OTHERS, _EVENT_TYPE_LEN};
   protected:
     double *data_device_, *c_device_, *old_c_device_;
     unsigned *labels_;
     const size_t d_sz_, c_sz_, dim_;
+
+    std::map<EventType, std::vector<float>> event_times_;
+
+    cudaEvent_t start, stop;
+
+  protected:
+    void registerTime(EventType ev, float time){
+      auto it = event_times_.find(ev);
+      if(it == event_times_.end()){
+        event_times_.insert(std::make_pair(ev, std::vector{time}));
+      }
+      else{
+        it->second.push_back(time);
+      }
+    }
+
+    inline void startGpuTimer() { cudaEventRecord(start, 0); }
+    inline float endGpuTimer() { 
+      cudaEventRecord(stop, 0); 
+      cudaEventSynchronize(stop);
+      float elapsed_time;
+      cudaEventElapsedTime(&elapsed_time, start, stop);
+      return elapsed_time;
+    }
+
   public:
+
     KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim)
       : d_sz_{sz}, c_sz_{k}, dim_{dim}
     {
@@ -33,6 +65,9 @@ namespace utils {
       gpuErrchk( cudaMalloc((void**)&c_device_, sizeof(double)*dim*k) );
       gpuErrchk( cudaMalloc((void**)&old_c_device_, sizeof(double)*dim*k) );
       gpuErrchk( cudaMalloc((void**)&labels_, sizeof(signed)*sz) );
+
+      cudaEventCreate(&start);
+      cudaEventCreate(&stop);
     }
     void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override {
       gpuErrchk( cudaMemcpy(data_device_, d, sizeof(double)*data_sz*dim_, cudaMemcpyHostToDevice) );
@@ -45,11 +80,25 @@ namespace utils {
     }
     bool converged(double *host_c, double *host_old_c) override;
     void swap() override { std::swap(c_device_, old_c_device_); }
+
     ~KmeansStrategyGpuGlobalBase() override {
       gpuErrchk( cudaFree(data_device_) );
       gpuErrchk( cudaFree(c_device_) );
       gpuErrchk( cudaFree(old_c_device_) );
       gpuErrchk( cudaFree(labels_) );
+
+      static const std::string event_names[_EVENT_TYPE_LEN] = {
+        "MEMCPY", 
+        "CLASSIFY", 
+        "UPDATE", 
+        "OTHERS", 
+        };
+
+      dbg << "CUDA time: \n";
+      for(const auto &[type, v]: event_times_){
+        dbg << event_names[type] << ": ";
+        for(const auto t: v) dbg << t << ' ';
+      }
     }
   };
 

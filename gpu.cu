@@ -95,24 +95,31 @@ namespace utils {
 bool KmeansStrategyGpuGlobalBase::converged(double *host_c, double *host_old_c) 
 {
   dbg << __func__ << '\n';
+  startGpuTimer();
   gpuErrchk( cudaMemcpy(host_c, c_device_, sizeof(double)*c_sz_*dim_, cudaMemcpyDeviceToHost) );
+  float tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
   return utils::converged(host_c, host_old_c, c_sz_, dim_);
 }
 
 void KmeansStrategyGpuBaseline::findNearestCentroids() 
 {
   dbg << __func__ << '\n';
+  startGpuTimer();
   classify<<<1, d_sz_>>>(labels_, 
                         data_device_, 
                         old_c_device_, 
                         d_sz_, 
                         c_sz_, 
                         dim_);   
+  float tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::CLASSIFY, tm);
 }
 
 void KmeansStrategyGpuBaseline::averageLabeledCentroids() 
 {
   dbg << __func__ << '\n';
+  startGpuTimer();
   update<<<1, 
           d_sz_, 
           sizeof(int)*c_sz_ + sizeof(double)*c_sz_*dim_>>>
@@ -122,6 +129,8 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
             c_sz_,
             d_sz_,
             dim_);
+  float tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
 }
 
 /* KmeansGpu */
