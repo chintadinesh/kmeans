@@ -82,11 +82,6 @@ namespace utils {
     void swap() override { std::swap(c_device_, old_c_device_); }
 
     ~KmeansStrategyGpuGlobalBase() override {
-      gpuErrchk( cudaFree(data_device_) );
-      gpuErrchk( cudaFree(c_device_) );
-      gpuErrchk( cudaFree(old_c_device_) );
-      gpuErrchk( cudaFree(labels_) );
-
       static const std::string event_names[_EVENT_TYPE_LEN] = {
         "MEMCPY", 
         "CLASSIFY", 
@@ -94,11 +89,25 @@ namespace utils {
         "OTHERS", 
         };
 
-      dbg << "CUDA time: \n";
+      dbg << "GPU time: \n";
       for(const auto &[type, v]: event_times_){
         dbg << event_names[type] << ": ";
-        for(const auto t: v) dbg << t << ' ';
+        float total = 0;
+        for(const auto t: v){
+          dbg << t << ' ';
+          total += t;
+        }
+        dbg << '\n';
+        dbg << "total = " << total << '\n';
       }
+
+      gpuErrchk( cudaFree(data_device_) );
+      gpuErrchk( cudaFree(c_device_) );
+      gpuErrchk( cudaFree(old_c_device_) );
+      gpuErrchk( cudaFree(labels_) );
+
+      cudaEventDestroy(start);
+      cudaEventDestroy(stop); 
     }
   };
 

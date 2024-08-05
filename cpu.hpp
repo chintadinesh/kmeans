@@ -1,6 +1,8 @@
 #pragma once
 #include "utils.hpp"
 
+extern utils::DebugStream dbg;
+
 namespace utils {
   class KmeansCpu : public KmeansBase<KmeansCpu>
   {
@@ -27,6 +29,9 @@ namespace utils {
               ? KmeansBase<KmeansCpu>::c_ 
               : (fit(), KmeansBase<KmeansCpu>::c_); 
     }
-    ~KmeansCpu() override {};
+    ~KmeansCpu() override {
+      dbg << "CPU Time (ms): \n";
+      dbg << tt_m_.count() << '\n';
+    };
   }; 
 }
