@@ -128,7 +128,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
   if(tid == 0){
     for(unsigned cid = 0; cid < c_sz; ++cid){
       for(unsigned did = 0; did < dim; ++did){
-        c[cid*dim +  did] += sh_c[cid*dim + did]/sh_npts[cid];
+        c[cid*dim +  did] = sh_c[cid*dim + did]/sh_npts[cid];
       }
     }
   }
