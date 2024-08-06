@@ -200,7 +200,7 @@ public:
     virtual void init(const double *d, const double *c, const size_t d_szz, const size_t c_sz) = 0;
     virtual void findNearestCentroids() = 0;
     virtual void averageLabeledCentroids() = 0;
-    virtual bool converged(double *host_c, double *host_old_c) = 0;
+    virtual void getCentroids(double *host_c) = 0;
     virtual void collect(double *c, unsigned *l, size_t c_sz, size_t l_sz) = 0;
     virtual void swap() = 0;
     virtual ~KmeansStrategy() {};

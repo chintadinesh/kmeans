@@ -52,14 +52,14 @@ __global__ void update(double *c,
                       const size_t d_sz,
                       const size_t dim)
 {
-  extern __shared__ size_t sh_all[];
+  extern __shared__ char sh_all[];
 
   // set the counter and centroids locations in the shared memory
-  int *npts = (int *)(&sh_all[0]);
-  double *cent = (double *)(&sh_all[c_sz]);
+  unsigned *npts = (unsigned *)(&sh_all[0]);
+  double *cent = (double *)(sh_all + d_sz*sizeof(unsigned));
 
   // initialize the shared memory
-  if(threadIdx.x == 0){
+  if(threadIdx.x == 0){ // thread 0 of all blocks initializes it's shared mem
     for(size_t i = 0; i < dim; ++i){
       npts[i] = 0;
     }
@@ -83,7 +83,7 @@ __global__ void update(double *c,
     for(size_t cid = 0; cid < c_sz; ++cid)
       for(size_t dimid = 0; dimid < dim; ++dimid){
         cent[cid*dim + dimid] /= npts[cid]; // div with num of pts in the cluster
-        c[cid*dim + dimid] = cent[cid*dim + dimid]; // update centroids
+        c[cid*dim + dimid] = cent[cid*dim + dimid]; // centroids
       }
   }
 }
@@ -92,43 +92,136 @@ __global__ void update(double *c,
 
 namespace utils {
 
-bool KmeansStrategyGpuGlobalBase::converged(double *host_c, double *host_old_c) 
+KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim)
+  : d_sz_{sz}, c_sz_{k}, dim_{dim}
 {
+  gpuErrchk( cudaMalloc((void**)&data_device_, sizeof(double)*dim*sz) );
+  gpuErrchk( cudaMalloc((void**)&c_device_, sizeof(double)*dim*k) );
+  gpuErrchk( cudaMalloc((void**)&old_c_device_, sizeof(double)*dim*k) );
+  gpuErrchk( cudaMalloc((void**)&labels_device_, sizeof(unsigned)*sz) );
+
+  cudaEventCreate(&start);
+  cudaEventCreate(&stop);
+}
+
+void KmeansStrategyGpuGlobalBase::init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) {
+  float tm; 
+  startGpuTimer();
+  gpuErrchk( cudaMemcpy(data_device_, d, data_sz, cudaMemcpyHostToDevice) );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
+  if(Args::debug){
+    std::vector<double> d_test(data_sz/sizeof(double), 0);
+    gpuErrchk( cudaMemcpy(&d_test[0], data_device_, data_sz, cudaMemcpyDeviceToHost) );
+    for(int i = 0; i < data_sz/sizeof(double); ++i) assert(d_test[i] == d[i]);
+  }
+
+  startGpuTimer();
+  gpuErrchk( cudaMemcpy(c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
+  if(Args::debug){
+    std::vector<double> c_test(c_sz/sizeof(double), 0);
+    gpuErrchk( cudaMemcpy(&c_test[0], c_device_, c_sz, cudaMemcpyDeviceToHost) );
+    for(int i = 0; i < c_sz/sizeof(double); ++i) assert(c_test[i] == c[i]);
+  }
+
+  startGpuTimer();
+  gpuErrchk( cudaMemcpy(old_c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
+}
+
+void KmeansStrategyGpuGlobalBase::collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) {
+  float tm; 
+  startGpuTimer();
+  gpuErrchk( cudaMemcpy(c, c_device_, c_sz, cudaMemcpyDeviceToHost) );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
+
+  startGpuTimer();
+  gpuErrchk( cudaMemcpy(l, labels_device_, d_sz_, cudaMemcpyDeviceToHost) );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
+}
+
+void KmeansStrategyGpuGlobalBase::swap() { std::swap(c_device_, old_c_device_); }
+
+KmeansStrategyGpuGlobalBase::~KmeansStrategyGpuGlobalBase() {
+  static const std::string event_names[_EVENT_TYPE_LEN] = {
+    "MEMCPY", 
+    "CLASSIFY", 
+    "UPDATE", 
+    "OTHERS", 
+    };
+
+  dbg << "GPU time: \n";
+  for(const auto &[type, v]: event_times_){
+    dbg << event_names[type] << ": ";
+    float total = 0;
+    for(const auto t: v){
+      dbg << t << ' ';
+      total += t;
+    }
+    dbg << '\n';
+    dbg << "total = " << total << '\n';
+  }
+
+  gpuErrchk( cudaFree(data_device_) );
+  gpuErrchk( cudaFree(c_device_) );
+  gpuErrchk( cudaFree(old_c_device_) );
+  gpuErrchk( cudaFree(labels_device_) );
+
+  cudaEventDestroy(start);
+  cudaEventDestroy(stop); 
+}
+
+void KmeansStrategyGpuGlobalBase::getCentroids(double *host_c) {
   dbg << __func__ << '\n';
   startGpuTimer();
   gpuErrchk( cudaMemcpy(host_c, c_device_, sizeof(double)*c_sz_*dim_, cudaMemcpyDeviceToHost) );
   float tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::MEMCPY, tm);
-  return utils::converged(host_c, host_old_c, c_sz_, dim_);
 }
 
-void KmeansStrategyGpuBaseline::findNearestCentroids() 
-{
+void KmeansStrategyGpuBaseline::findNearestCentroids() {
+  constexpr unsigned NTHREADS = 128;
+  constexpr unsigned NBLOCKS = (d_sz + NTHREADS -1)/NTHREADS;;
+
   dbg << __func__ << '\n';
   startGpuTimer();
-  classify<<<1, d_sz_>>>(labels_, 
+  classify<<<NTHREADS, NBLOCKS>>>(labels_device_, 
                         data_device_, 
                         old_c_device_, 
                         d_sz_, 
                         c_sz_, 
                         dim_);   
+  gpuErrchk( cudaPeekAtLastError() );
   float tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::CLASSIFY, tm);
+
+  if(Args::debug){
+    static std::unique_ptr<unsigned> labels {new unsigned[d_sz_]};
+    cudaMemcpy(labels.get(), labels_device_, sizeof(unsigned)*d_sz_, cudaMemcpyDeviceToHost);
+    dbg << "Labels: ";
+    for(int i = 0; i < d_sz_; ++i) dbg << labels.get()[i] << ' ';
+    dbg << '\n';
+  }
 }
 
 void KmeansStrategyGpuBaseline::averageLabeledCentroids() 
 {
+  constexpr unsigned NTHREADS = 128;
+  constexpr unsigned NBLOCKS = (d_sz + NTHREADS -1)/NTHREADS;;
+
   dbg << __func__ << '\n';
   startGpuTimer();
-  update<<<1, 
-          d_sz_, 
-          sizeof(int)*c_sz_ + sizeof(double)*c_sz_*dim_>>>
-          (c_device_,
-            data_device_,
-            labels_,
-            c_sz_,
-            d_sz_,
-            dim_);
+  update<<<NTHREADS, 
+          NBLOCKS, 
+          sizeof(unsigned)*d_sz_ + sizeof(double)*c_sz_*dim_>>>
+          (c_device_, data_device_, labels_device_,
+          c_sz_, d_sz_, dim_);
+  gpuErrchk( cudaPeekAtLastError() );
   float tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
 }
@@ -163,7 +256,8 @@ Labels KmeansGpu::fit(){
     stgy_->averageLabeledCentroids();
     dbg << "ITER = " << iters << '\n';
     //print_centroids(dbg, c_);
-    if(++iters > max_iters || stgy_->converged(c.ptr(), old_c.ptr())) break;
+    stgy_->getCentroids(c.ptr());
+    if(++iters > max_iters || converged(c.ptr(), old_c.ptr(), c.size(), c.dim())) break;
     //done = ++iters_ > max_iters_;
 
     stgy_->swap();
