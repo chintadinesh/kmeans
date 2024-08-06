@@ -242,7 +242,7 @@ void KmeansStrategyGpuBaseline::findNearestCentroids() {
   const unsigned NTHREADS = Args::threads_classify;
   const unsigned NBLOCKS = Args::blocks_classify;
 
-  dbg << "classify<<< " << NBLOCKS << ", " << NTHREADS << " >>>()";
+  dbg << "classify<<< " << NBLOCKS << ", " << NTHREADS << " >>>()\n";
   startGpuTimer();
   classify<<<NTHREADS, NBLOCKS>>>(labels_device_, 
                         data_device_, 
