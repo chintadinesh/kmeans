@@ -37,94 +37,94 @@ classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
 Updated Centroids: 
-3.61493 3.07946 2.41979 2.56558 2.11487 2.27857 3.12859 1.37992 1.85677 0.755664 1.1558 2.29537 2.77242 3.03448 2.54509 3.5512 
-3.02689 0.00975818 3.47154 2.22943 0.412598 0.50168 2.73963 3.68636 1.18153 4.12871 0.423108 3.60293 1.67409 0.343021 1.15906 1.91105 
-4.89314e-310 4.54937e-314 4.24399e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 3.16202e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 4.42683e-321 4.89314e-310 
--nan 2.122e-314 4.89314e-310 6.32404e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 5.05923e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 
-2.122e-314 4.89314e-310 5.05923e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 2.21341e-320 4.89314e-310 1.55951e-313 4.24399e-314 
-4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 4.24399e-314 4.89314e-310 5.69164e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 
-4.42683e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 
-4.89314e-310 3.49545e-313 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 4.76865e-313 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 
--nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 5.03498e-313 
-4.24399e-314 4.89314e-310 1.26481e-321 4.89314e-310 6.09598e-313 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 5.45674e-313 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 5.56782e-313 2.122e-314 
-4.89314e-310 1.89721e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 3.16202e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 1.26481e-321 4.89314e-310 6.30818e-313 4.24399e-314 4.89314e-310 
-1.26481e-321 4.89314e-310 7.36918e-313 4.24399e-314 4.89314e-310 4.42683e-321 4.89314e-310 3.89836e-313 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.89721e-321 
-4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 2.26676e-313 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 
--nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 5.19305e-313 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 
-2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 4.2191e-313 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 9.08905e-313 4.24399e-314 4.89314e-310 1.89721e-321 4.89314e-310 -nan 4.24399e-314 
-4.89314e-310 6.95644e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 1.89721e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 4.24399e-314 4.89314e-310 
+1.77139 1.3899 1.07018 1.10996 1.1638 1.02675 1.46925 0.482855 0.907109 0.42179 0.484096 1.1057 1.23507 1.3706 1.34125 1.75671 
+1.43484 0.00459237 1.64551 1.05674 0.195641 0.237772 1.29859 1.7473 0.560032 1.95689 0.200721 1.70761 0.79365 0.162497 0.549346 0.9057 
+4.84013e-310 6.32404e-322 4.84013e-310 5.45674e-313 4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 5.56782e-313 2.122e-314 4.84013e-310 1.89721e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 
+3.16202e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 1.26481e-321 4.84013e-310 6.30818e-313 4.24399e-314 4.84013e-310 1.26481e-321 4.84013e-310 7.36918e-313 4.24399e-314 4.84013e-310 4.42683e-321 
+4.84013e-310 3.89836e-313 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 2.122e-314 4.84013e-310 1.89721e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 
+-nan 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 2.26676e-313 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 
+4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 5.19305e-313 4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 4.2191e-313 4.24399e-314 
+4.84013e-310 6.32404e-322 4.84013e-310 9.08905e-313 4.24399e-314 4.84013e-310 1.89721e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 6.95644e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 
+1.89721e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 4.24399e-314 4.84013e-310 7.58885e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 6.32404e-322 
+4.84013e-310 -nan 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 -nan 2.122e-314 4.84013e-310 1.26481e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 6.32404e-322 4.84013e-310 
+-nan 2.122e-314 4.84013e-310 8.22125e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 5.05923e-321 4.84013e-310 7.60997e-313 2.122e-314 4.84013e-310 5.69164e-321 4.84013e-310 -nan 
+2.122e-314 4.84013e-310 1.26481e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 6.32404e-322 4.84013e-310 4.39039e-313 4.24399e-314 4.84013e-310 2.01104e-319 4.84013e-310 8.79392e-313 2.122e-314 
+4.84013e-310 5.05923e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 1.26481e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 2.52962e-321 4.84013e-310 7.7721e-313 4.24399e-314 4.84013e-310 
+2.52962e-321 4.84013e-310 1.08038e-312 2.122e-314 4.84013e-310 3.16202e-321 4.84013e-310 -nan 2.122e-314 4.84013e-310 3.16202e-321 4.84013e-310 1.40595e-312 4.24399e-314 4.84013e-310 1.26481e-321 
+4.84013e-310 1.33804e-312 4.24399e-314 4.84013e-310 2.52962e-321 4.84013e-310 1.37137e-312 2.122e-314 4.84013e-310 2.52962e-321 4.84013e-310 1.39868e-312 2.122e-314 4.84013e-310 3.16202e-321 4.84013e-310 
+1.42717e-312 4.24399e-314 4.84013e-310 3.16202e-321 4.84013e-310 1.51205e-312 4.24399e-314 4.84013e-310 1.26481e-321 4.84013e-310 -nan 4.24399e-314 4.84013e-310 1.89721e-321 4.84013e-310 -nan 
 ITER = 0
 getCentroids
-7.99044 7.12581 7.75601 5.4623 6.53308 6.32271 5.46461 9.05271 9.51052 7.96379 7.87193 12.2012 5.13119 5.13135 7.23106 4.19858 
+2.61416 2.21332 2.39862 1.92422 2.22306 1.99664 2.00836 2.5375 2.51988 2.28526 2.36708 2.23689 1.9242 1.92426 2.34099 1.92435 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
 Updated Centroids: 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-3.15107 3.46005 1.71583 1.25001 2.58521 1.55985 3.44543 1.94645 1.60157 1.93941 3.65053 2.05352 1.93168 3.36718 2.85604 1.62192 
-0.475908 0.808192 3.07354 3.59705 0.087314 1.63378 0.38956 0.997645 0.847075 2.48349 1.3446 0.691984 1.93345 0.151028 0.387519 3.79311 
-3.12444 0.324675 2.41344 1.91633 2.4817 3.32866 0.957162 2.88124 0.46167 0.868205 3.12965 1.30964 3.21349 0.396046 0.576107 2.74782 
-1.96465 1.7083 2.37144 2.11978 1.29753 1.48879 3.49034 1.04517 2.33556 0.051647 3.09005 1.39969 0.19054 1.17024 1.00049 3.97164 
-1.31046 1.07105 1.33602 3.52346 2.35819 2.31157 2.6628 1.44347 1.54176 2.4216 0.00552136 0.71523 1.24438 0.89055 2.37179 1.4088 
-1.09 4.41967 3.66853 2.04637 0.367694 1.46164 2.32001 4.26054 0.497839 2.51839 3.2279 2.50016 3.71972 2.46755 4.40264 2.75522 
-2.36092 1.48984 2.22879 3.86248 4.17732 3.87848 0.897754 4.77205 3.02276 0.398268 3.46436 4.7111 1.91793 3.23942 1.50978 1.01967 
-0.203107 2.57372 4.08191 2.39576 3.05236 0.119813 2.84783 2.7193 2.58321 1.75444 1.65999 4.39711 0.163288 0.0970052 4.31012 0.829931 
-0.862293 1.55164 3.16462 3.626 3.973 0.732748 2.90957 4.18101 0.251045 2.9242 3.65663 1.48088 1.08444 2.58115 1.91349 0.756674 
-5.65011 3.66697 2.67538 2.59644 4.52967 2.69924 4.27349 0.301608 2.87433 1.6731 1.01819 3.40478 3.144 3.62266 4.87566 5.70419 
-0.454099 0.772603 2.9354 3.43503 0.0833867 1.56142 0.371991 0.953684 0.81051 2.37158 1.28433 0.661551 1.84614 0.145087 0.37024 3.62363 
-0.454808 0.771556 2.93773 3.43483 0.0844036 1.5609 0.372227 0.95322 0.810034 2.37116 1.28518 0.66108 1.84701 0.143193 0.36942 3.62304 
-2.40268 1.81928 2.43825 1.57378 2.35375 1.18688 0.773941 0.763709 2.50564 2.68537 1.9487 0.366858 3.09761 3.58518 3.77561 3.44462 
-0.39343 0.670007 2.5484 2.9818 0.0722161 1.35366 0.322525 0.826555 0.703332 2.05809 1.11425 0.57292 1.60268 0.125301 0.320943 3.14479 
+1.43484 0.00459237 1.64551 1.05674 0.195641 0.237772 1.29859 1.7473 0.560032 1.95689 0.200721 1.70761 0.79365 0.162497 0.549346 0.9057 
+1.55742 1.59365 0.821097 0.565535 1.15262 0.762144 1.60675 0.811409 0.824423 1.00305 1.75631 0.983516 0.792033 1.5636 1.3105 0.674525 
+0.248039 0.421079 1.60132 1.87422 0.045423 0.851236 0.202902 0.519806 0.441232 1.29386 0.700589 0.360402 1.00741 0.0786524 0.201873 1.97611 
+1.5864 0.165013 1.22533 0.973161 1.25999 1.69024 0.485936 1.46307 0.234574 0.440799 1.58907 0.664924 1.63162 0.200984 0.292418 1.39519 
+0.942732 0.820126 1.13832 1.01776 0.622747 0.714925 1.67537 0.501532 1.12097 0.0246765 1.48327 0.671899 0.0914948 0.561775 0.480229 1.90654 
+0.70433 0.575622 0.717956 1.89401 1.26753 1.24272 1.43131 0.775745 0.828562 1.30158 0.00294524 0.384279 0.668915 0.478549 1.27487 0.757213 
+0.477332 1.93541 1.60629 0.896102 0.161148 0.639906 1.01573 1.8654 0.217934 1.10294 1.41369 1.09458 1.62847 1.08032 1.92797 1.20643 
+0.988774 0.624146 0.933482 1.61801 1.74982 1.62466 0.376221 1.99951 1.26646 0.166776 1.4515 1.97356 0.803199 1.35715 0.6326 0.427271 
+0.0907953 1.14778 1.82056 1.06836 1.36114 0.0533708 1.26997 1.21268 1.1521 0.782406 0.740187 1.96074 0.072931 0.0432135 1.9221 0.370239 
+0.39867 0.717787 1.46316 1.67648 1.83697 0.338766 1.34542 1.93317 0.116005 1.35162 1.69052 0.684745 0.501526 1.19324 0.884768 0.350098 
+1.7504 1.13628 0.828953 0.804599 1.40336 0.836338 1.32414 0.0934295 0.890585 0.5185 0.315594 1.0547 0.974024 1.12222 1.51053 1.76726 
+0.247635 0.421541 1.60109 1.87362 0.0454699 0.851816 0.202852 0.520277 0.442167 1.29346 0.700561 0.360795 1.00696 0.0792355 0.201929 1.97651 
+0.24821 0.42084 1.60257 1.8735 0.0460026 0.851454 0.202964 0.519931 0.441752 1.29329 0.701072 0.360488 1.0075 0.0779783 0.201465 1.97624 
+1.17525 0.889773 1.19262 0.769717 1.15129 0.580433 0.378308 0.37364 1.22569 1.31362 0.953315 0.179215 1.51507 1.75374 1.84684 1.68479 
+0.247242 0.421192 1.60192 1.87435 0.0453377 0.850827 0.202636 0.519525 0.442123 1.29358 0.70043 0.359964 1.00743 0.0787773 0.201702 1.97673 
 ITER = 1
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan 0 0.453927 -nan 2.23773e-16 0.959286 1.11022e-16 0 2.54384e-16 6.93889e-18 1.24127e-16 0.00024141 0.000394113 -nan 0 -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
 Updated Centroids: 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-1.84472 1.8959 2.69941 2.70946 1.70518 1.72253 1.9746 2.05855 1.35661 2.08466 2.19358 1.72415 2.09061 1.6755 1.89802 2.76452 
+2.15214 0.00691982 2.46822 1.58509 0.293391 0.356675 1.94785 2.62094 0.840046 2.9354 0.300917 2.56155 1.19033 0.243832 0.824053 1.35866 
+1.61122 0.594134 0.724873 0.896759 1.70317 1.03587 0.894824 1.6029 1.38214 0.396992 -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.5864 0.165013 1.22533 0.973161 1.25999 1.69024 
+0.485936 1.46307 0.234574 0.440799 1.58907 0.664924 1.63162 0.200984 0.292418 1.39519 1.10763 1.20461 1.17833 0.937566 0.847724 0.785756 
+1.67797 0.885647 1.04709 0.342857 1.50932 0.779424 0.478902 0.98524 0.740086 1.77191 0.70433 0.575622 0.717956 1.89401 1.26753 1.24272 
+1.43131 0.775745 0.828562 1.30158 0.00294524 0.384279 0.668915 0.478549 1.27487 0.757213 0.477332 1.93541 1.60629 0.896102 0.161148 0.639906 
+1.01573 1.8654 0.217934 1.10294 1.41369 1.09458 1.62847 1.08032 1.92797 1.20643 0.988774 0.624146 0.933482 1.61801 1.74982 1.62466 
+0.376221 1.99951 1.26646 0.166776 1.4515 1.97356 0.803199 1.35715 0.6326 0.427271 0.0907953 1.14778 1.82056 1.06836 1.36114 0.0533708 
+1.26997 1.21268 1.1521 0.782406 0.740187 1.96074 0.072931 0.0432135 1.9221 0.370239 0.39867 0.717787 1.46316 1.67648 1.83697 0.338766 
+1.34542 1.93317 0.116005 1.35162 1.69052 0.684745 0.501526 1.19324 0.884768 0.350098 1.75039 1.13629 0.828859 0.804608 1.40334 0.836372 
+1.32422 0.093458 0.890609 0.518516 0.315524 1.05469 0.974164 1.12229 1.51059 1.76733 0.24764 0.421455 1.60121 1.87374 0.045503 0.851666 
+0.202869 0.520137 0.442003 1.29352 0.700552 0.36068 1.00707 0.0791064 0.201891 1.97647 -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.17525 0.889773 1.19262 0.769717 1.15129 0.580433 
+0.378308 0.37364 1.22569 1.31362 0.953315 0.179215 1.51507 1.75374 1.84684 1.68479 -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.84013e-310 1.02815e-320 6.69382e-310 6.69382e-310 0 0 
 ITER = 2
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan 2.21332 2.39862 -nan 2.22306 1.99664 2.00836 2.5375 2.51988 2.28526 2.36708 2.23689 1.9242 -nan 2.34099 -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
 Updated Centroids: 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.3759 2.40311 1.09856 0.954971 1.73342 1.13824 2.43443 1.10232 1.07282 1.31599 2.55126 1.51494 1.40507 2.4104 2.07411 0.821161 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.37971 0.247365 1.83815 1.45964 1.89014 2.53532 0.72899 2.19455 0.351708 0.66125 2.38369 0.997463 2.44753 0.301595 0.438742 2.09286 
+1.57928 1.61454 1.74747 1.44619 1.15916 1.14292 2.51565 1.13655 1.60767 0.355305 2.25092 1.11533 0.524615 1.26607 0.980207 2.72503 
+1.05654 0.863507 1.0771 2.84085 1.90129 1.86381 2.14691 1.16375 1.24299 1.9524 0.00444217 0.576588 1.00331 0.717955 1.91227 1.13584 
+0.71595 2.90296 2.40948 1.3441 0.241592 0.959949 1.52372 2.79824 0.32695 1.65422 2.12028 1.64201 2.44296 1.62061 2.89179 1.80964 
+1.48339 0.936198 1.40039 2.42706 2.62485 2.43708 0.564216 2.99891 1.89955 0.250221 2.17707 2.96035 1.20502 2.03564 0.948792 0.640809 
+0.135994 1.72164 2.73061 1.60256 2.04176 0.0801097 1.90496 1.81901 1.72803 1.17359 1.11035 2.94123 0.109294 0.0648614 2.88313 0.555237 
+0.598028 1.07634 2.19479 2.51477 2.75546 0.508178 2.018 2.89974 0.174072 2.02783 2.53595 1.02708 0.752178 1.79004 1.32712 0.524926 
+2.62583 1.7044 1.24336 1.20686 2.10517 1.25458 1.98632 0.140192 1.33594 0.777713 0.47325 1.58226 1.4613 1.68361 2.26603 2.65114 
+0.371518 0.632092 2.4018 2.81058 0.0682531 1.27743 0.304352 0.780181 0.663009 1.9404 1.05081 0.541133 1.51058 0.118617 0.302878 2.96474 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.76285 1.33475 1.78893 1.15464 1.72694 0.870754 0.567706 0.560375 1.83843 1.97031 1.42983 0.269044 2.27267 2.63049 2.77019 2.52726 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-2.11461 2.35525 4.44676 4.75399 1.7548 2.65083 2.19593 2.62538 1.83884 3.49606 2.95755 2.1173 3.18953 1.76139 2.11816 4.92094 
 ITER = 3
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan 0.993979 0.912178 -nan -nan -nan -nan -nan 0.944053 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -133,21 +133,21 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.79571 1.98998 1.74072 1.32398 1.37791 1.20804 
+2.50425 1.43845 1.5313 0.736135 2.31179 1.23804 0.874521 1.70231 1.26942 2.44962 1.1719 1.07857 1.21301 2.56737 2.01337 1.63324 
+2.06657 1.32363 1.16352 1.65075 0.485401 0.970481 1.09437 1.00532 1.94619 1.06033 -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 0.73537 0.755845 2.32719 2.43862 0.328394 1.25893 
+0.531209 1.10562 0.709469 1.89909 1.18753 0.7509 1.66404 0.400132 0.671484 2.70207 -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-3.5659 3.58114 4.59778 4.48165 3.38776 3.01971 3.84801 3.85737 2.49211 3.52264 4.03689 3.26852 3.67746 3.31159 3.69524 4.54066 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 2.52962e-321 1.00444e-320 6.69382e-310 6.69382e-310 0 0 
 ITER = 4
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan 2.07457 -nan -nan -nan -nan -nan 1.90894 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -158,19 +158,19 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.63094 1.45479 1.56732 3.42059 2.60898 2.24204 2.8251 1.71473 1.66774 2.3646 0.605188 1.15048 1.41163 1.29367 2.61663 1.50804 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+0.872062 1.09269 3.1003 3.3379 0.408228 1.71052 0.795023 1.3537 0.946429 2.42774 1.6016 0.930491 2.09595 0.564054 0.718685 3.7066 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-3.83579 4.04049 6.34513 6.52618 3.43738 3.94801 4.06934 4.4242 2.97434 4.93404 4.80086 3.66167 4.77638 3.39748 3.91538 6.69708 
 ITER = 5
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan 0.95263 -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -181,19 +181,19 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.78608 1.77536 1.66877 3.08273 2.6459 1.97181 2.83698 1.79812 1.62742 2.09291 1.09367 1.52981 1.52354 1.56068 2.76801 1.40776 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.2376 1.20301 2.98465 3.01039 0.804353 1.6955 1.03026 1.70868 1.01338 2.35183 1.7485 1.19769 2.1911 0.890823 1.11159 3.35408 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-5.28708 5.26638 6.49614 6.25384 5.07035 4.31689 5.72142 5.65619 3.62762 4.96061 5.8802 4.8129 5.26431 4.94768 5.49246 6.3168 
 ITER = 6
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan 2.2103 -nan -nan -nan -nan -nan 1.88911 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -204,19 +204,19 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.42327 2.31616 1.70072 3.94144 3.25978 2.5891 3.69696 1.99312 1.6863 2.40526 1.28618 1.70883 2.35815 2.2321 3.52646 1.55005 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.39054 1.59382 3.72857 3.89422 0.924511 2.12033 1.35864 1.93745 1.3269 2.90825 2.16963 1.40734 2.5575 1.04279 1.25378 4.30074 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-5.55696 5.72573 8.24349 8.29836 5.11997 5.24519 5.94275 6.22302 4.10985 6.37201 6.64417 5.20605 6.36324 5.03357 5.7126 8.47322 
 ITER = 7
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan 0.95263 -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -227,19 +227,19 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.57841 2.63673 1.80217 3.60358 3.2967 2.31887 3.70884 2.07651 1.64598 2.13356 1.77466 2.08816 2.47006 2.4991 3.67785 1.44978 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.75607 1.70415 3.61292 3.56671 1.32064 2.10531 1.59388 2.29243 1.39385 2.83234 2.31654 1.67454 2.65265 1.36955 1.64669 3.94821 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-7.00826 6.95163 8.39451 8.02603 6.75293 5.61406 7.59483 7.45501 4.76312 6.39859 7.7235 6.35727 6.85116 6.58377 7.28968 8.09295 
 ITER = 8
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -256,13 +256,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+1.92841 2.12046 4.32181 4.44803 1.45032 2.5257 1.94408 2.49959 1.68174 3.35761 2.74567 1.88996 3.05339 1.55406 1.81541 4.85578 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-7.27814 7.41098 10.1419 10.0706 6.80255 6.54236 7.81616 8.02184 5.24535 7.80999 8.48747 6.75042 7.95009 6.66966 7.50982 10.2494 
 ITER = 9
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -279,13 +279,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.29394 2.23078 4.20616 4.12051 1.84644 2.51068 2.17932 2.85456 1.74869 3.2817 2.89257 2.15715 3.14854 1.88083 2.20832 4.50326 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-8.72944 8.63687 10.2929 9.79822 8.43551 6.91124 9.46824 9.25383 5.89863 7.83656 9.56681 7.90165 8.43802 8.21986 9.0869 9.86909 
 ITER = 10
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -302,13 +302,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.46628 2.6471 4.91505 5.00184 1.97613 2.93107 2.52952 3.06172 2.03659 3.80698 3.3217 2.37257 3.54929 2.06534 2.37705 5.41083 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-8.99932 9.09622 12.0402 11.8427 8.48514 7.83954 9.68957 9.82066 6.38086 9.24796 10.3308 8.2948 9.53694 8.30575 9.30704 12.0255 
 ITER = 11
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -325,13 +325,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+2.83181 2.75742 4.7994 4.67432 2.37225 2.91605 2.76476 3.4167 2.10354 3.73107 3.4686 2.63977 3.64443 2.39211 2.76995 5.0583 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-10.4506 10.3221 12.1912 11.5704 10.1181 8.20842 11.3416 11.0526 7.03413 9.27454 11.4101 9.44603 10.0249 9.85595 10.8841 11.6452 
 ITER = 12
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -348,13 +348,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+3.00415 3.17373 5.50829 5.55564 2.50193 3.33644 3.11496 3.62385 2.39143 4.25635 3.89773 2.85519 4.04518 2.57662 2.93868 5.96587 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-10.7205 10.7815 13.9386 13.6149 10.1677 9.13672 11.563 11.6195 7.51636 10.6859 12.1741 9.83917 11.1238 9.94184 11.1043 13.8017 
 ITER = 13
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -371,13 +371,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+3.36968 3.28406 5.39264 5.22813 2.89806 3.32141 3.3502 3.97883 2.45838 4.18044 4.04464 3.12239 4.14032 2.90339 3.33158 5.61335 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-12.1718 12.0074 14.0896 13.3426 11.8007 9.50559 13.2151 12.8515 8.16964 10.7125 13.2534 10.9904 11.6117 11.492 12.6813 13.4214 
 ITER = 14
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -394,13 +394,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+3.54201 3.70037 6.10153 6.10945 3.02774 3.7418 3.7004 4.18598 2.74628 4.70571 4.47377 3.33781 4.54107 3.0879 3.50031 6.52092 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-12.4417 12.4667 15.837 15.3871 11.8503 10.4339 13.4364 13.4183 8.65187 12.1239 14.0174 11.3836 12.7106 11.5779 12.9015 15.5778 
 ITER = 15
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -417,13 +417,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+3.90755 3.8107 5.98588 5.78194 3.42387 3.72678 3.93564 4.54096 2.81323 4.6298 4.62067 3.60501 4.63622 3.41467 3.89321 6.16839 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-13.893 13.6926 15.988 15.1148 13.4833 10.8028 15.0885 14.6503 9.30514 12.1505 15.0967 12.5348 13.1986 13.1281 14.4786 15.1975 
 ITER = 16
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -440,13 +440,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+4.07988 4.22701 6.69477 6.66326 3.55355 4.14717 4.28584 4.74811 3.10112 5.15508 5.0498 3.82043 5.03696 3.59917 4.06194 7.07596 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-14.1629 14.1519 17.7353 17.1593 13.5329 11.7311 15.3098 15.2171 9.78737 13.5619 15.8607 12.9279 14.2975 13.214 14.6987 17.3539 
 ITER = 17
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -463,13 +463,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+4.44542 4.33734 6.57912 6.33575 3.94967 4.13215 4.52108 5.10309 3.16807 5.07917 5.1967 4.08762 5.13211 3.92594 4.45484 6.72344 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-15.6141 15.3778 17.8863 16.887 15.1658 12.0999 16.9619 16.4491 10.4406 13.5885 16.94 14.0792 14.7854 14.7642 16.2758 16.9737 
 ITER = 18
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -486,13 +486,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+4.61775 4.75365 7.28801 7.21707 4.07936 4.55254 4.87128 5.31024 3.45597 5.60445 5.62583 4.30304 5.53285 4.11045 4.62357 7.63101 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-15.884 15.8372 19.6337 18.9315 15.2155 13.0282 17.1832 17.0159 10.9229 14.9999 17.704 14.4723 15.8843 14.8501 16.4959 19.1301 
 ITER = 19
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -509,13 +509,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+4.98328 4.86397 7.17236 6.88956 4.47548 4.53752 5.10652 5.66522 3.52292 5.52854 5.77274 4.57024 5.628 4.43722 5.01648 7.27848 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-17.3353 17.0631 19.7847 18.6592 16.8484 13.3971 18.8353 18.2479 11.5762 15.0264 18.7833 15.6235 16.3723 16.4003 18.073 18.7498 
 ITER = 20
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -532,13 +532,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+5.15562 5.28029 7.88125 7.77088 4.60516 4.95791 5.45672 5.87237 3.81082 6.05382 6.20187 4.78566 6.02874 4.62173 5.1852 8.18605 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-17.6052 17.5224 21.532 20.7037 16.8981 14.3254 19.0566 18.8148 12.0584 16.4378 19.5473 16.0167 17.4712 16.4862 18.2931 20.9062 
 ITER = 21
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -555,13 +555,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+5.52115 5.39061 7.76559 7.44337 5.00129 4.94288 5.69196 6.22735 3.87776 5.97791 6.34877 5.05286 6.12389 4.9485 5.57811 7.83353 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-19.0565 18.7483 21.6831 20.4314 18.531 14.6943 20.7087 20.0468 12.7117 16.4644 20.6266 17.1679 17.9591 18.0364 19.8702 20.526 
 ITER = 22
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -578,13 +578,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+5.69349 5.80693 8.47449 8.32469 5.13097 5.36328 6.04216 6.4345 4.16566 6.50318 6.7779 5.26828 6.52463 5.13301 5.74683 8.7411 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-19.3264 19.2077 23.4304 22.4759 18.5806 15.6226 20.93 20.6136 13.1939 17.8758 21.3906 17.5611 19.0581 18.1223 20.0903 22.6824 
 ITER = 23
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -601,13 +601,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+6.05902 5.91725 8.35883 7.99718 5.5271 5.34825 6.2774 6.78948 4.23261 6.42727 6.9248 5.53548 6.61978 5.45978 6.13974 8.38857 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-20.7777 20.4336 23.5814 22.2035 20.2136 15.9915 22.5821 21.8456 13.8472 17.9024 22.47 18.7123 19.546 19.6725 21.6674 22.3021 
 ITER = 24
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -624,13 +624,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+6.23136 6.33356 9.06773 8.8785 5.65678 5.76864 6.6276 6.99664 4.52051 6.95255 7.35393 5.7509 7.02052 5.64429 6.30846 9.29614 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-21.0476 20.8929 25.3288 24.2481 20.2632 16.9198 22.8034 22.4124 14.3294 19.3138 23.2339 19.1054 20.6449 19.7584 21.8876 24.4585 
 ITER = 25
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -647,13 +647,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+6.59689 6.44389 8.95207 8.55099 6.0529 5.75362 6.86284 7.35161 4.58746 6.87664 7.50084 6.01809 7.11567 5.97106 6.70137 8.94362 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-22.4989 22.1188 25.4798 23.9757 21.8962 17.2887 24.4555 23.6444 14.9827 19.3404 24.3133 20.2567 21.1328 21.3086 23.4646 24.0782 
 ITER = 26
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -670,13 +670,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+6.76922 6.8602 9.66096 9.43231 6.18259 6.17401 7.21304 7.55877 4.87535 7.40192 7.92996 6.23351 7.51642 6.15556 6.87009 9.85119 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-22.7687 22.5782 27.2271 26.0203 21.9458 18.217 24.6768 24.2112 15.4649 20.7518 25.0772 20.6498 22.2318 21.3945 23.6848 26.2347 
 ITER = 27
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -693,13 +693,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+7.13476 6.97053 9.54531 9.1048 6.57871 6.15899 7.44828 7.91375 4.9423 7.32601 8.07687 6.50071 7.61156 6.48233 7.263 9.49866 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-24.22 23.804 27.3782 25.7479 23.5788 18.5858 26.3289 25.4432 16.1182 20.7783 26.1566 21.801 22.7197 22.9447 25.2619 25.8544 
 ITER = 28
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -716,13 +716,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+7.30709 7.38684 10.2542 9.98612 6.70839 6.57938 7.79848 8.1209 5.2302 7.85128 8.506 6.71613 8.01231 6.66684 7.43172 10.4062 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-24.4899 24.2634 29.1255 27.7924 23.6284 19.5141 26.5502 26.01 16.6004 22.1897 26.9205 22.1942 23.8186 23.0306 25.482 28.0108 
 ITER = 29
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -739,13 +739,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+7.67262 7.49717 10.1386 9.65861 7.10452 6.56436 8.03372 8.47588 5.29715 7.77537 8.6529 6.98333 8.10745 6.99361 7.82463 10.0537 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-25.9412 25.4893 29.2765 27.5201 25.2614 19.883 28.2023 27.242 17.2537 22.2163 27.9999 23.3454 24.3065 24.5808 27.0591 27.6305 
 ITER = 30
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -762,13 +762,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+7.84496 7.91348 10.8474 10.5399 7.2342 6.98475 8.38392 8.68303 5.58504 8.30065 9.08203 7.19875 8.5082 7.17812 7.99335 10.9613 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-26.2111 25.9486 31.0239 29.5646 25.311 20.8113 28.4237 27.8089 17.7359 23.6277 28.7638 23.7386 25.4055 24.6666 27.2792 29.787 
 ITER = 31
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -785,13 +785,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+8.21049 8.0238 10.7318 10.2124 7.63033 6.96972 8.61916 9.03801 5.65199 8.22474 9.22894 7.46595 8.60335 7.50489 8.38626 10.6088 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-27.6624 27.1745 31.1749 29.2923 26.9439 21.1802 30.0757 29.0409 18.3892 23.6543 29.8432 24.8898 25.8934 26.2168 28.8563 29.4067 
 ITER = 32
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -808,13 +808,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+8.38283 8.44012 11.4407 11.0937 7.76001 7.39011 8.96936 9.24516 5.93989 8.75002 9.65806 7.68137 9.00409 7.6894 8.55498 11.5163 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-27.9323 27.6339 32.9222 31.3368 26.9936 22.1085 30.2971 29.6077 18.8714 25.0657 30.6072 25.2829 26.9923 26.3027 29.0764 31.5631 
 ITER = 33
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -831,13 +831,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+8.74836 8.55044 11.325 10.7662 8.15613 7.37509 9.2046 9.60014 6.00684 8.67411 9.80497 7.94856 9.09924 8.01617 8.94789 11.1638 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-29.3836 28.8598 33.0733 31.0645 28.6265 22.4774 31.9491 30.8397 19.5247 25.0923 31.6865 26.4342 27.4802 27.8529 30.6535 31.1828 
 ITER = 34
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -854,13 +854,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+8.9207 8.96675 12.0339 11.6475 8.28582 7.79548 9.5548 9.80729 6.29473 9.19939 10.2341 8.16398 9.49998 8.20068 9.11662 12.0714 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-29.6535 29.3191 34.8206 33.109 28.6761 23.4057 32.1705 31.4065 20.0069 26.5037 32.4505 26.8273 28.5792 27.9388 30.8737 33.3392 
 ITER = 35
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -877,13 +877,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+9.28623 9.07708 11.9183 11.32 8.68194 7.78046 9.79004 10.1623 6.36168 9.12348 10.381 8.43118 9.59513 8.52745 9.50952 11.7188 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-31.1048 30.545 34.9716 32.8367 30.3091 23.7745 33.8225 32.6385 20.6602 26.5302 33.5298 27.9785 29.0671 29.489 32.4507 32.959 
 ITER = 36
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -900,13 +900,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+9.45856 9.49339 12.6272 12.2014 8.81162 8.20085 10.1402 10.3694 6.64958 9.64875 10.8101 8.6466 9.99587 8.71195 9.67825 12.6264 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-31.3746 31.0044 36.719 34.8812 30.3587 24.7028 34.0439 33.2053 21.1424 27.9416 34.2938 28.3717 30.166 29.5749 32.6709 35.1154 
 ITER = 37
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -923,13 +923,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+9.8241 9.60372 12.5115 11.8738 9.20775 8.18583 10.3755 10.7244 6.71653 9.57284 10.957 8.9138 10.091 9.03872 10.0712 12.2739 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-32.8259 32.2303 36.87 34.6089 31.9917 25.0717 35.696 34.4373 21.7957 27.9682 35.3731 29.5229 30.6539 31.1251 34.248 34.7351 
 ITER = 38
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -946,13 +946,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+9.99643 10.02 13.2204 12.7552 9.33743 8.60622 10.7257 10.9316 7.00442 10.0981 11.3862 9.12922 10.4918 9.22323 10.2399 13.1815 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-33.0958 32.6896 38.6173 36.6534 32.0413 26 35.9173 35.0041 22.2779 29.3796 36.1371 29.9161 31.7529 31.211 34.4681 36.8915 
 ITER = 39
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -969,13 +969,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+10.362 10.1304 13.1047 12.4277 9.73356 8.59119 10.9609 11.2865 7.07137 10.0222 11.5331 9.39642 10.5869 9.55 10.6328 12.8289 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-34.5471 33.9155 38.7683 36.3811 33.6743 26.3689 37.5694 36.2361 22.9312 29.4062 37.2164 31.0673 32.2408 32.7612 36.0452 36.5113 
 ITER = 40
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -992,13 +992,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+10.5343 10.5467 13.8136 13.309 9.86324 9.01158 11.3111 11.4937 7.35927 10.5475 11.9622 9.61184 10.9877 9.73451 10.8015 13.7365 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-34.817 34.3749 40.5157 38.4256 33.7239 27.2972 37.7907 36.803 23.4134 30.8176 37.9804 31.4604 33.3397 32.8471 36.2653 38.6677 
 ITER = 41
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1015,13 +1015,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+10.8998 10.657 13.698 12.9815 10.2594 8.99656 11.5464 11.8487 7.42622 10.4716 12.1091 9.87903 11.0828 10.0613 11.1944 13.384 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-36.2683 35.6007 40.6667 38.1532 35.3569 27.6661 39.4428 38.035 24.0667 30.8442 39.0597 32.6117 33.8276 34.3973 37.8424 38.2874 
 ITER = 42
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1038,13 +1038,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+11.0722 11.0733 14.4069 13.8628 10.389 9.41695 11.8966 12.0558 7.71411 10.9969 12.5382 10.0945 11.4835 10.2458 11.3631 14.2915 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-36.5382 36.0601 42.4141 40.1978 35.4065 28.5944 39.6641 38.6018 24.5489 32.2556 39.8237 33.0048 34.9266 34.4832 38.0625 40.4438 
 ITER = 43
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1061,13 +1061,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+11.4377 11.1836 14.2912 13.5353 10.7852 9.40193 12.1318 12.4108 7.78106 10.9209 12.6851 10.3617 11.5787 10.5726 11.756 13.939 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-37.9895 37.286 42.5651 39.9254 37.0394 28.9632 41.3162 39.8338 25.2022 32.2821 40.903 34.156 35.4145 36.0334 39.6396 40.0635 
 ITER = 44
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1084,13 +1084,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+11.61 11.5999 15.0001 14.4166 10.9149 9.82232 12.482 12.6179 8.06896 11.4462 13.1143 10.5771 11.9794 10.7571 11.9248 14.8466 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-38.2594 37.7453 44.3124 41.97 37.0891 29.8915 41.5375 40.4006 25.6844 33.6935 41.667 34.5492 36.5134 36.1193 39.8598 42.22 
 ITER = 45
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1107,13 +1107,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+11.9756 11.7103 14.8845 14.0891 11.311 9.8073 12.7172 12.9729 8.13591 11.3703 13.2612 10.8443 12.0746 11.0838 12.3177 14.4941 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-39.7106 38.9712 44.4634 41.6976 38.722 30.2604 43.1896 41.6326 26.3377 33.7201 42.7463 35.7004 37.0014 37.6695 41.4368 41.8397 
 ITER = 46
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1130,13 +1130,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+12.1479 12.1266 15.5934 14.9704 11.4407 10.2277 13.0674 13.1801 8.42381 11.8956 13.6903 11.0597 12.4753 11.2683 12.4864 15.4016 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-39.9805 39.4306 46.2108 43.7421 38.7716 31.1887 43.4109 42.1994 26.82 35.1315 43.5103 36.0936 38.1003 37.7554 41.657 43.9961 
 ITER = 47
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1153,13 +1153,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+12.5134 12.2369 15.4777 14.6429 11.8368 10.2127 13.3027 13.5351 8.49075 11.8197 13.8372 11.3269 12.5705 11.5951 12.8793 15.0491 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-41.4318 40.6565 46.3618 43.4698 40.4046 31.5576 45.063 43.4314 27.4732 35.1581 44.5896 37.2448 38.5882 39.3056 43.2341 43.6158 
 ITER = 48
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1176,13 +1176,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+12.6858 12.6532 16.1866 15.5242 11.9665 10.6331 13.6529 13.7422 8.77865 12.345 14.2663 11.5423 12.9712 11.7796 13.048 15.9567 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-41.7017 41.1158 48.1092 45.5143 40.4542 32.4859 45.2843 43.9982 27.9555 36.5695 45.3536 37.6379 39.6871 39.3914 43.4542 45.7722 
 ITER = 49
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1199,13 +1199,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+13.0513 12.7635 16.0709 15.1967 12.3626 10.618 13.8881 14.0972 8.8456 12.269 14.4132 11.8095 13.0664 12.1064 13.4409 15.6042 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-43.153 42.3417 48.2602 45.242 42.0872 32.8548 46.9364 45.2302 28.6087 36.5961 46.4329 38.7892 40.1751 40.9416 45.0313 45.392 
 ITER = 50
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1222,13 +1222,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+13.2236 13.1799 16.7798 16.078 12.4923 11.0384 14.2383 14.3043 9.1335 12.7943 14.8424 12.0249 13.4671 12.2909 13.6097 16.5117 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-43.4229 42.8011 50.0075 47.2865 42.1368 33.7831 47.1577 45.7971 29.091 38.0075 47.1969 39.1823 41.274 41.0275 45.2514 47.5484 
 ITER = 51
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1245,13 +1245,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+13.5892 13.2902 16.6642 15.7505 12.8884 11.0234 14.4736 14.6593 9.20045 12.7184 14.9893 12.2921 13.5623 12.6177 14.0026 16.1592 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-44.8742 44.027 50.1585 47.0142 43.7698 34.1519 48.8098 47.0291 29.7442 38.034 48.2762 40.3335 41.7619 42.5777 46.8285 47.1681 
 ITER = 52
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1268,13 +1268,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+13.7615 13.7065 17.3731 16.6318 13.0181 11.4438 14.8238 14.8665 9.48834 13.2437 15.4184 12.5075 13.963 12.8022 14.1713 17.0668 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-45.1441 44.4863 51.9059 49.0587 43.8194 35.0802 49.0312 47.5959 30.2265 39.4454 49.0402 40.7267 42.8608 42.6636 47.0486 49.3245 
 ITER = 53
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1291,13 +1291,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+14.127 13.8168 17.2574 16.3043 13.4142 11.4288 15.059 15.2215 9.55529 13.1678 15.5653 12.7747 14.0582 13.1289 14.5642 16.7142 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-46.5954 45.7122 52.0569 48.7864 45.4524 35.4491 50.6832 48.8279 30.8797 39.472 50.1196 41.8779 43.3488 44.2138 48.6257 48.9443 
 ITER = 54
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1314,13 +1314,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+14.2994 14.2331 17.9663 17.1856 13.5439 11.8492 15.4092 15.4286 9.84319 13.6931 15.9944 12.9902 14.4589 13.3135 14.7329 17.6218 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-46.8652 46.1715 53.8043 50.8309 45.502 36.3774 50.9046 49.3947 31.362 40.8834 50.8835 42.2711 44.4477 44.2997 48.8458 51.1007 
 ITER = 55
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1337,13 +1337,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+14.6649 14.3435 17.8507 16.8581 13.94 11.8341 15.6444 15.7836 9.91014 13.6171 16.1413 13.2574 14.554 13.6402 15.1258 17.2693 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-48.3165 47.3974 53.9553 50.5586 47.1349 36.7463 52.5566 50.6267 32.0152 40.91 51.9629 43.4223 44.9356 45.8499 50.4229 50.7204 
 ITER = 56
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1360,13 +1360,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+14.8372 14.7598 18.5596 17.7394 14.0697 12.2545 15.9946 15.9907 10.198 14.1424 16.5705 13.4728 14.9548 13.8247 15.2946 18.1769 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-48.5864 47.8568 55.7026 52.6031 47.1846 37.6746 52.778 51.1935 32.4975 42.3214 52.7268 43.8154 46.0345 45.9358 50.6431 52.8768 
 ITER = 57
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1383,13 +1383,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+15.2028 14.8701 18.4439 17.4119 14.4658 12.2395 16.2299 16.3457 10.265 14.0665 16.7174 13.74 15.0499 14.1515 15.6875 17.8243 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-50.0377 49.0827 55.8536 52.3308 48.8175 38.0435 54.43 52.4255 33.1508 42.348 53.8062 44.9667 46.5225 47.486 52.2201 52.4965 
 ITER = 58
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1406,13 +1406,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+15.3751 15.2864 19.1528 18.2933 14.5955 12.6599 16.5801 16.5529 10.5529 14.5918 17.1465 13.9554 15.4507 14.336 15.8562 18.7319 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-50.3076 49.542 57.601 54.3753 48.8671 38.9718 54.6514 52.9923 33.633 43.7594 54.5701 45.3598 47.6214 47.5719 52.4403 54.653 
 ITER = 59
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1429,13 +1429,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+15.7406 15.3967 19.0371 17.9657 14.9916 12.6449 16.8153 16.9078 10.6198 14.5159 17.2934 14.2226 15.5458 14.6628 16.2491 18.3794 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-51.7589 50.7679 57.752 54.1029 50.5001 39.3407 56.3035 54.2243 34.2863 43.7859 55.6495 46.511 48.1093 49.1221 54.0174 54.2727 
 ITER = 60
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1452,13 +1452,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+15.913 15.8131 19.746 18.8471 15.1213 13.0653 17.1655 17.115 10.9077 15.0412 17.7225 14.438 15.9466 14.8473 16.4178 19.2869 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-52.0288 51.2273 59.4993 56.1475 50.5497 40.269 56.5248 54.7912 34.7685 45.1973 56.4134 46.9042 49.2082 49.208 54.2375 56.4291 
 ITER = 61
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1475,13 +1475,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+16.2785 15.9234 19.6304 18.5195 15.5174 13.0502 17.4008 17.47 10.9747 14.9652 17.8694 14.7052 16.0417 15.1741 16.8107 18.9344 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-53.4801 52.4532 59.6504 55.8751 52.1827 40.6378 58.1769 56.0232 35.4218 45.2239 57.4928 48.0554 49.6962 50.7582 55.8146 56.0488 
 ITER = 62
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1498,13 +1498,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+16.4509 16.3397 20.3393 19.4009 15.6471 13.4706 17.751 17.6771 11.2626 15.4905 18.2986 14.9206 16.4425 15.3586 16.9794 19.842 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-53.75 52.9125 61.3977 57.9197 52.2323 41.5661 58.3982 56.59 35.904 46.6353 58.2568 48.4486 50.7951 50.8441 56.0347 58.2053 
 ITER = 63
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1515,19 +1515,19 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 55.2012 54.1384 
-61.5487 57.6473 53.8653 41.935 60.0503 57.822 36.5573 46.6619 59.3361 49.5998 51.283 52.3943 57.6118 57.825 7.58885e-321 1.51826e-320 
-6.88839e-310 6.88839e-310 0 0 4.89314e-310 -nan 2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 
-2.122e-314 4.89314e-310 6.32404e-322 4.89314e-310 -nan 2.122e-314 4.89314e-310 8.22125e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 5.05923e-321 4.89314e-310 7.60997e-313 2.122e-314 
-4.89314e-310 5.69164e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 4.24399e-314 4.89314e-310 6.32404e-322 4.89314e-310 4.39039e-313 4.24399e-314 4.89314e-310 
-2.01104e-319 4.89314e-310 8.79392e-313 2.122e-314 4.89314e-310 5.05923e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 2.52962e-321 
-4.89314e-310 7.7721e-313 4.24399e-314 4.89314e-310 2.52962e-321 4.89314e-310 1.08038e-312 2.122e-314 4.89314e-310 3.16202e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 3.16202e-321 4.89314e-310 
-1.40595e-312 4.24399e-314 4.89314e-310 1.26481e-321 4.89314e-310 1.33804e-312 4.24399e-314 4.89314e-310 2.52962e-321 4.89314e-310 1.37137e-312 2.122e-314 4.89314e-310 2.52962e-321 4.89314e-310 1.39868e-312 
-2.122e-314 4.89314e-310 3.16202e-321 4.89314e-310 1.42717e-312 4.24399e-314 4.89314e-310 3.16202e-321 4.89314e-310 1.51205e-312 4.24399e-314 4.89314e-310 1.26481e-321 4.89314e-310 -nan 4.24399e-314 
-4.89314e-310 1.89721e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 1.89721e-321 4.89314e-310 -nan 2.122e-314 4.89314e-310 2.52962e-321 4.89314e-310 1.48243e-312 2.122e-314 4.89314e-310 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+16.8164 16.45 20.2236 19.0734 16.0432 13.4556 17.9862 18.0321 11.3295 15.4146 18.4455 15.1878 16.5376 15.6853 17.3724 19.4895 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 ITER = 64
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1544,13 +1544,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+16.9887 16.8663 20.9325 19.9547 16.1729 13.876 18.3364 18.2393 11.6174 15.9399 18.8746 15.4032 16.9383 15.8698 17.5411 20.397 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-55.4711 54.5978 63.2961 59.6918 53.9149 42.8633 60.2716 58.3888 37.0395 48.0733 60.1001 49.9929 52.3819 52.4802 57.8319 59.9814 
 ITER = 65
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1567,13 +1567,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+17.3543 16.9767 20.8169 19.6272 16.5691 13.861 18.5716 18.5942 11.6844 15.864 19.0215 15.6704 17.0335 16.1966 17.934 20.0445 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-56.9224 55.8237 63.4471 59.4195 55.5479 43.2322 61.9237 59.6208 37.6928 48.0999 61.1794 51.1442 52.8699 54.0304 59.409 59.6011 
 ITER = 66
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1590,13 +1590,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+17.5266 17.393 21.5257 20.5085 16.6987 14.2814 18.9218 18.8014 11.9723 16.3893 19.4506 15.8859 17.4342 16.3811 18.1027 20.9521 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-57.1923 56.283 65.1944 61.464 55.5975 44.1605 62.145 60.1876 38.175 49.5113 61.9434 51.5373 53.9688 54.1162 59.6292 61.7575 
 ITER = 67
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1613,13 +1613,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+17.8921 17.5033 21.4101 20.181 17.0949 14.2663 19.1571 19.1564 12.0392 16.3134 19.5975 16.1531 17.5294 16.7079 18.4956 20.5996 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-58.6436 57.5089 65.3455 61.1917 57.2304 44.5294 63.7971 61.4196 38.8283 49.5378 63.0227 52.6885 54.4567 55.6664 61.2062 61.3773 
 ITER = 68
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1636,13 +1636,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+18.0645 17.9196 22.119 21.0623 17.2245 14.6867 19.5073 19.3635 12.3271 16.8386 20.0267 16.3685 17.9301 16.8924 18.6643 21.5071 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-58.9135 57.9682 67.0928 63.2362 57.2801 45.4577 64.0184 61.9864 39.3105 50.9492 63.7867 53.0817 55.5557 55.7523 61.4264 63.5337 
 ITER = 69
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1659,13 +1659,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+18.43 18.0299 22.0033 20.7348 17.6207 14.6717 19.7425 19.7185 12.3941 16.7627 20.1736 16.6357 18.0253 17.2192 19.0572 21.1546 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-60.3648 59.1941 67.2438 62.9639 58.913 45.8265 65.6705 63.2184 39.9638 50.9758 64.866 54.2329 56.0436 57.3025 63.0035 63.1534 
 ITER = 70
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1682,13 +1682,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+18.6023 18.4462 22.7122 21.6161 17.7503 15.0921 20.0927 19.9257 12.682 17.288 20.6027 16.8511 18.426 17.4037 19.226 22.0622 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-60.6347 59.6535 68.9912 65.0084 58.9626 46.7548 65.8918 63.7853 40.446 52.3872 65.63 54.6261 57.1425 57.3884 63.2236 65.3098 
 ITER = 71
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1705,13 +1705,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+18.9679 18.5566 22.5966 21.2886 18.1465 15.0771 20.328 20.2806 12.7489 17.2121 20.7496 17.1183 18.5212 17.7304 19.6189 21.7097 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-62.086 60.8794 69.1422 64.7361 60.5956 47.1237 67.5439 65.0173 41.0993 52.4138 66.7093 55.7773 57.6304 58.9386 64.8007 64.9296 
 ITER = 72
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1728,13 +1728,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+19.1402 18.9729 23.3055 22.1699 18.2762 15.4975 20.6782 20.4878 13.0368 17.7374 21.1787 17.3337 18.9219 17.915 19.7876 22.6172 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-62.3558 61.3387 70.8895 66.7806 60.6452 48.052 67.7652 65.5841 41.5815 53.8252 67.4733 56.1704 58.7294 59.0245 65.0208 67.086 
 ITER = 73
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1751,13 +1751,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+19.5057 19.0832 23.1898 21.8424 18.6723 15.4824 20.9134 20.8428 13.1037 17.6615 21.3256 17.6009 19.0171 18.2417 20.1805 22.2647 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-63.8071 62.5646 71.0405 66.5083 62.2782 48.4209 69.4173 66.8161 42.2348 53.8518 68.5526 57.3217 59.2173 60.5747 66.5979 66.7057 
 ITER = 74
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1774,13 +1774,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+19.6781 19.4995 23.8987 22.7237 18.802 15.9028 21.2636 21.0499 13.3916 18.1867 21.7548 17.8163 19.4178 18.4262 20.3492 23.1723 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-64.077 63.024 72.7879 68.5528 62.3278 49.3492 69.6386 67.3829 42.717 55.2632 69.3166 57.7148 60.3162 60.6606 66.818 68.8621 
 ITER = 75
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1797,13 +1797,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+20.0436 19.6098 23.783 22.3962 19.1981 15.8878 21.4988 21.4049 13.4586 18.1108 21.9017 18.0835 19.513 18.753 20.7421 22.8197 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-65.5283 64.2499 72.9389 68.2805 63.9608 49.7181 71.2907 68.6149 43.3703 55.2897 70.3959 58.8661 60.8041 62.2108 68.3951 68.4818 
 ITER = 76
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1820,13 +1820,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+20.2159 20.0262 24.4919 23.2775 19.3278 16.3082 21.849 21.612 13.7465 18.6361 22.3308 18.2989 19.9137 18.9375 20.9109 23.7273 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-65.7982 64.7092 74.6863 70.325 64.0104 50.6464 71.5121 69.1817 43.8525 56.7011 71.1599 59.2592 61.9031 62.2967 68.6152 70.6383 
 ITER = 77
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1843,13 +1843,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+20.5815 20.1365 24.3763 22.95 19.7239 16.2932 22.0843 21.967 13.8134 18.5602 22.4777 18.5661 20.0088 19.2643 21.3038 23.3748 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-67.2495 65.9351 74.8373 70.0526 65.6434 51.0152 73.1641 70.4137 44.5058 56.7277 72.2392 60.4104 62.391 63.8469 70.1923 70.258 
 ITER = 78
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1866,13 +1866,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+20.7538 20.5528 25.0852 23.8313 19.8536 16.7136 22.4345 22.1742 14.1013 19.0855 22.9068 18.7816 20.4096 19.4488 21.4725 24.2824 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-67.5194 66.3945 76.5846 72.0972 65.693 51.9435 73.3855 70.9805 44.988 58.1391 73.0032 60.8036 63.4899 63.9328 70.4125 72.4144 
 ITER = 79
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1889,13 +1889,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+21.1193 20.6631 24.9695 23.5038 20.2497 16.6985 22.6697 22.5292 14.1683 19.0096 23.0537 19.0488 20.5047 19.7756 21.8654 23.9298 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-68.9707 67.6203 76.7356 71.8248 67.3259 52.3124 75.0375 72.2125 45.6413 58.1657 74.0825 61.9548 63.9778 65.483 71.9895 72.0341 
 ITER = 80
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1912,13 +1912,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+21.2917 21.0794 25.6784 24.3852 20.3794 17.1189 23.0199 22.7363 14.4562 19.5348 23.4829 19.2642 20.9055 19.9601 22.0341 24.8374 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-69.2406 68.0797 78.483 73.8694 67.3756 53.2407 75.2589 72.7794 46.1235 59.5771 74.8465 62.348 65.0768 65.5689 72.2097 74.1905 
 ITER = 81
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1935,13 +1935,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+21.6572 21.1898 25.5628 24.0576 20.7755 17.1039 23.2552 23.0913 14.5231 19.4589 23.6298 19.5314 21.0006 20.2868 22.427 24.4849 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-70.6919 69.3056 78.634 73.597 69.0085 53.6096 76.9109 74.0114 46.7768 59.6037 75.9258 63.4992 65.5647 67.1191 73.7868 73.8103 
 ITER = 82
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1958,13 +1958,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+21.8295 21.6061 26.2717 24.939 20.9052 17.5243 23.6054 23.2984 14.811 19.9842 24.0589 19.7468 21.4014 20.4713 22.5958 25.3924 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-70.9617 69.7649 80.3814 75.6415 69.0582 54.5379 77.1323 74.5782 47.259 61.0151 76.6898 63.8923 66.6636 67.205 74.0069 75.9667 
 ITER = 83
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -1981,13 +1981,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+22.1951 21.7164 26.156 24.6114 21.3013 17.5093 23.8406 23.6534 14.878 19.9083 24.2058 20.014 21.4965 20.7981 22.9887 25.0399 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-72.413 70.9908 80.5324 75.3692 70.6911 54.9068 78.7844 75.8102 47.9123 61.0416 77.7692 65.0436 67.1515 68.7552 75.584 75.5864 
 ITER = 84
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2004,13 +2004,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+22.3674 22.1327 26.8649 25.4928 21.431 17.9297 24.1908 23.8606 15.1659 20.4336 24.6349 20.2294 21.8973 20.9826 23.1574 25.9475 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-72.6829 71.4502 82.2797 77.4137 70.7407 55.8351 79.0057 76.377 48.3946 62.453 78.5331 65.4367 68.2505 68.8411 75.8041 77.7428 
 ITER = 85
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2027,13 +2027,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+22.7329 22.243 26.7492 25.1653 21.8271 17.9147 24.426 24.2156 15.2328 20.3577 24.7818 20.4966 21.9924 21.3094 23.5503 25.595 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-74.1342 72.6761 82.4307 77.1414 72.3737 56.204 80.6578 77.609 49.0478 62.4796 79.6125 66.5879 68.7384 70.3913 77.3812 77.3626 
 ITER = 86
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2050,13 +2050,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+22.9053 22.6593 27.4581 26.0466 21.9568 18.335 24.7762 24.4227 15.5207 20.8829 25.211 20.712 22.3932 21.4939 23.719 26.5025 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-74.4041 73.1354 84.1781 79.1859 72.4233 57.1323 80.8791 78.1758 49.5301 63.891 80.3764 66.9811 69.8373 70.4771 77.6013 79.519 
 ITER = 87
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2073,13 +2073,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+23.2708 22.7697 27.3425 25.7191 22.3529 18.32 25.0115 24.7777 15.5877 20.807 25.3579 20.9792 22.4883 21.8207 24.1119 26.15 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-75.8554 74.3613 84.3291 78.9136 74.0563 57.5011 82.5312 79.4078 50.1833 63.9176 81.4558 68.1323 70.3252 72.0273 79.1784 79.1387 
 ITER = 88
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2096,13 +2096,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+23.4431 23.186 28.0514 26.6004 22.4826 18.7404 25.3617 24.9848 15.8756 21.3323 25.787 21.1947 22.889 22.0052 24.2806 27.0576 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-76.1253 74.8207 86.0765 80.9581 74.1059 58.4294 82.7525 79.9746 50.6656 65.329 82.2197 68.5255 71.4242 72.1132 79.3986 81.2951 
 ITER = 89
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2119,13 +2119,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+23.8087 23.2963 27.9357 26.2729 22.8787 18.7254 25.5969 25.3398 15.9425 21.2564 25.9339 21.4619 22.9842 22.3319 24.6736 26.7051 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-77.5766 76.0466 86.2275 80.6858 75.7389 58.7983 84.4046 81.2066 51.3188 65.3556 83.2991 69.6767 71.9121 73.6634 80.9756 80.9149 
 ITER = 90
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2142,13 +2142,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+23.981 23.7126 28.6446 27.1542 23.0084 19.1458 25.9471 25.547 16.2304 21.7817 26.363 21.6773 23.3849 22.5165 24.8423 27.6126 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-77.8464 76.5059 87.9748 82.7303 75.7885 59.7266 84.6259 81.7735 51.8011 66.767 84.063 70.0698 73.011 73.7493 81.1958 83.0713 
 ITER = 91
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2165,13 +2165,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+24.3465 23.823 28.529 26.8267 23.4045 19.1308 26.1824 25.9019 16.2974 21.7058 26.5099 21.9445 23.4801 22.8432 25.2352 27.2601 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-79.2977 77.7318 88.1258 82.458 77.4215 60.0955 86.278 83.0055 52.4543 66.7935 85.1424 71.2211 73.499 75.2995 82.7729 82.691 
 ITER = 92
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2188,13 +2188,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+24.5189 24.2393 29.2379 27.708 23.5342 19.5511 26.5326 26.1091 16.5852 22.231 26.9391 22.1599 23.8808 23.0277 25.4039 28.1677 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-79.5676 78.1912 89.8732 84.5025 77.4711 61.0238 86.4993 83.5723 52.9366 68.2049 85.9064 71.6142 74.5979 75.3854 82.993 84.8474 
 ITER = 93
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2211,13 +2211,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+24.8844 24.3496 29.1222 27.3805 23.9304 19.5361 26.7678 26.4641 16.6522 22.1551 27.086 22.4271 23.976 23.3545 25.7968 27.8151 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-81.0189 79.417 90.0242 84.2302 79.104 61.3927 88.1514 84.8043 53.5898 68.2315 86.9857 72.7654 75.0858 76.9356 84.5701 84.4671 
 ITER = 94
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2234,13 +2234,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+25.0567 24.7659 29.8311 28.2618 24.06 19.9565 27.118 26.6712 16.9401 22.6804 27.5151 22.6425 24.3767 23.539 25.9655 28.7227 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-81.2888 79.8764 91.7715 86.2747 79.1537 62.321 88.3727 85.3711 54.0721 69.6429 87.7497 73.1586 76.1847 77.0215 84.7902 86.6236 
 ITER = 95
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2257,13 +2257,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+25.4223 24.8762 29.7154 27.9343 24.4562 19.9415 27.3532 27.0262 17.007 22.6045 27.662 22.9097 24.4719 23.8658 26.3584 28.3702 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-82.7401 81.1023 91.9226 86.0023 80.7866 62.6898 90.0248 86.6031 54.7254 69.6695 88.829 74.3098 76.6727 78.5717 86.3673 86.2433 
 ITER = 96
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2280,13 +2280,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+25.5946 25.2925 30.4243 28.8156 24.5858 20.3619 27.7034 27.2334 17.2949 23.1298 28.0911 23.1251 24.8726 24.0503 26.5272 29.2778 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-83.01 81.5616 93.6699 88.0469 80.8362 63.6181 90.2461 87.1699 55.2076 71.0809 89.593 74.703 77.7716 78.6576 86.5874 88.3997 
 ITER = 97
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2303,13 +2303,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+25.9601 25.4029 30.3087 28.4881 24.982 20.3469 27.9387 27.5883 17.3619 23.0539 28.238 23.3923 24.9678 24.3771 26.9201 28.9252 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-84.4613 82.7875 93.8209 87.7745 82.4692 63.987 91.8982 88.4019 55.8609 71.1075 90.6723 75.8542 78.2595 80.2078 88.1645 88.0194 
 ITER = 98
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2326,13 +2326,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+26.1325 25.8192 31.0176 29.3694 25.1117 20.7672 28.2889 27.7955 17.6498 23.5791 28.6672 23.6077 25.3685 24.5616 27.0888 29.8328 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-84.7312 83.2469 95.5683 89.8191 82.5188 64.9153 92.1196 88.9687 56.3431 72.5189 91.4363 76.2473 79.3584 80.2937 88.3847 90.1758 
 ITER = 99
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2349,13 +2349,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+26.498 25.9295 30.9019 29.0419 25.5078 20.7522 28.5241 28.1505 17.7167 23.5032 28.8141 23.8749 25.4636 24.8883 27.4817 29.4803 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-86.1825 84.4728 95.7193 89.5467 84.1518 65.2842 93.7716 90.2007 56.9964 72.5454 92.5156 77.3986 79.8464 81.8439 89.9617 89.7956 
 ITER = 100
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2372,13 +2372,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+26.6703 26.3458 31.6108 29.9232 25.6375 21.1726 28.8743 28.3576 18.0046 24.0285 29.2432 24.0904 25.8644 25.0728 27.6504 30.3878 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-86.4523 84.9321 97.4666 91.5912 84.2014 66.2125 93.993 90.7676 57.4786 73.9568 93.2796 77.7917 80.9453 81.9298 90.1819 91.952 
 ITER = 101
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2395,13 +2395,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+27.0359 26.4561 31.4952 29.5957 26.0336 21.1576 29.1096 28.7126 18.0716 23.9526 29.3901 24.3576 25.9595 25.3996 28.0433 30.0353 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-87.9036 86.158 97.6177 91.3189 85.8344 66.5814 95.645 91.9996 58.1319 73.9834 94.3589 78.9429 81.4332 83.48 91.759 91.5717 
 ITER = 102
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2418,13 +2418,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+27.2082 26.8725 32.204 30.4771 26.1633 21.578 29.4598 28.9198 18.3595 24.4779 29.8192 24.573 26.3603 25.5841 28.2121 30.9429 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-88.1735 86.6174 99.365 93.3634 85.884 67.5097 95.8664 92.5664 58.6141 75.3948 95.1229 79.3361 82.5321 83.5659 91.9791 93.7281 
 ITER = 103
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2441,13 +2441,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+27.5737 26.9828 32.0884 30.1495 26.5594 21.563 29.695 29.2747 18.4264 24.402 29.9661 24.8402 26.4554 25.9109 28.605 30.5904 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-89.6248 87.8433 99.516 93.0911 87.517 67.8785 97.5184 93.7984 59.2674 75.4214 96.2022 80.4873 83.0201 85.1161 93.5562 93.3479 
 ITER = 104
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2464,13 +2464,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+27.7461 27.3991 32.7973 31.0309 26.6891 21.9834 30.0452 29.4819 18.7143 24.9272 30.3953 25.0556 26.8562 26.0954 28.7737 31.4979 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-89.8947 88.3026 101.263 95.1356 87.5666 68.8068 97.7398 94.3652 59.7496 76.8328 96.9662 80.8805 84.119 85.2019 93.7763 95.5043 
 ITER = 105
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2487,13 +2487,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+28.1116 27.5094 32.6816 30.7033 27.0852 21.9683 30.2804 29.8369 18.7813 24.8513 30.5422 25.3228 26.9513 26.4222 29.1666 31.1454 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-91.346 89.5285 101.414 94.8633 89.1995 69.1757 99.3919 95.5972 60.4029 76.8594 98.0455 82.0317 84.6069 86.7521 95.3534 95.124 
 ITER = 106
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2510,13 +2510,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+28.284 27.9257 33.3905 31.5847 27.2149 22.3887 30.6307 30.044 19.0692 25.3766 30.9713 25.5382 27.3521 26.6067 29.3353 32.053 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-91.6159 89.9878 103.162 96.9078 89.2492 70.104 99.6132 96.164 60.8851 78.2708 98.8095 82.4248 85.7058 86.838 95.5735 97.2804 
 ITER = 107
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2533,13 +2533,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+28.6495 28.0361 33.2749 31.2572 27.611 22.3737 30.8659 30.399 19.1361 25.3007 31.1182 25.8054 27.4472 26.9335 29.7282 31.7005 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-93.0672 91.2137 103.313 96.6355 90.8821 70.4729 101.265 97.396 61.5384 78.2973 99.8888 83.5761 86.1938 88.3882 97.1506 96.9001 
 ITER = 108
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2556,13 +2556,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+28.8218 28.4524 33.9838 32.1385 27.7407 22.7941 31.2161 30.6061 19.424 25.826 31.5473 26.0208 27.848 27.118 29.897 32.608 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-93.3371 91.6731 105.06 98.68 90.9317 71.4012 101.487 97.9628 62.0206 79.7087 100.653 83.9692 87.2927 88.4741 97.3707 99.0566 
 ITER = 109
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2579,13 +2579,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+29.1874 28.5627 33.8681 31.811 28.1368 22.7791 31.4513 30.9611 19.491 25.7501 31.6942 26.288 27.9431 27.4447 30.2899 32.2555 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-94.7883 92.899 105.211 98.4077 92.5647 71.7701 103.139 99.1948 62.6739 79.7353 101.732 85.1204 87.7806 90.0243 98.9478 98.6763 
 ITER = 110
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2602,13 +2602,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+29.3597 28.979 34.577 32.6923 28.2665 23.1995 31.8015 31.1683 19.7789 26.2753 32.1234 26.5034 28.3438 27.6292 30.4586 33.1631 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-95.0582 93.3583 106.958 100.452 92.6143 72.6984 103.36 99.7617 63.1561 81.1467 102.496 85.5136 88.8795 90.1102 99.168 100.833 
 ITER = 111
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2625,13 +2625,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+29.7252 29.0893 34.4614 32.3648 28.6626 23.1844 32.0368 31.5233 19.8458 26.1994 32.2703 26.7706 28.439 27.956 30.8515 32.8106 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-96.5095 94.5842 107.109 100.18 94.2473 73.0672 105.012 100.994 63.8094 81.1733 103.575 86.6648 89.3675 91.6604 100.745 100.452 
 ITER = 112
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2648,13 +2648,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+29.8976 29.5056 35.1702 33.2461 28.7923 23.6048 32.387 31.7304 20.1337 26.7247 32.6994 26.9861 28.8397 28.1405 31.0202 33.7181 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-96.7794 95.0436 108.857 102.224 94.2969 73.9955 105.233 101.56 64.2916 82.5847 104.339 87.058 90.4664 91.7463 100.965 102.609 
 ITER = 113
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2671,13 +2671,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+30.2631 29.616 35.0546 32.9186 29.1884 23.5898 32.6222 32.0854 20.2007 26.6488 32.8463 27.2533 28.9349 28.4673 31.4131 33.3656 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-98.2307 96.2695 109.008 101.952 95.9299 74.3644 106.885 102.792 64.9449 82.6113 105.419 88.2092 90.9543 93.2965 102.542 102.229 
 ITER = 114
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2694,13 +2694,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+30.4354 30.0323 35.7635 33.7999 29.3181 24.0102 32.9724 32.2925 20.4885 27.1741 33.2754 27.4687 29.3356 28.6518 31.5818 34.2732 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-98.5006 96.7288 110.755 103.997 95.9795 75.2927 107.107 103.359 65.4271 84.0227 106.183 88.6023 92.0533 93.3824 102.762 104.385 
 ITER = 115
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2717,13 +2717,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+30.801 30.1426 35.6478 33.4724 29.7142 23.9952 33.2076 32.6475 20.5555 27.0982 33.4223 27.7359 29.4308 28.9786 31.9748 33.9206 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-99.9519 97.9547 110.906 103.724 97.6125 75.6616 108.759 104.591 66.0804 84.0492 107.262 89.7536 92.5412 94.9326 104.339 104.005 
 ITER = 116
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2740,13 +2740,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+30.9733 30.5589 36.3567 34.3537 29.8439 24.4156 33.5579 32.8547 20.8434 27.6234 33.8515 27.9513 29.8315 29.1631 32.1435 34.8282 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-100.222 98.4141 112.654 105.769 97.6621 76.5899 108.98 105.158 66.5626 85.4606 108.026 90.1467 93.6401 95.0185 104.56 106.161 
 ITER = 117
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2763,13 +2763,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+31.3388 30.6692 36.2411 34.0262 30.24 24.4005 33.7931 33.2097 20.9103 27.5475 33.9984 28.2185 29.9267 29.4898 32.5364 34.4757 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-101.673 99.64 112.805 105.496 99.295 76.9588 110.632 106.39 67.2159 85.4872 109.105 91.2979 94.128 96.5687 106.137 105.781 
 ITER = 118
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2786,13 +2786,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+31.5112 31.0856 36.95 34.9075 30.3697 24.8209 34.1433 33.4168 21.1982 28.0728 34.4275 28.4339 30.3274 29.6743 32.7051 35.3833 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-101.943 100.099 114.552 107.541 99.3447 77.8871 110.854 106.957 67.6981 86.8986 109.869 91.6911 95.227 96.6546 106.357 107.937 
 ITER = 119
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2809,13 +2809,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+31.8767 31.1959 36.8343 34.58 30.7659 24.8059 34.3785 33.7718 21.2652 27.9969 34.5744 28.7011 30.4226 30.0011 33.098 35.0307 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-103.394 101.325 114.703 107.269 100.978 78.256 112.506 108.189 68.3514 86.9252 110.949 92.8423 95.7149 98.2048 107.934 107.557 
 ITER = 120
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2832,13 +2832,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+32.049 31.6122 37.5432 35.4613 30.8955 25.2263 34.7287 33.9789 21.5531 28.5222 35.0035 28.9165 30.8233 30.1856 33.2667 35.9383 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-103.664 101.785 116.45 109.313 101.027 79.1843 112.727 108.756 68.8336 88.3366 111.713 93.2355 96.8138 98.2907 108.154 109.713 
 ITER = 121
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2855,13 +2855,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+32.4146 31.7225 37.4275 35.1338 31.2917 25.2113 34.964 34.3339 21.62 28.4463 35.1504 29.1837 30.9185 30.5124 33.6596 35.5858 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-105.115 103.01 116.601 109.041 102.66 79.5531 114.379 109.988 69.4869 88.3632 112.792 94.3867 97.3017 99.8409 109.731 109.333 
 ITER = 122
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2878,13 +2878,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+32.5869 32.1388 38.1364 36.0151 31.4213 25.6317 35.3142 34.5411 21.9079 28.9715 35.5796 29.3992 31.3192 30.6969 33.8284 36.4933 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-105.385 103.47 118.349 111.085 102.71 80.4814 114.6 110.555 69.9692 89.7746 113.556 94.7798 98.4007 99.9267 109.951 111.49 
 ITER = 123
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2901,13 +2901,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+32.9524 32.2492 38.0208 35.6876 31.8175 25.6166 35.5494 34.896 21.9749 28.8956 35.7265 29.6663 31.4143 31.0237 34.2213 36.1408 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-106.837 104.696 118.5 110.813 104.343 80.8503 116.253 111.787 70.6224 89.8011 114.635 95.9311 98.8886 101.477 111.528 111.109 
 ITER = 124
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2924,13 +2924,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+33.1248 32.6655 38.7297 36.569 31.9472 26.037 35.8996 35.1032 22.2628 29.4209 36.1556 29.8818 31.8151 31.2082 34.39 37.0484 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-107.106 105.155 120.247 112.858 104.392 81.7786 116.474 112.353 71.1047 91.2125 115.399 96.3242 99.9875 101.563 111.748 113.266 
 ITER = 125
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2947,13 +2947,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+33.4903 32.7758 38.614 36.2414 32.3433 26.022 36.1348 35.4582 22.3297 29.345 36.3025 30.149 31.9102 31.535 34.7829 36.6959 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-108.558 106.381 120.398 112.585 106.025 82.1475 118.126 113.585 71.7579 91.2391 116.479 97.4754 100.475 103.113 113.326 112.885 
 ITER = 126
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -2970,36 +2970,36 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+33.6626 33.1921 39.3229 37.1228 32.473 26.4424 36.4851 35.6653 22.6176 29.8703 36.7316 30.3644 32.311 31.7195 34.9516 37.6034 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-108.828 106.84 122.145 114.63 106.075 83.0758 118.347 114.152 72.2402 92.6505 117.243 97.8686 101.574 103.199 113.546 115.042 
 ITER = 127
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
 Updated Centroids: 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
+4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 4.84013e-310 
 ITER = 128
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3016,13 +3016,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+34.2005 33.7188 39.9162 37.6766 32.9988 26.8478 37.0705 36.2275 22.9725 30.3196 37.3077 30.847 32.8069 32.2307 35.5133 38.1585 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-110.549 108.526 124.044 116.402 107.758 84.373 120.221 115.951 73.3757 94.0885 119.086 99.413 103.161 104.835 115.343 116.818 
 ITER = 129
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3039,13 +3039,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+34.566 33.8291 39.8005 37.3491 33.3949 26.8327 37.3057 36.5824 23.0394 30.2437 37.4546 31.1142 32.902 32.5575 35.9062 37.806 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-112 109.751 124.195 116.13 109.391 84.7418 121.873 117.183 74.0289 94.1151 120.165 100.564 103.649 106.385 116.92 116.438 
 ITER = 130
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3062,13 +3062,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+34.7384 34.2454 40.5094 38.2304 33.5246 27.2531 37.6559 36.7896 23.3273 30.769 37.8837 31.3296 33.3028 32.742 36.0749 38.7135 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-112.27 110.211 125.942 118.174 109.44 85.6701 122.094 117.75 74.5112 95.5265 120.929 100.957 104.748 106.471 117.14 118.594 
 ITER = 131
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3085,13 +3085,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+35.1039 34.3557 40.3937 37.9029 33.9207 27.2381 37.8912 37.1446 23.3943 30.6931 38.0306 31.5968 33.3979 33.0688 36.4678 38.361 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-113.721 111.437 126.093 117.902 111.073 86.039 123.746 118.982 75.1644 95.553 122.009 102.109 105.236 108.021 118.717 118.214 
 ITER = 132
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3108,13 +3108,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+35.2762 34.772 41.1026 38.7842 34.0504 27.6585 38.2414 37.3517 23.6822 31.2184 38.4597 31.8122 33.7987 33.2533 36.6365 39.2686 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-113.991 111.896 127.84 119.946 111.123 86.9673 123.967 119.549 75.6467 96.9644 122.772 102.502 106.335 108.107 118.937 120.37 
 ITER = 133
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3131,13 +3131,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+35.6418 34.8824 40.987 38.4567 34.4465 27.6435 38.4766 37.7067 23.7491 31.1425 38.6066 32.0794 33.8938 33.5801 37.0294 38.916 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-115.442 113.122 127.991 119.674 112.756 87.3362 125.62 120.781 76.3 96.991 123.852 103.653 106.823 109.657 120.514 119.99 
 ITER = 134
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3154,13 +3154,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+35.8141 35.2987 41.6959 39.338 34.5762 28.0639 38.8268 37.9139 24.037 31.6677 39.0358 32.2949 34.2945 33.7646 37.1982 39.8236 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-115.712 113.581 129.739 121.718 112.805 88.2645 125.841 121.348 76.7822 98.4024 124.616 104.046 107.922 109.743 120.735 122.146 
 ITER = 135
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3177,13 +3177,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+36.1796 35.409 41.5802 39.0105 34.9723 28.0488 39.062 38.2688 24.104 31.5918 39.1827 32.5621 34.3897 34.0913 37.5911 39.4711 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-117.164 114.807 129.89 121.446 114.438 88.6334 127.493 122.579 77.4355 98.429 125.695 105.197 108.41 111.293 122.312 121.766 
 ITER = 136
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3200,13 +3200,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+36.352 35.8253 42.2891 39.8918 35.102 28.4692 39.4123 38.476 24.3918 32.1171 39.6118 32.7775 34.7904 34.2758 37.7598 40.3787 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-117.434 115.266 131.637 123.491 114.488 89.5617 127.714 123.146 77.9177 99.8404 126.459 105.59 109.509 111.379 122.532 123.923 
 ITER = 137
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3223,13 +3223,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+36.7175 35.9356 42.1735 39.5643 35.4981 28.4542 39.6475 38.831 24.4588 32.0412 39.7587 33.0447 34.8856 34.6026 38.1527 40.0261 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-118.885 116.492 131.788 123.218 116.121 89.9305 129.366 124.378 78.571 99.867 127.538 106.742 109.997 112.93 124.109 123.542 
 ITER = 138
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3246,13 +3246,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+36.8898 36.3519 42.8824 40.4456 35.6278 28.8746 39.9977 39.0381 24.7467 32.5665 40.1878 33.2601 35.2863 34.7871 38.3214 40.9337 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-119.155 116.952 133.536 125.263 116.17 90.8588 129.588 124.945 79.0532 101.278 128.302 107.135 111.095 113.015 124.329 125.699 
 ITER = 139
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3269,13 +3269,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+37.2554 36.4623 42.7667 40.1181 36.0239 28.8596 40.2329 39.3931 24.8136 32.4906 40.3347 33.5273 35.3815 35.1139 38.7143 40.5812 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-120.606 118.178 133.687 124.991 117.803 91.2277 131.24 126.177 79.7065 101.305 129.382 108.286 111.583 114.566 125.906 125.318 
 ITER = 140
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3292,13 +3292,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+37.4277 36.8786 43.4756 40.9994 36.1536 29.28 40.5831 39.6002 25.1015 33.0158 40.7639 33.7427 35.7822 35.2984 38.883 41.4887 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-120.876 118.637 135.434 127.035 117.853 92.156 131.461 126.744 80.1887 102.716 130.146 108.679 112.682 114.652 126.126 127.475 
 ITER = 141
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3315,13 +3315,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+37.7932 36.9889 43.3599 40.6719 36.5497 29.2649 40.8184 39.9552 25.1685 32.9399 40.9108 34.0099 35.8774 35.6252 39.276 41.1362 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-122.327 119.863 135.585 126.763 119.486 92.5249 133.113 127.976 80.842 102.743 131.225 109.83 113.17 116.202 127.703 127.095 
 ITER = 142
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3338,13 +3338,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+37.9656 37.4052 44.0688 41.5532 36.6794 29.6853 41.1686 40.1624 25.4564 33.4652 41.3399 34.2253 36.2781 35.8097 39.4447 42.0438 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-122.597 120.322 137.332 128.807 119.536 93.4532 133.335 128.543 81.3242 104.154 131.989 110.224 114.269 116.288 127.923 129.251 
 ITER = 143
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3361,13 +3361,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+38.3311 37.5155 43.9532 41.2257 37.0755 29.6703 41.4038 40.5174 25.5233 33.3893 41.4868 34.4925 36.3733 36.1365 39.8376 41.6913 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-124.048 121.548 137.483 128.535 121.169 93.8221 134.987 129.775 81.9775 104.181 133.068 111.375 114.757 117.838 129.501 128.871 
 ITER = 144
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3384,13 +3384,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+38.5034 37.9319 44.6621 42.107 37.2052 30.0907 41.754 40.7245 25.8112 33.9146 41.9159 34.7079 36.774 36.321 40.0063 42.5988 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-124.318 122.007 139.231 130.579 121.218 94.7504 135.208 130.342 82.4597 105.592 133.832 111.768 115.856 117.924 129.721 131.027 
 ITER = 145
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3407,13 +3407,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+38.869 38.0422 44.5464 41.7795 37.6014 30.0757 41.9893 41.0795 25.8782 33.8387 42.0628 34.9751 36.8691 36.6477 40.3992 42.2463 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-125.77 123.233 139.382 130.307 122.851 95.1193 136.86 131.574 83.113 105.619 134.912 112.919 116.344 119.474 131.298 130.647 
 ITER = 146
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3430,13 +3430,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+39.0413 38.4585 45.2553 42.6609 37.731 30.4961 42.3395 41.2866 26.1661 34.3639 42.492 35.1906 37.2699 36.8322 40.5679 43.1539 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-126.039 123.693 141.129 132.352 122.901 96.0476 137.081 132.14 83.5952 107.03 135.676 113.312 117.443 119.56 131.518 132.803 
 ITER = 147
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3453,13 +3453,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+39.4068 38.5688 45.1397 42.3333 38.1272 30.4811 42.5747 41.6416 26.233 34.288 42.6389 35.4578 37.365 37.159 40.9608 42.8014 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-127.491 124.919 141.28 132.079 124.534 96.4164 138.733 133.372 84.2485 107.057 136.755 114.464 117.931 121.11 133.095 132.423 
 ITER = 148
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.86481 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3476,13 +3476,13 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+39.5792 38.9851 45.8485 43.2147 38.2568 30.9014 42.9249 41.8488 26.5209 34.8133 43.068 35.6732 37.7658 37.3435 41.1296 43.7089 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-127.761 125.378 143.027 134.124 124.583 97.3447 138.955 133.939 84.7307 108.468 137.519 114.857 119.03 121.196 133.315 134.579 
 ITER = 149
 getCentroids
--nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 1.05005 -nan -nan -nan 
 classify<<< 16, 128 >>>()
 update<<< 16, 128 >>>()
 reduce<<< 1, 16 >>>()
@@ -3499,10 +3499,10 @@ Updated Centroids:
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+39.9447 39.0955 45.7329 42.8871 38.653 30.8864 43.1601 42.2038 26.5879 34.7374 43.2149 35.9404 37.8609 37.6703 41.5225 43.3564 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-129.212 126.604 143.178 133.851 126.216 97.7136 140.607 135.171 85.384 108.495 138.598 116.008 119.518 122.746 134.892 134.199 
 ITER = 150
 getCentroids
 ########### Final CPU Centroids
@@ -3518,14 +3518,14 @@ getCentroids
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+40.1171 39.5118 46.4418 43.7685 38.7826 31.3068 43.5103 42.4109 26.8758 35.2627 43.644 36.1558 38.2617 37.8548 41.6912 44.264 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
 -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
-129.482 127.063 144.926 135.896 126.266 98.6419 140.828 135.738 85.8662 109.906 139.362 116.401 120.617 122.832 135.112 136.356 
 GPU time: 
-MEMCPY: 0.141376 0.013952 0.011648 0.012192 0.011168 0.015712 0.010976 0.01104 0.011392 0.011424 0.015232 0.011104 0.01152 0.01104 0.011392 0.015424 0.01808 0.0112 0.010976 0.011968 0.011072 0.015072 0.011392 0.011104 0.01072 0.011264 0.014464 0.01088 0.010848 0.011072 0.011008 0.01472 0.0112 0.011104 0.019296 0.010816 0.010912 0.015968 0.012448 0.011168 0.010944 0.010752 0.027744 0.011008 0.010752 0.011168 0.011072 0.01536 0.010976 0.015264 0.011104 0.010816 0.010944 0.0112 0.0112 0.010944 0.011008 0.010784 0.01472 0.014208 0.018016 0.01504 0.011168 0.016032 0.0112 0.011136 0.010976 0.01104 0.0152 0.01104 0.011424 0.011552 0.010912 0.015904 0.0112 0.010944 0.011072 0.010944 0.010976 0.011168 0.011232 0.011008 0.010816 0.010912 0.015104 0.011232 0.01088 0.010816 0.010944 0.017152 0.014304 0.011488 0.017088 0.017888 0.019168 0.018112 0.014368 0.016064 0.014304 0.0168 0.320224 0.01328 0.016768 0.012704 0.013664 0.015936 0.011008 0.010912 0.011104 0.010944 0.017088 0.011168 0.010976 0.01152 0.01104 0.011072 0.015136 0.0112 0.011328 0.011136 0.011136 0.015584 0.011072 0.010944 0.010816 0.010784 0.015264 0.011968 0.01344 0.010784 0.010624 0.010688 0.015744 0.010976 0.011168 0.01104 0.010912 0.018464 0.011008 0.010592 0.010624 0.010656 0.010848 0.014816 0.010848 0.010816 0.010592 0.013248 0.015104 0.011008 0.010816 0.010784 0.010688 0.016224 0.011072 0.010944 
-total = 2.39424
-CLASSIFY: 0.495648 0.087488 0.0864 0.087296 0.084544 0.083904 0.084736 0.08576 0.087264 0.08416 0.084512 0.085344 0.0848 0.086816 0.084256 0.084 0.084448 0.084128 0.084128 0.087296 0.08496 0.084448 0.0848 0.084096 0.087104 0.083648 0.084608 0.083648 0.084096 0.086784 0.087552 0.084384 0.08496 0.083872 0.083136 0.086944 0.087712 0.083488 0.084992 0.084448 0.08608 0.085472 0.083264 0.085024 0.084832 0.086944 0.083968 0.083744 0.085472 0.083904 0.089344 0.085248 0.084256 0.08192 0.08368 0.083552 0.086496 0.091392 0.089824 0.08896 0.087648 0.087968 0.084704 0.084416 0.083616 0.083296 0.0872 0.08464 0.085504 0.084576 0.083712 0.088064 0.085088 0.08336 0.084448 0.083808 0.083936 0.084928 0.08448 0.084736 0.084032 0.084576 0.086816 0.084416 0.084032 0.083296 0.084768 0.086304 0.089216 0.086176 0.09024 0.095616 0.11104 0.088544 0.089792 0.08896 0.099296 0.088736 0.090848 0.085696 0.085504 0.085344 0.085376 0.087072 0.084416 0.084064 0.083808 0.083616 0.087008 0.084416 0.084128 0.084352 0.08352 0.083584 0.087296 0.084992 0.086528 0.083872 0.085248 0.087936 0.08528 0.084544 0.083904 0.05728 0.059616 0.05936 0.059296 0.057504 0.0568 0.057216 0.05984 0.057472 0.057888 0.0576 0.058496 0.059648 0.057536 0.057824 0.057888 0.056704 0.057504 0.060672 0.056128 0.056672 0.05728 0.059712 0.063232 0.058944 0.057888 0.057984 0.058656 
-total = 12.601
-UPDATE: 0.14128 0.494144 0.238496 0.749472 0.239008 0.749568 0.237536 0.749056 0.238624 0.749568 0.239616 0.748416 0.237536 0.749856 0.23744 0.748768 0.240416 0.749696 0.238272 0.749248 0.237504 0.74928 0.236544 0.747744 0.237568 0.747904 0.238304 0.749056 0.237568 0.74848 0.237856 0.74928 0.23728 0.749568 0.237536 0.748576 0.236512 0.748 0.23792 0.747904 0.238688 0.747584 0.237408 0.748992 0.239616 0.749056 0.243808 0.74944 0.23776 0.749536 0.238976 0.74864 0.237248 0.755744 0.237568 0.7488 0.237568 0.749568 0.23792 0.747776 0.23776 0.749536 0.237632 0.749568 0.237696 0.748832 0.236384 0.748576 0.237568 0.748384 0.239744 0.749568 0.2376 0.74944 0.237568 0.747904 0.239296 0.749184 0.237536 0.748096 0.237568 0.747584 0.237568 0.748736 0.2376 0.748896 0.237248 0.7496 0.2376 0.748064 0.238432 0.748576 0.237664 0.749568 0.23744 0.748992 0.237376 0.7496 0.237536 0.749536 0.239264 0.749376 0.2376 0.748256 0.2392 0.749184 0.2376 0.748512 0.237472 0.74928 0.237536 0.749472 0.238304 0.748544 0.243264 0.753312 0.243072 0.752288 0.243392 0.752064 0.238464 0.75104 0.239104 0.7496 0.238944 0.749344 0.237632 0.74928 0.237888 0.7496 0.239648 0.7496 0.237568 0.749472 0.238624 0.747584 0.237952 0.748256 0.237696 0.748032 0.237376 0.748992 0.23856 0.748384 0.24432 0.7496 0.238592 0.749024 0.23728 0.747616 0.237664 0.749568 0.242048 0.7496 0.2376 0.749344 0.237536 0.748192 0.2376 0.747936 0.237376 0.748928 0.236384 0.748128 0.238016 0.74896 0.237792 0.748896 0.237312 0.748736 0.237568 0.747808 0.238112 0.74992 0.241696 0.74992 0.243232 0.752256 0.23824 0.748064 0.286272 0.753728 0.244064 0.753696 0.248352 0.753824 0.24368 0.750848 0.240544 0.751456 0.250432 0.75056 0.241664 0.751456 0.244064 0.751904 0.243712 0.752864 0.24 0.7496 0.239488 0.749984 0.23856 0.75072 0.239776 0.749536 0.239648 0.7496 0.237568 0.749056 0.237536 0.74832 0.237568 0.748224 0.2376 0.74928 0.239552 0.749216 0.237344 0.749568 0.237568 0.748224 0.2376 0.74816 0.2376 0.74784 0.2376 0.749152 0.238176 0.748544 0.241696 0.752288 0.2376 0.749536 0.237536 0.747936 0.2376 0.748128 0.237536 0.749568 0.237536 0.748672 0.238912 0.749568 0.237984 0.514368 0.151136 0.464928 0.152928 0.466944 0.151552 0.46592 0.150464 0.465856 0.150304 0.465696 0.151488 0.466272 0.15136 0.465984 0.150176 0.465216 0.151296 0.46656 0.15008 0.465632 0.149504 0.4656 0.1504 0.466464 0.151296 0.46592 0.151392 0.464896 0.14976 0.465664 0.149984 0.465728 0.150912 0.464896 0.151552 0.466496 0.151552 0.466752 0.1512 0.466656 0.15136 0.466176 0.149856 0.465504 0.151008 0.465248 0.151552 0.465888 0.150112 0.46576 0.151456 0.466112 0.151552 0.465568 0.15152 0.465728 
-total = 138.276
+MEMCPY: 0.143136 0.013952 0.01168 0.01952 0.0176 0.013792 0.01488 0.014368 0.01488 0.020288 0.014752 0.0152 0.02144 0.016224 0.027488 0.016416 0.014656 0.0168 0.014272 0.016416 0.013824 0.014048 0.014528 0.0144 0.017248 0.020736 0.01568 0.014784 0.01392 0.016096 0.020448 0.014528 0.01408 0.014432 0.016768 0.019712 0.013408 0.032256 0.01424 0.014688 0.015008 0.019328 0.014496 0.014976 0.014688 0.01488 0.02 0.014272 0.01552 0.02032 0.015936 0.018752 0.015904 0.016288 0.013984 0.014752 0.015424 0.019232 0.014656 0.015648 0.014112 0.015712 0.019968 0.015392 0.015616 0.014432 0.016288 0.021344 0.015872 0.014784 0.01616 0.014112 0.013888 0.016352 0.012672 0.013472 0.012704 0.015072 0.026688 0.012896 0.014112 0.013184 0.01328 0.018144 0.012928 0.0128 0.012672 0.012992 0.012992 0.017728 0.014656 0.016064 0.016128 0.015808 0.020768 0.016192 0.01456 0.011296 0.0112 0.020992 0.013696 0.014048 0.015968 0.017408 0.014016 0.016448 0.0168 0.013536 0.013376 0.013408 0.021344 0.013536 0.01456 0.012992 0.0128 0.016032 0.012992 0.0128 0.012672 0.021504 0.012672 0.012928 0.0128 0.013312 0.0128 0.012736 0.017248 0.013408 0.013056 0.01296 0.013216 0.016096 0.013632 0.014368 0.014432 0.019872 0.016128 0.312992 0.015808 0.01648 0.01344 0.019872 0.016288 0.014528 0.015872 0.014752 0.020096 0.014496 0.015296 0.016352 0.016288 0.01952 0.01648 0.015936 0.013248 0.012768 
+total = 2.86979
+CLASSIFY: 121.671 0.090656 0.093504 0.08848 0.09088 0.0904 0.09008 0.08992 0.091072 0.0912 0.092544 0.089728 0.09152 0.090272 0.089984 0.09008 0.088832 0.09008 0.090016 0.089184 0.090112 0.089088 0.091168 0.089984 0.088608 0.088992 0.09104 0.089728 0.08992 0.088704 0.08928 0.089248 0.090528 0.089184 0.090368 0.089632 0.088896 0.089568 0.088992 0.088704 0.089408 0.087936 0.087904 0.089504 0.090272 0.088096 0.089024 0.091072 0.08976 0.089792 0.090112 0.089792 0.088448 0.086784 0.09008 0.089312 0.087424 0.090016 0.088768 0.08832 0.089824 0.0896 0.088768 0.08912 0.09008 0.090432 0.101184 0.088704 0.089664 0.089696 0.086848 0.08816 0.086848 0.086016 0.086752 0.093536 0.08992 0.0864 0.090016 0.08656 0.086368 0.088992 0.087424 0.0864 0.086816 0.084896 0.085472 0.090144 0.089632 0.09024 0.088864 0.08944 0.090464 0.089056 0.09024 0.086336 0.08592 0.089216 0.08912 0.08832 0.095808 0.090304 0.089856 0.08928 0.09056 0.088384 0.088544 0.086624 0.089024 0.088992 0.08992 0.086368 0.085824 0.088512 0.086016 0.085888 0.085056 0.085472 0.088384 0.085824 0.085248 0.086848 0.084704 0.085984 0.088512 0.086592 0.086464 0.085664 0.084928 0.088768 0.088576 0.08864 0.08928 0.089984 0.090624 0.091296 0.089664 0.089024 0.089248 0.089856 0.08864 0.08864 0.089504 0.089184 0.105984 0.089344 0.08912 0.089664 0.088576 0.089856 0.089568 
+total = 135.037
+UPDATE: 0.135136 0.478944 0.102432 0.522272 0.104416 0.523008 0.133856 0.709888 0.167936 0.730432 0.200736 0.7304 0.242688 0.732864 0.241696 0.729408 0.2424 0.752064 0.243904 0.752096 0.241856 0.751648 0.243104 0.751584 0.244064 0.751936 0.241664 0.750176 0.241664 0.752672 0.258624 0.752 0.2416 0.7496 0.24208 0.749984 0.241984 0.752384 0.242112 0.752128 0.24048 0.750176 0.242464 0.752032 0.24576 0.753216 0.241664 0.751008 0.241632 0.749984 0.2424 0.74992 0.249984 0.750464 0.243456 0.751936 0.24224 0.751008 0.24224 0.752416 0.242816 0.751648 0.24224 0.751456 0.241248 0.750656 0.242592 0.750208 0.2416 0.750816 0.375008 0.753792 0.241664 0.751072 0.243232 0.751648 0.241696 0.751648 0.251392 0.751232 0.24288 0.751648 0.241632 0.750688 0.24128 0.751296 0.241696 0.75104 0.243552 0.751616 0.241504 0.751584 0.242496 0.751744 0.241664 0.751648 0.242016 0.750176 0.240736 0.7496 0.245344 0.751872 0.240736 0.749472 0.239744 0.752288 0.242368 0.751648 0.243904 0.75152 0.243168 0.751904 0.24176 0.750368 0.243584 0.751488 0.243584 0.75168 0.241696 0.751584 0.243872 0.751776 0.242272 0.751616 0.243712 0.752736 0.242368 0.751616 0.242144 0.751584 0.243968 0.751648 0.242752 0.752672 0.241856 0.751584 0.2416 0.751424 0.241632 0.751648 0.239808 0.749664 0.239936 0.749408 0.239872 0.75072 0.239648 0.749568 0.239104 0.750016 0.24272 0.749536 0.239648 0.749696 0.239072 0.749568 0.241376 0.749568 0.238432 0.750464 0.290848 0.75504 0.254304 0.751072 0.239392 0.754112 0.240736 0.749536 0.239648 0.749568 0.24144 0.751648 0.239648 0.7496 0.24192 0.750464 1.8289 0.755584 0.243936 0.75184 0.241664 0.751168 0.243488 0.751744 0.243712 0.752384 0.243552 0.752096 0.24112 0.750976 0.238848 0.749216 0.239616 0.749472 0.239616 0.751424 0.243648 0.75008 0.241632 0.751072 0.24576 0.753632 0.241632 0.75104 0.240032 0.755712 0.241408 0.750976 0.242656 0.750848 0.239872 0.749888 0.241184 0.751616 0.239648 0.749984 0.24016 0.750016 0.240416 0.750272 0.239584 0.74976 0.239744 0.749184 0.23904 0.749888 0.240672 0.7496 0.239616 0.749568 0.239648 0.749504 0.23776 0.749728 0.239264 0.749568 0.240736 0.749792 0.2392 0.749568 0.239168 0.749408 0.239648 0.7496 0.238848 0.749952 0.239584 0.749728 0.2392 0.749472 0.23984 0.7496 0.23856 0.7496 0.239456 0.749856 0.23936 0.750624 0.241728 0.7496 0.241376 0.7496 0.248416 0.75152 0.243168 0.751808 0.25792 0.751232 0.243712 0.751744 0.24704 0.751616 0.244992 0.753696 0.245728 0.753088 0.243712 0.752768 0.243648 0.751872 0.244 0.752 0.242496 0.751808 0.244064 0.752448 0.243616 0.751776 0.242464 0.751648 0.242976 0.751616 0.243584 0.751648 0.241664 0.751072 0.243744 0.751136 0.243808 0.752096 0.243424 0.758944 
+total = 150.312
