@@ -45,7 +45,7 @@ __device__ double atomicAddDouble(double* address, double val) {
   return __longlong_as_double(old);
 }
 
-__global__ void update(double *c, 
+__global__ void update(double *tmp_c, 
                       const double *d, 
                       const unsigned *l,
                       const size_t c_sz,
@@ -80,13 +80,54 @@ __global__ void update(double *c,
   __syncthreads(); // After all threads accumulate
 
   if(threadIdx.x == 0){
-    for(size_t cid = 0; cid < c_sz; ++cid)
+    double *c = &tmp_c[blockIdx.x*c_sz*dim];
+    for(size_t cid = 0; cid < c_sz; ++cid){
       for(size_t dimid = 0; dimid < dim; ++dimid){
-        cent[cid*dim + dimid] /= npts[cid]; // div with num of pts in the cluster
+        if(npts[cid])
+          cent[cid*dim + dimid] /= npts[cid]; // div with num of pts in the cluster
         c[cid*dim + dimid] = cent[cid*dim + dimid]; // centroids
       }
+    }
   }
 }
+
+// use with only one block
+__global__ void reduce(double *c, const double *tmp_c, const unsigned c_sz, const unsigned dim){
+  extern __shared__ double sh_c[];
+
+  unsigned tid = threadIdx.x;
+
+  for(unsigned cid = 0; cid < c_sz; ++cid){
+    for(unsigned did = 0; did < dim; ++did){
+      sh_c[threadIdx.x*c_sz*dim + cid*dim + did] = tmp_c[threadIdx.x*c_sz*dim + cid*dim + did];
+    }
+  }
+
+  __syncthreads();
+  
+  // Perform reduction in shared memory
+  for (unsigned int s = blockDim.x / 2; s > 0; s >>= 1) {
+    if (tid < s) {
+      //sdata[tid] += sdata[tid + s];
+      for(unsigned cid = 0; cid < c_sz; ++cid){
+        for(unsigned did = 0; did < dim; ++did){
+          sh_c[tid*c_sz*dim + c_sz*dim + did] += sh_c[(tid*c_sz*dim + s)*c_sz*dim + c_sz*dim + did];
+        }
+      }
+    }
+    __syncthreads();
+  }
+
+  // copy the centroid to global memory
+  if(tid == 0){
+    for(unsigned cid = 0; cid < c_sz; ++cid){
+      for(unsigned did = 0; did < dim; ++did){
+        sh_c[c_sz*dim +  did] += sh_c[c_sz*dim + did];
+      }
+    }
+  }
+}
+
 
 }
 
@@ -99,6 +140,9 @@ KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const 
   gpuErrchk( cudaMalloc((void**)&c_device_, sizeof(double)*dim*k) );
   gpuErrchk( cudaMalloc((void**)&old_c_device_, sizeof(double)*dim*k) );
   gpuErrchk( cudaMalloc((void**)&labels_device_, sizeof(unsigned)*sz) );
+
+  // temporary storage before the centroids are accumulated
+  gpuErrchk( cudaMalloc((void**)&tmp_c_device_, sizeof(double)*dim*k*Args::blocks_update) );
 
   cudaEventCreate(&start);
   cudaEventCreate(&stop);
@@ -171,6 +215,7 @@ KmeansStrategyGpuGlobalBase::~KmeansStrategyGpuGlobalBase() {
   gpuErrchk( cudaFree(c_device_) );
   gpuErrchk( cudaFree(old_c_device_) );
   gpuErrchk( cudaFree(labels_device_) );
+  gpuErrchk( cudaFree(tmp_c_device_) );
 
   cudaEventDestroy(start);
   cudaEventDestroy(stop); 
@@ -185,10 +230,10 @@ void KmeansStrategyGpuGlobalBase::getCentroids(double *host_c) {
 }
 
 void KmeansStrategyGpuBaseline::findNearestCentroids() {
-  constexpr unsigned NTHREADS = 128;
-  const unsigned NBLOCKS = (d_sz_ + NTHREADS -1)/NTHREADS;;
+  const unsigned NTHREADS = Args::threads_classify;
+  const unsigned NBLOCKS = Args::blocks_classify;
 
-  dbg << __func__ << '\n';
+  dbg << "classify<<< " << NBLOCKS << ", " << NTHREADS << " >>>()";
   startGpuTimer();
   classify<<<NTHREADS, NBLOCKS>>>(labels_device_, 
                         data_device_, 
@@ -211,26 +256,40 @@ void KmeansStrategyGpuBaseline::findNearestCentroids() {
 
 void KmeansStrategyGpuBaseline::averageLabeledCentroids() 
 {
-  constexpr unsigned NTHREADS = 128;
-  const unsigned NBLOCKS = (d_sz_ + NTHREADS -1)/NTHREADS;;
+  const unsigned NTHREADS = Args::threads_update;
+  const unsigned NBLOCKS = Args::blocks_update;
 
-  dbg << __func__ << '\n';
+  dbg <<  "update<<< " << NBLOCKS << ", " << NTHREADS << " >>>()";
   startGpuTimer();
   update<<<NBLOCKS, 
           NTHREADS, 
           sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_>>>
-          (c_device_, data_device_, labels_device_,
+          (tmp_c_device_, data_device_, labels_device_,
           c_sz_, d_sz_, dim_);
   gpuErrchk( cudaPeekAtLastError() );
 
   cudaDeviceSynchronize();
   gpuErrchk( cudaPeekAtLastError() );
 
-  accumulatCentroids<<<NBLOCKS,32>>>();
-  gpuErrchk( cudaPeekAtLastError() );
-
   float tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
+
+
+  // one thread is enough 
+  dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()";
+  startGpuTimer();
+  reduce<<<1, NBLOCKS>>>(c_device_, tmp_c_device_, c_sz_, dim_);
+  gpuErrchk( cudaPeekAtLastError() );
+  tm = endGpuTimer();
+  registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
+
+  if(Args::debug){
+    DoubleCentroids tmp_c{c_sz_, dim_};
+    gpuErrchk( cudaMemcpy(tmp_c.ptr(), c_device_, c_sz_*dim_, cudaMemcpyDeviceToHost) );
+    dbg << "Updated Centroids: \n";
+    print_centroids(dbg, tmp_c);
+  }
+
 }
 
 /* KmeansGpu */

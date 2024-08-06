@@ -29,7 +29,7 @@ namespace utils {
   public:
     enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, OTHERS, _EVENT_TYPE_LEN};
   protected:
-    double *data_device_, *c_device_, *old_c_device_;
+    double *data_device_, *c_device_, *old_c_device_, *tmp_c_device_;
     unsigned *labels_device_;
     const size_t d_sz_, c_sz_, dim_;
 
@@ -72,6 +72,7 @@ namespace utils {
     using KmeansStrategyGpuGlobalBase::data_device_;
     using KmeansStrategyGpuGlobalBase::c_device_;
     using KmeansStrategyGpuGlobalBase::old_c_device_;
+    using KmeansStrategyGpuGlobalBase::tmp_c_device_;
     using KmeansStrategyGpuGlobalBase::labels_device_;
     using KmeansStrategyGpuGlobalBase::d_sz_;
     using KmeansStrategyGpuGlobalBase::c_sz_;

@@ -15,6 +15,13 @@ bool Args::r = false;
 unsigned Args::s = 1;
 bool Args::help = false;
 bool Args::gpu = false;
+unsigned Args::threads_classify = 128;
+unsigned Args::blocks_classify = 0;
+unsigned Args::threads_update = 128;
+unsigned Args::blocks_update = 0;
+
+unsigned Args::data_size = 0;
+
 bool Args::debug = false;
 
 std::ostream & operator<<(std::ostream &os, const Args &args){
@@ -27,6 +34,9 @@ std::ostream & operator<<(std::ostream &os, const Args &args){
         << " -c : " << args.c << '\n'
         << " -s : " << args.s << '\n'
         << " -r: " << args.r << '\n'
+        << " --gpu: " << args.gpu << '\n'
+        << " --threads_classify: " << args.threads_classify << '\n'
+        << " --threads_update: " << args.threads_update << '\n'
         << " --gpu: " << args.gpu << '\n'
         << " --debug: " << args.debug << '\n';
   return os;
@@ -49,7 +59,11 @@ void Args::parse_args(int argc, char* argv[]){
             << "      This is used by the autograder to simplify the correctness checking process.\n"
             << " -r randomly choose centroids from 0 to 1. Avoid choosing\n" 
             << "      centroids from within the points. This is to avoid local minima.\n"
-            << " --gpu Run Kmeans on gpu."
+            << " --gpu Run Kmeans on gpu.\n"
+            << " --threads_classify. Number of threads per block to perform\n"
+            << "      classification. #Blocks are computed accordingly."
+            << " --threads_update. Number of threads per block to perform\n"
+            << "      centroid updation. #Blocks are computed accordingly."
             << " --debug Redirect debug info to cerr."; 
       help = true;
       return;
@@ -69,6 +83,18 @@ void Args::parse_args(int argc, char* argv[]){
       r = true;
     } else if (arg == "--gpu") {
       gpu = true;
+    } else if ((arg == "--threads_classify") && j + 1 < argc) {
+      threads_classify = stoi(argv[++j]);
+      if((threads_classify & (threads_classify-1)) != 0){
+        cerr << "ERROR: threads_classify should be power of 2.\n";
+        exit(EXIT_FAILURE);
+      }
+    } else if ((arg == "--threads_update") && j + 1 < argc) {
+      threads_update = stoi(argv[++j]);
+      if((threads_update & (threads_update-1)) != 0){
+        cerr << "ERROR: threads_update should be power of 2.\n";
+        exit(EXIT_FAILURE);
+      }
     } else if (arg == "--debug") {
       debug = true;
     } else if ((arg == "-s") && j + 1 < argc) {
@@ -83,6 +109,19 @@ void Args::parse_args(int argc, char* argv[]){
   if(k<=0) cerr << "Invalid clusters: " << k << '\n';
   if(d<=0) cerr << "Invalid dimensions: " << d << '\n';
   if(!filesystem::exists(i)) cerr << "Input file does not exist: " << i << '\n';
+}
+
+void Args::set_data_size(const unsigned sz){
+  if(!sz){
+    cerr << "ERROR: Invalid data size. Should be > 0.\n";
+    exit(EXIT_FAILURE);
+  }
+
+  data_size = sz;
+
+  // compute the block dimensions of GPU kernels
+  blocks_classify = (sz + threads_classify - 1) / threads_classify;
+  blocks_update = (sz + threads_update - 1) / threads_update;
 }
 
 }
