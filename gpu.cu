@@ -114,11 +114,10 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
   // Perform reduction in shared memory
   for (unsigned int s = blockDim.x / 2; s > 0; s >>= 1) {
     if (tid < s) {
-      //sdata[tid] += sdata[tid + s];
       for(unsigned cid = 0; cid < c_sz; ++cid){
         sh_npts[tid*c_sz + cid] += npts[(tid + s)*c_sz + cid];
         for(unsigned did = 0; did < dim; ++did){
-          sh_c[tid*c_sz*dim + cid*dim + did] += sh_c[(tid*c_sz*dim + s)*c_sz*dim + cid*dim + did];
+          sh_c[tid*c_sz*dim + cid*dim + did] += sh_c[(tid + s)*c_sz*dim + cid*dim + did];
         }
       }
     }
@@ -295,11 +294,11 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   reduce<<<1, 
 	  NBLOCKS,    // this is intentional
     sizeof(unsigned)*c_sz_*NBLOCKS + sizeof(double)*c_sz_*dim_*NBLOCKS
-	  >>>(c_device_, 
-        tmp_c_device_, 
-        tmp_npts_device_, 
-        c_sz_, 
-        dim_);
+	  >>> ( c_device_, 
+          tmp_c_device_, 
+          tmp_npts_device_, 
+          c_sz_, 
+          dim_);
   gpuErrchk( cudaPeekAtLastError() );
   tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
