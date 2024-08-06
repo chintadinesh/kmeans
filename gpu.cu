@@ -289,7 +289,7 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
 
 
   // one thread is enough 
-  dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()";
+  dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()\n";
   startGpuTimer();
   reduce<<<1, 
 	  NBLOCKS,    // this is intentional
@@ -303,7 +303,7 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
 
-  if(Args::debug){
+  {
     DoubleCentroids tmp_c{c_sz_, dim_};
     gpuErrchk( cudaMemcpy(tmp_c.ptr(), c_device_, c_sz_*dim_, cudaMemcpyDeviceToHost) );
     dbg << "Updated Centroids: \n";

@@ -1,0 +1,813 @@
+args: 
+ -k : 16
+ -d : 16
+ -i : input/random-n2048-d16-c16.txt
+ -m : 150
+ -t : 1e-12
+ -c : 1
+ -s : 1
+ -r: 0
+ --gpu: 1
+ --threads_classify: 128
+ --threads_update: 128
+ --gpu: 1
+ --debug: 0
+Read data successfully
+randomCentroids
+########### Initial Centroids
+0.874991 0.568373 0.413948 0.402189 0.701355 0.418074 0.662415 0.0466688 0.445346 0.259448 0.157488 0.527236 0.487556 0.561555 0.755892 0.884159 
+0.717541 0.00226492 0.822787 0.528383 0.0978914 0.118868 0.649325 0.873651 0.280018 0.978375 0.100524 0.853676 0.396968 0.0811618 0.27464 0.45274 
+0.843907 0.758019 0.420509 0.259082 0.511213 0.404993 0.783539 0.303226 0.476479 0.583815 0.908226 0.504452 0.281788 0.756098 0.618523 0.250355 
+0.12411 0.210544 0.80064 0.937247 0.0226401 0.425642 0.101386 0.259929 0.220511 0.646874 0.350335 0.180068 0.503769 0.0392905 0.100908 0.987919 
+0.793096 0.0826607 0.612517 0.486683 0.629842 0.84516 0.242883 0.731596 0.117439 0.220347 0.794451 0.332385 0.81571 0.100374 0.146093 0.697522 
+0.471077 0.4102 0.569181 0.509135 0.311308 0.357757 0.837689 0.250624 0.560385 0.0122286 0.741673 0.335996 0.0457817 0.280942 0.240108 0.953412 
+0.352117 0.287737 0.35881 0.947169 0.633776 0.621641 0.715718 0.387743 0.414136 0.650758 0.0014483 0.191969 0.334521 0.239143 0.637479 0.378586 
+0.238714 0.967851 0.803109 0.448103 0.0807034 0.319862 0.507753 0.932558 0.108918 0.551665 0.707096 0.547138 0.813988 0.540026 0.964151 0.603219 
+0.494162 0.312093 0.46657 0.808949 0.874794 0.812231 0.188227 1.00011 0.633374 0.0833307 0.725933 0.98677 0.401379 0.678658 0.316408 0.213732 
+0.0455966 0.57393 0.910499 0.534156 0.680529 0.0266318 0.634973 0.606362 0.576168 0.391221 0.370023 0.980247 0.036568 0.0215656 0.96107 0.185241 
+0.199312 0.359229 0.731538 0.83818 0.918477 0.169354 0.672832 0.966596 0.0579378 0.67541 0.845097 0.342409 0.250874 0.59644 0.442418 0.175271 
+0.87496 0.568167 0.414449 0.402349 0.701531 0.418134 0.662041 0.0466956 0.445255 0.259304 0.157868 0.527136 0.486887 0.560894 0.75509 0.883462 
+0.123757 0.210904 0.800501 0.936781 0.0227198 0.426052 0.101369 0.260233 0.221161 0.646588 0.350301 0.180341 0.503451 0.0397247 0.100943 0.988242 
+0.124252 0.210411 0.801467 0.936702 0.022962 0.425789 0.101406 0.259957 0.220783 0.646568 0.350608 0.180133 0.503786 0.0388494 0.100692 0.988164 
+0.587655 0.444797 0.596314 0.384795 0.575647 0.290112 0.188909 0.186905 0.612946 0.65693 0.476798 0.0893861 0.757465 0.876994 0.923497 0.842316 
+0.123545 0.210656 0.801048 0.937275 0.0225945 0.425357 0.101192 0.259729 0.221101 0.646689 0.350277 0.179771 0.503755 0.0394108 0.100806 0.988373 
+Kmeans created
+fit
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 0
+getCentroids
+7.99044 7.12581 7.75601 5.4623 6.53308 6.32271 5.46461 9.05271 9.51052 7.96379 7.87193 12.2012 5.13119 5.13135 7.23106 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 1
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 2
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 3
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 4
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 5
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 6
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 7
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 8
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 9
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 10
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 11
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 12
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 13
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 14
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 15
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 16
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 17
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 18
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 19
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 20
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 21
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 22
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 23
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 24
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 25
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 26
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 27
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 28
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 29
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 30
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 31
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 32
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 33
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 34
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 35
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 36
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 37
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 38
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 39
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 40
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 41
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 42
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 43
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 44
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 45
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 46
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 47
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 48
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 49
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 50
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 51
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 52
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 53
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 54
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 55
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 56
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 57
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 58
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 59
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 60
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 61
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 62
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 63
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 64
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 65
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 66
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 67
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 68
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 69
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 70
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 71
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 72
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 73
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 74
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 75
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 76
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 77
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 78
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 79
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 80
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 81
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 82
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 83
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 84
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 85
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 86
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 87
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 88
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 89
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 90
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 91
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 92
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 93
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 94
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 95
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 96
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 97
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 98
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 99
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 100
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 101
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 102
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 103
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 104
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 105
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 106
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 107
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 108
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 109
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 110
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 111
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 112
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 113
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 114
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 115
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 116
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 117
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 118
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 119
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 120
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 121
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 122
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 123
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 124
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 125
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 126
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 127
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 128
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 129
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 130
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 131
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 132
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 133
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 134
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 135
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 136
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 137
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 138
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 139
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 140
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 141
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 142
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 143
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 144
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 145
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 146
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 147
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 148
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.19858 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 149
+getCentroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 4.35277 
+classify<<< 16, 128 >>>()
+update<<< 16, 128 >>>()
+reduce<<< 1, 16 >>>()ITER = 150
+getCentroids
+########### Final CPU Centroids
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+-nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan -nan 
+129.482 127.063 144.926 135.896 126.266 98.6419 140.828 135.738 85.8662 109.906 139.362 116.401 120.617 122.832 135.112 136.356 
+GPU time: 
+MEMCPY: 0.142976 0.013664 0.01024 0.019264 0.014368 0.013728 0.012704 0.011936 0.012736 0.01344 0.013312 0.012352 0.011296 0.021184 0.018688 0.018304 0.03696 0.019072 0.01824 0.018336 0.018016 0.019776 0.02096 0.018272 0.018464 0.017056 0.01888 0.019232 0.02064 0.019008 0.02064 0.019296 0.018624 0.01792 0.01952 0.019616 0.015488 0.013792 0.012672 0.012608 0.01696 0.01216 0.013184 0.013216 0.012192 0.011616 0.012128 0.015264 0.014592 0.0248 0.012992 0.013696 0.013312 0.011584 0.01152 0.011744 0.01472 0.016064 0.013408 0.01344 0.012832 0.012352 0.018432 0.019072 0.015904 0.013376 0.012512 0.012192 0.013376 0.016544 0.013344 0.013312 0.019232 0.013024 0.014752 0.012608 0.011296 0.01104 0.012992 0.011264 0.015488 0.01168 0.01216 0.011296 0.013056 0.014048 0.01472 0.012832 0.01136 0.012192 0.012064 0.011392 0.011328 0.011936 0.011072 0.012288 0.018432 0.014784 0.012864 0.012704 0.012192 0.011936 0.0112 0.01088 0.011328 0.010848 0.011104 0.011296 0.01104 0.01168 0.011552 0.011072 0.011392 0.012032 0.011552 0.01104 0.011296 0.011168 0.01168 0.010816 0.010816 0.011776 0.011168 0.011488 0.013728 0.013536 0.015488 0.011872 0.011168 0.011744 0.011712 0.012416 0.018112 0.015744 0.018528 0.01952 0.019552 0.018816 0.016032 0.0216 0.019296 0.0192 0.019424 0.041184 0.020448 0.0208 0.019232 0.019648 0.037952 0.032832 0.016832 0.015936 0.01584 0.015456 0.012896 0.013088 
+total = 2.49101
+CLASSIFY: 0.581216 0.087296 0.085376 0.085152 0.084992 0.08416 0.083872 0.083552 0.085344 0.083808 0.084416 0.090016 0.08896 0.088672 0.08816 0.088576 0.08736 0.092544 0.089024 0.089184 0.092192 0.088192 0.086816 0.086336 0.08864 0.090272 0.089696 0.088128 0.089312 0.09024 0.087808 0.088448 0.089536 0.08864 0.0872 0.085664 0.084288 0.083808 0.08448 0.08352 0.085152 0.083104 0.08368 0.084704 0.08432 0.087008 0.084928 0.084384 0.084896 0.084064 0.084288 0.083392 0.084224 0.084544 0.085344 0.08528 0.085664 0.084032 0.083488 0.083232 0.096032 0.087872 0.0856 0.084608 0.084832 0.084832 0.085408 0.084 0.084992 0.08464 0.087808 0.084576 0.086048 0.083072 0.08464 0.083232 0.086016 0.084608 0.08592 0.0832 0.08416 0.08288 0.084448 0.086688 0.085568 0.084704 0.085632 0.084256 0.083808 0.08384 0.083456 0.085248 0.084192 0.085184 0.0888 0.084096 0.084608 0.084768 0.085664 0.083776 0.083264 0.084032 0.083744 0.083456 0.084096 0.083712 0.084256 0.082848 0.084512 0.084 0.084 0.083904 0.083936 0.084032 0.083424 0.084 0.083008 0.084448 0.08368 0.08368 0.083456 0.084736 0.08608 0.08928 0.083712 0.08448 0.083456 0.084 0.08464 0.085184 0.087936 0.087072 0.089216 0.08848 0.087968 0.08976 0.087424 0.087616 0.089664 0.089184 0.08944 0.08992 0.089184 0.08944 0.088864 0.090016 0.122912 0.089856 0.087072 0.085568 0.087424 
+total = 13.5014
+UPDATE: 0.124928 0.469152 0.23904 0.7496 0.238912 0.749376 0.237728 0.749568 0.237664 0.748416 0.237536 0.749216 0.239264 0.749184 0.238944 0.748736 0.237184 0.748992 0.237856 0.747968 0.237472 0.749184 0.243456 0.751616 0.243648 0.751744 0.241728 0.751744 0.243104 0.751104 0.240544 0.750176 0.2416 0.749792 0.241312 0.751232 0.243712 0.751648 0.244256 0.752736 0.246016 0.753664 0.252256 0.751104 0.241696 0.751232 0.24144 0.75104 0.241664 0.751552 0.241088 0.7512 0.244416 0.752896 0.243488 0.751808 0.241312 0.751008 0.240224 0.750752 0.241632 0.751552 0.247936 0.753056 0.242016 0.751584 0.240288 0.751104 0.238176 0.75024 0.237728 0.747808 0.237536 0.748096 0.239584 0.749568 0.238048 0.749632 0.2376 0.748544 0.2376 0.749376 0.237568 0.749376 0.236544 0.748128 0.237792 0.748256 0.237184 0.748704 0.239584 0.749728 0.237536 0.749408 0.239232 0.748416 0.2376 0.7496 0.237568 0.748448 0.239072 0.74896 0.2376 0.74928 0.237568 0.748416 0.237632 0.749376 0.253664 0.751072 0.237696 0.748768 0.2376 0.748928 0.238816 0.747712 0.237568 0.74912 0.238464 0.750112 0.26416 0.753408 0.242336 0.751008 0.237568 0.748352 0.237536 0.747968 0.237984 0.748992 0.237376 0.749312 0.240352 0.74944 0.239648 0.749952 0.237664 0.74912 0.238784 0.749856 0.2376 0.748672 0.237664 0.749536 0.237568 0.749088 0.237568 0.748192 0.237568 0.748352 0.238752 0.7496 0.237568 0.74944 0.245888 0.7496 0.237888 0.749568 0.23776 0.748832 0.237376 0.749056 0.239072 0.748608 0.237568 0.748384 0.237664 0.7496 0.2376 0.74832 0.23792 0.749408 0.237248 0.749184 0.237536 0.749184 0.237568 0.749536 0.237536 0.74848 0.237536 0.749184 0.2376 0.748288 0.238816 0.7496 0.23712 0.747776 0.238144 0.749536 0.239072 0.7496 0.238496 0.748384 0.2376 0.749312 0.23728 0.74864 0.237248 0.74784 0.237536 0.748352 0.237472 0.749152 0.2376 0.748064 0.237472 0.749568 0.236544 0.748288 0.237568 0.7496 0.2376 0.749088 0.2376 0.749088 0.236544 0.74832 0.237824 0.749312 0.237376 0.749088 0.239648 0.74912 0.237568 0.748992 0.236576 0.748 0.237568 0.7496 0.237184 0.74864 0.237568 0.7496 0.24 0.74832 0.237536 0.74928 0.236544 0.74816 0.237344 0.748768 0.236096 0.747936 0.238912 0.74896 0.242528 0.751616 0.237536 0.74784 0.237792 0.74848 0.237504 0.749088 0.237568 0.749152 0.237952 0.74832 0.238592 0.748512 0.243488 0.766016 0.239776 0.749568 0.244288 0.751648 0.243712 0.7536 0.237536 0.748992 0.245664 0.753152 0.241952 0.76432 0.239616 0.7496 0.243712 0.75136 0.2744 0.75392 0.249824 0.753696 0.24768 0.752928 1.01133 0.753728 0.256736 0.753664 0.245184 0.752384 0.729504 0.755712 0.24512 0.762752 0.241824 0.750496 0.239776 0.751008 0.240832 0.74976 0.240064 0.751072 
+total = 150.37
