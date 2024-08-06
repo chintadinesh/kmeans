@@ -127,6 +127,7 @@ Data::Data(const string &input_file)
   } 
 
   file.close();
+  Args::set_data_size(size_);
 }
 
 bool converged(double *c, double  *oldc, const size_t c_sz, const size_t dim)

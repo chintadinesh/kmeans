@@ -259,7 +259,7 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   const unsigned NTHREADS = Args::threads_update;
   const unsigned NBLOCKS = Args::blocks_update;
 
-  dbg <<  "update<<< " << NBLOCKS << ", " << NTHREADS << " >>>()";
+  dbg <<  "update<<< " << NBLOCKS << ", " << NTHREADS << " >>>()\n";
   startGpuTimer();
   update<<<NBLOCKS, 
           NTHREADS, 
@@ -278,7 +278,9 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   // one thread is enough 
   dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()";
   startGpuTimer();
-  reduce<<<1, NBLOCKS>>>(c_device_, tmp_c_device_, c_sz_, dim_);
+  reduce<<<1, 
+	  NBLOCKS,
+	  >>>(c_device_, tmp_c_device_, c_sz_, dim_);
   gpuErrchk( cudaPeekAtLastError() );
   tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
