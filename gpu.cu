@@ -46,6 +46,7 @@ __device__ double atomicAddDouble(double* address, double val) {
 }
 
 __global__ void update(double *tmp_c, 
+                      unsigned *tmp_npts,
                       const double *d, 
                       const unsigned *l,
                       const size_t c_sz,
@@ -81,25 +82,30 @@ __global__ void update(double *tmp_c,
 
   if(threadIdx.x == 0){
     double *c = &tmp_c[blockIdx.x*c_sz*dim];
+    unsigned *pts = &tmp_npts[blockIdx.x*c_sz];
     for(size_t cid = 0; cid < c_sz; ++cid){
-      for(size_t dimid = 0; dimid < dim; ++dimid){
-        if(npts[cid])
-          cent[cid*dim + dimid] /= npts[cid]; // div with num of pts in the cluster
-        c[cid*dim + dimid] = cent[cid*dim + dimid]; // centroids
+      pts[cid] = npts[cid]; // update the number of pts in the centroid
+      for(size_t dimid = 0; dimid < dim; ++dimid){ // update the centroid
+        c[cid*dim + dimid] = cent[cid*dim + dimid]; 
       }
     }
   }
 }
 
 // use with only one block
-__global__ void reduce(double *c, const double *tmp_c, const unsigned c_sz, const unsigned dim){
-  extern __shared__ double sh_c[];
+__global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, const unsigned c_sz, const unsigned dim){
+  extern __shared__ char sh_all[];
+
+  // set the counter and centroids locations in the shared memory
+  unsigned *sh_npts = (unsigned *)(&sh_all[0]);
+  double *sh_c = (double *)(sh_all + blockDim.x*c_sz*sizeof(unsigned));
 
   unsigned tid = threadIdx.x;
 
   for(unsigned cid = 0; cid < c_sz; ++cid){
+    sh_npts[tid*c_sz + cid] = npts[tid*c_sz + cid];
     for(unsigned did = 0; did < dim; ++did){
-      sh_c[threadIdx.x*c_sz*dim + cid*dim + did] = tmp_c[threadIdx.x*c_sz*dim + cid*dim + did];
+      sh_c[tid*c_sz*dim + cid*dim + did] = tmp_c[tid*c_sz*dim + cid*dim + did];
     }
   }
 
@@ -110,8 +116,9 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned c_sz, cons
     if (tid < s) {
       //sdata[tid] += sdata[tid + s];
       for(unsigned cid = 0; cid < c_sz; ++cid){
+        sh_npts[tid*c_sz + cid] += npts[(tid + s)*c_sz + cid];
         for(unsigned did = 0; did < dim; ++did){
-          sh_c[tid*c_sz*dim + c_sz*dim + did] += sh_c[(tid*c_sz*dim + s)*c_sz*dim + c_sz*dim + did];
+          sh_c[tid*c_sz*dim + cid*dim + did] += sh_c[(tid*c_sz*dim + s)*c_sz*dim + cid*dim + did];
         }
       }
     }
@@ -122,7 +129,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned c_sz, cons
   if(tid == 0){
     for(unsigned cid = 0; cid < c_sz; ++cid){
       for(unsigned did = 0; did < dim; ++did){
-        sh_c[c_sz*dim +  did] += sh_c[c_sz*dim + did];
+        c[cid*dim +  did] += sh_c[cid*dim + did]/sh_npts[cid];
       }
     }
   }
@@ -143,6 +150,7 @@ KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const 
 
   // temporary storage before the centroids are accumulated
   gpuErrchk( cudaMalloc((void**)&tmp_c_device_, sizeof(double)*dim*k*Args::blocks_update) );
+  gpuErrchk( cudaMalloc((void**)&tmp_npts_device_, sizeof(unsigned)*k*Args::blocks_update) );
 
   cudaEventCreate(&start);
   cudaEventCreate(&stop);
@@ -214,6 +222,7 @@ KmeansStrategyGpuGlobalBase::~KmeansStrategyGpuGlobalBase() {
   gpuErrchk( cudaFree(data_device_) );
   gpuErrchk( cudaFree(c_device_) );
   gpuErrchk( cudaFree(old_c_device_) );
+  gpuErrchk( cudaFree(tmp_npts_device_) );
   gpuErrchk( cudaFree(labels_device_) );
   gpuErrchk( cudaFree(tmp_c_device_) );
 
@@ -263,9 +272,14 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   startGpuTimer();
   update<<<NBLOCKS, 
           NTHREADS, 
-          sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_>>>
-          (tmp_c_device_, data_device_, labels_device_,
-          c_sz_, d_sz_, dim_);
+          sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_
+          >>> (tmp_c_device_, 
+              tmp_npts_device_,
+              data_device_, 
+              labels_device_, 
+              c_sz_, 
+              d_sz_, 
+              dim_);
   gpuErrchk( cudaPeekAtLastError() );
 
   cudaDeviceSynchronize();
@@ -279,8 +293,13 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()";
   startGpuTimer();
   reduce<<<1, 
-	  NBLOCKS,
-	  >>>(c_device_, tmp_c_device_, c_sz_, dim_);
+	  NBLOCKS,    // this is intentional
+    sizeof(unsigned)*c_sz_*NBLOCKS + sizeof(double)*c_sz_*dim_*NBLOCKS
+	  >>>(c_device_, 
+        tmp_c_device_, 
+        tmp_npts_device_, 
+        c_sz_, 
+        dim_);
   gpuErrchk( cudaPeekAtLastError() );
   tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
