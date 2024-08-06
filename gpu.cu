@@ -61,10 +61,8 @@ __global__ void update(double *tmp_c,
 
   // initialize the shared memory
   if(threadIdx.x == 0){ // thread 0 of all blocks initializes it's shared mem
-    for(size_t i = 0; i < c_sz; ++i){
-      npts[i] = 0; // # of pts belonging to ith cluster
-    }
     for(size_t cid = 0; cid < c_sz; ++cid){
+      npts[cid] = 0;
       for(size_t dimid = 0; dimid < dim; ++dimid){
         cent[cid*dim + dimid] = 0;
       }
@@ -94,6 +92,7 @@ __global__ void update(double *tmp_c,
 
 // use with only one block
 __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, const unsigned c_sz, const unsigned dim){
+  // shared memory for local accumulation
   extern __shared__ char sh_all[];
 
   // set the counter and centroids locations in the shared memory
@@ -102,6 +101,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
 
   unsigned tid = threadIdx.x;
 
+  // initialize the shared memeory with partial centroids
   for(unsigned cid = 0; cid < c_sz; ++cid){
     sh_npts[tid*c_sz + cid] = npts[tid*c_sz + cid];
     for(unsigned did = 0; did < dim; ++did){
@@ -115,7 +115,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
   for (unsigned int s = blockDim.x / 2; s > 0; s >>= 1) {
     if (tid < s) {
       for(unsigned cid = 0; cid < c_sz; ++cid){
-        sh_npts[tid*c_sz + cid] += npts[(tid + s)*c_sz + cid];
+        sh_npts[tid*c_sz + cid] += sh_npts[(tid + s)*c_sz + cid];
         for(unsigned did = 0; did < dim; ++did){
           sh_c[tid*c_sz*dim + cid*dim + did] += sh_c[(tid + s)*c_sz*dim + cid*dim + did];
         }
