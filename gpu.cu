@@ -56,12 +56,12 @@ __global__ void update(double *c,
 
   // set the counter and centroids locations in the shared memory
   unsigned *npts = (unsigned *)(&sh_all[0]);
-  double *cent = (double *)(sh_all + d_sz*sizeof(unsigned));
+  double *cent = (double *)(sh_all + c_sz*sizeof(unsigned));
 
   // initialize the shared memory
   if(threadIdx.x == 0){ // thread 0 of all blocks initializes it's shared mem
-    for(size_t i = 0; i < dim; ++i){
-      npts[i] = 0;
+    for(size_t i = 0; i < c_sz; ++i){
+      npts[i] = 0; // # of pts belonging to ith cluster
     }
     for(size_t cid = 0; cid < c_sz; ++cid){
       for(size_t dimid = 0; dimid < dim; ++dimid){
@@ -186,7 +186,7 @@ void KmeansStrategyGpuGlobalBase::getCentroids(double *host_c) {
 
 void KmeansStrategyGpuBaseline::findNearestCentroids() {
   constexpr unsigned NTHREADS = 128;
-  constexpr unsigned NBLOCKS = (d_sz + NTHREADS -1)/NTHREADS;;
+  const unsigned NBLOCKS = (d_sz_ + NTHREADS -1)/NTHREADS;;
 
   dbg << __func__ << '\n';
   startGpuTimer();
@@ -212,16 +212,23 @@ void KmeansStrategyGpuBaseline::findNearestCentroids() {
 void KmeansStrategyGpuBaseline::averageLabeledCentroids() 
 {
   constexpr unsigned NTHREADS = 128;
-  constexpr unsigned NBLOCKS = (d_sz + NTHREADS -1)/NTHREADS;;
+  const unsigned NBLOCKS = (d_sz_ + NTHREADS -1)/NTHREADS;;
 
   dbg << __func__ << '\n';
   startGpuTimer();
-  update<<<NTHREADS, 
-          NBLOCKS, 
-          sizeof(unsigned)*d_sz_ + sizeof(double)*c_sz_*dim_>>>
+  update<<<NBLOCKS, 
+          NTHREADS, 
+          sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_>>>
           (c_device_, data_device_, labels_device_,
           c_sz_, d_sz_, dim_);
   gpuErrchk( cudaPeekAtLastError() );
+
+  cudaDeviceSynchronize();
+  gpuErrchk( cudaPeekAtLastError() );
+
+  accumulatCentroids<<<NBLOCKS,32>>>();
+  gpuErrchk( cudaPeekAtLastError() );
+
   float tm = endGpuTimer();
   registerTime(KmeansStrategyGpuGlobalBase::UPDATE, tm);
 }
