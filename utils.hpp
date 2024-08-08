@@ -5,7 +5,6 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-#include <chrono>
 #include <cstring>
 
 namespace utils {
@@ -40,7 +39,6 @@ namespace utils {
 
   template<typename ElemType = double>
   class Point {
-    /// @brief magnitude in each dimension
     ElemType *elems_; 
     size_t size_; // dim
   public:
@@ -213,7 +211,7 @@ public:
 
   void kmeans_srand(unsigned int seed);
 
-  Kmeans * kmeansFactory( const Data &d, bool random, size_t n_clu, unsigned max_iters);
+  Kmeans * kmeansFactory( const Data &d, const bool random, const size_t n_clu, const unsigned max_iters, const std::string &gpu);
 
   bool converged(double *c, double *oldc, size_t c_sz, size_t dim);
 

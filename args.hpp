@@ -16,7 +16,7 @@ struct Args {
                 // This is used by the autograder to simplify the correctness checking process. 
   static bool r; // -r randomly choose centroids from 0 to 1. Avoid choosing 
                 // centroids from within the points. This is to avoid local minima.
-  static bool gpu; // --gpu Run the gpu algirithm. 
+  static std::string gpu; // --gpu Run the gpu algirithm. 
   static unsigned threads_classify; // --threads_classify. Number of threads per block to perform
                                     // classification. #Blocks are computed accordingly.
   static unsigned blocks_classify; // computed #blocks during classification.

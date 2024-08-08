@@ -1,4 +1,6 @@
 #pragma once
+#include <chrono>
+
 #include "utils.hpp"
 
 extern utils::DebugStream dbg;

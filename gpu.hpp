@@ -27,38 +27,31 @@ namespace utils {
   class KmeansStrategyGpuGlobalBase : public KmeansStrategy 
   {
   public:
-    enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, OTHERS, _EVENT_TYPE_LEN};
   protected:
     double *data_device_, *c_device_, *old_c_device_, *tmp_c_device_;
     unsigned *labels_device_, *tmp_npts_device_;
     const size_t d_sz_, c_sz_, dim_;
 
-    std::map<EventType, std::vector<float>> event_times_;
-
-    cudaEvent_t start, stop;
-
   protected:
-    inline void registerTime(EventType ev, float time){
-      auto it = event_times_.find(ev);
-      if(it == event_times_.end()){
-        event_times_.insert(std::make_pair(ev, std::vector{time}));
-      }
-      else{
-        it->second.push_back(time);
-      }
-    }
+    class TimeStats{
+    public:
+      enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, OTHERS, _EVENT_TYPE_LEN};
+    private:
+      std::map<EventType, std::vector<float>> event_times_;
+      cudaEvent_t start, stop;
 
-    inline void startGpuTimer() { cudaEventRecord(start, 0); }
-    inline float endGpuTimer() { 
-      cudaEventRecord(stop, 0); 
-      cudaEventSynchronize(stop);
-      float elapsed_time;
-      cudaEventElapsedTime(&elapsed_time, start, stop);
-      return elapsed_time;
-    }
+    public:
+      TimeStats();
+      void registerTime(EventType ev, float time);
+
+      inline void startGpuTimer() { cudaEventRecord(start, 0); }
+      float endGpuTimer();
+      ~TimeStats();
+    };
+
+    TimeStats stats_;
 
   public:
-
     KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim);
     void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override; 
     void collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) override; 

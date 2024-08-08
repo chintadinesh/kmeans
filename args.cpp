@@ -14,7 +14,7 @@ bool Args::c = false;
 bool Args::r = false;
 unsigned Args::s = 1;
 bool Args::help = false;
-bool Args::gpu = false;
+std::string Args::gpu = "";
 unsigned Args::threads_classify = 128;
 unsigned Args::blocks_classify = 0;
 unsigned Args::threads_update = 128;
@@ -59,7 +59,8 @@ void Args::parse_args(int argc, char* argv[]){
             << "      This is used by the autograder to simplify the correctness checking process.\n"
             << " -r randomly choose centroids from 0 to 1. Avoid choosing\n" 
             << "      centroids from within the points. This is to avoid local minima.\n"
-            << " --gpu Run Kmeans on gpu.\n"
+            << " --gpu [baseline]\n"
+            << "       Run Kmeans on gpu with the specified strategy.\n"
             << " --threads_classify. Number of threads per block to perform\n"
             << "      classification. #Blocks are computed accordingly."
             << " --threads_update. Number of threads per block to perform\n"
@@ -81,8 +82,13 @@ void Args::parse_args(int argc, char* argv[]){
       c = true;
     } else if (arg == "-r") {
       r = true;
-    } else if (arg == "--gpu") {
-      gpu = true;
+    } else if ((arg == "--gpu") && j + 1 < argc) {
+      gpu = argv[j+1];
+      if(gpu != "" || gpu != "baseline"){
+        cerr << "ERROR: invalid gpu option: " << gpu << '\n';
+        cerr << "       Valid options are baseline\n";
+        exit(EXIT_FAILURE);
+      }
     } else if ((arg == "--threads_classify") && j + 1 < argc) {
       threads_classify = stoi(argv[++j]);
       if((threads_classify & (threads_classify-1)) != 0){
