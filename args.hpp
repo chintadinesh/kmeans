@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-namespace utils {
+namespace kmeans {
 struct Args {
   static unsigned k ; // -k num_cluster: an integer specifying the number of clusters
   static unsigned d ; // -d dims: an integer specifying the dimension of the points

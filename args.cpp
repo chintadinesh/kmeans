@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace utils {
+namespace kmeans {
 
 unsigned Args::k = 0;
 unsigned Args::d = 0;

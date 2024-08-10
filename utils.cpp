@@ -12,10 +12,10 @@
 
 using namespace std;
 
-utils::DebugStream dbg{"debug.log"};
+kmeans::DebugStream dbg{"debug.log"};
 
 namespace {
-using namespace utils;
+using namespace kmeans;
 unsigned long int _next = 1;
 unsigned long _kmeans_rmax = 32767;
 
@@ -37,7 +37,7 @@ unsigned kmeans_rand() {
 
 } // unnamed namespace
 
-namespace utils {
+namespace kmeans {
 
 void kmeans_srand(unsigned int seed) { _next = seed; }
 
@@ -229,4 +229,4 @@ Kmeans * kmeansFactory( const Data &d, const bool random, const size_t n_clu, co
   else return new KmeansCpu{d, random, n_clu, max_iters}; 
 }
 
-} // namespace utils
+} // namespace kmeans

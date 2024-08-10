@@ -4,12 +4,10 @@
 #include <cuda_device_runtime_api.h>
 #include <cuda_runtime_api.h>
 #include <map>
-#include <utility>
 
 #include "utils.hpp"
-#include "args.hpp"
 
-extern utils::DebugStream dbg;
+extern kmeans::DebugStream dbg;
 
 #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 
@@ -22,7 +20,7 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=t
    }
 }
 
-namespace utils {
+namespace kmeans {
   // all the memory is global memory
   class KmeansStrategyGpuGlobalBase : public KmeansStrategy 
   {

@@ -3,9 +3,9 @@
 
 #include "utils.hpp"
 
-extern utils::DebugStream dbg;
+extern kmeans::DebugStream dbg;
 
-namespace utils {
+namespace kmeans {
   class KmeansCpu : public KmeansBase<KmeansCpu>
   {
     using Ptdur = std::chrono::duration<double, std::milli>; 

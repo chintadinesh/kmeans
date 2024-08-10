@@ -1,6 +1,7 @@
 #include "gpu.hpp"
+#include "args.hpp"
 
-extern utils::DebugStream dbg;
+extern kmeans::DebugStream dbg;
 
 namespace {
 
@@ -137,7 +138,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
 
 }
 
-namespace utils {
+namespace kmeans {
 
 KmeansStrategyGpuGlobalBase::TimeStats::TimeStats(){
   cudaEventCreate(&start);

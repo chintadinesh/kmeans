@@ -7,7 +7,7 @@
 #include <fstream>
 #include <cstring>
 
-namespace utils {
+namespace kmeans {
 
   class DebugStream {
   public:

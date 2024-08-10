@@ -2,12 +2,11 @@
 
 #include "cpu.hpp"
 #include "utils.hpp"
-#include "args.hpp"
 
-using namespace utils;
+using namespace kmeans;
 using namespace std;
 
-extern utils::DebugStream dbg;
+extern kmeans::DebugStream dbg;
 
 namespace {
 
@@ -50,7 +49,7 @@ void averageLabeledCentroids(const Data &d,
 
 }
 
-namespace utils 
+namespace kmeans 
 {
 
 inline bool converged(const Centroids<double> &c, const Centroids<double> &old_c){
