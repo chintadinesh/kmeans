@@ -30,25 +30,6 @@ namespace kmeans {
     unsigned *labels_device_, *tmp_npts_device_;
     const size_t d_sz_, c_sz_, dim_;
 
-  protected:
-    class TimeStats{
-    public:
-      enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, OTHERS, _EVENT_TYPE_LEN};
-    private:
-      std::map<EventType, std::vector<float>> event_times_;
-      cudaEvent_t start, stop;
-
-    public:
-      TimeStats();
-      void registerTime(EventType ev, float time);
-
-      inline void startGpuTimer() { cudaEventRecord(start, 0); }
-      float endGpuTimer();
-      ~TimeStats();
-    };
-
-    TimeStats stats_;
-
   public:
     KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim);
     void init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) override; 

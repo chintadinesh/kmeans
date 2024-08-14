@@ -1,5 +1,6 @@
 #include "gpu.hpp"
 #include "args.hpp"
+#include "stats.hpp"
 
 extern kmeans::DebugStream dbg;
 
@@ -135,56 +136,84 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
   }
 }
 
+  class GPUEvent: public kmeans::Event {
+  private:
+    class GPUTimer{
+      inline static cudaEvent_t start_ {}, end_ {};
 
-}
+      GPUTimer(){
+        cudaEventCreate(&start_);
+        cudaEventCreate(&end_);
+      }
+
+    public:
+      static GPUTimer & inst(){
+        static GPUTimer instance; 
+        return instance;
+      }
+
+      ~GPUTimer(){
+        cudaEventDestroy(start_);
+        cudaEventDestroy(end_); 
+      }
+
+      static void start() { cudaEventRecord(start_, 0); }
+
+      static float end() {
+        cudaEventRecord(end_, 0); 
+        cudaEventSynchronize(end_);
+        float elapsed_time;
+        cudaEventElapsedTime(&elapsed_time, start_, end_);
+        return elapsed_time;
+      }
+    };
+
+  public:
+    enum EventType {MEMCPY = 0, CLASSIFY, UPDATE, REDUCE, OTHERS, _EVENT_TYPE_LEN};
+
+    explicit GPUEvent(const EventType ev) : ev_{ev} { GPUTimer::inst().start(); }
+
+    ~GPUEvent() {
+      auto tm = GPUTimer::inst().end();
+      elapsed_time_ = tm;
+      kmeans::Stats::record(this);
+    }
+
+    float count_ms() const override {return elapsed_time_;}
+
+    std::ostream & print(std::ostream &os) const override {
+      os << event_names[ev_] << ' ' << elapsed_time_ << '\n';
+      return os;
+    }
+
+  private:
+    static const std::string event_names[_EVENT_TYPE_LEN];
+
+    EventType ev_;
+    float elapsed_time_ {};
+  };
+
+    const std::string GPUEvent::event_names[] = {
+      "MEMCPY", 
+      "CLASSIFY", 
+      "UPDATE", 
+      "REDUCE",
+      "OTHERS", 
+    };
+} // anonymous namespace
+
 
 namespace kmeans {
 
-KmeansStrategyGpuGlobalBase::TimeStats::TimeStats(){
-  cudaEventCreate(&start);
-  cudaEventCreate(&stop);
-}
-
-void KmeansStrategyGpuGlobalBase::TimeStats::registerTime(const EventType ev, const float time){
-  auto it = event_times_.find(ev);
-  if(it == event_times_.end()){
-    event_times_.insert(std::make_pair(ev, std::vector{time}));
+Stats::~Stats(){
+  std::ofstream os {"time_stats.rpt"};
+  os << "Event Times: \n";
+  float total = 0;
+  for(const auto evp: event_times_){
+    evp->print(os);
+    total += evp->count_ms();
   }
-  else{
-    it->second.push_back(time);
-  }
-}
-
-float KmeansStrategyGpuGlobalBase::TimeStats::endGpuTimer() { 
-  cudaEventRecord(stop, 0); 
-  cudaEventSynchronize(stop);
-  float elapsed_time;
-  cudaEventElapsedTime(&elapsed_time, start, stop);
-  return elapsed_time;
-}
-
-KmeansStrategyGpuGlobalBase::TimeStats::~TimeStats(){
-  cudaEventDestroy(start);
-  cudaEventDestroy(stop); 
-
-  static const std::string event_names[_EVENT_TYPE_LEN] = {
-    "MEMCPY", 
-    "CLASSIFY", 
-    "UPDATE", 
-    "OTHERS", 
-    };
-
-  dbg << "GPU time: \n";
-  for(const auto &[type, v]: event_times_){
-    dbg << event_names[type] << ": ";
-    float total = 0;
-    for(const auto t: v){
-      dbg << t << ' ';
-      total += t;
-    }
-    dbg << '\n';
-    dbg << "total = " << total << '\n';
-  }
+  os << "Total = " << total << '\n';
 }
 
 KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim)
@@ -202,44 +231,42 @@ KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const 
 }
 
 void KmeansStrategyGpuGlobalBase::init(const double *d, const double *c, const size_t data_sz, const size_t c_sz) {
-  float tm; 
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(data_device_, d, data_sz, cudaMemcpyHostToDevice) );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(data_device_, d, data_sz, cudaMemcpyHostToDevice) );
+  }
   if(Args::debug){
     std::vector<double> d_test(data_sz/sizeof(double), 0);
     gpuErrchk( cudaMemcpy(&d_test[0], data_device_, data_sz, cudaMemcpyDeviceToHost) );
     for(int i = 0; i < data_sz/sizeof(double); ++i) assert(d_test[i] == d[i]);
   }
 
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(c_device_, c, c_sz, cudaMemcpyHostToDevice) );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+  }
   if(Args::debug){
     std::vector<double> c_test(c_sz/sizeof(double), 0);
     gpuErrchk( cudaMemcpy(&c_test[0], c_device_, c_sz, cudaMemcpyDeviceToHost) );
     for(int i = 0; i < c_sz/sizeof(double); ++i) assert(c_test[i] == c[i]);
   }
 
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(old_c_device_, c, c_sz, cudaMemcpyHostToDevice) );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(old_c_device_, c, c_sz, cudaMemcpyHostToDevice) );
+  }
 }
 
 void KmeansStrategyGpuGlobalBase::collect(double *c, unsigned *l, const size_t c_sz, const size_t l_sz) {
-  float tm; 
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(c, c_device_, c_sz, cudaMemcpyDeviceToHost) );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(c, c_device_, c_sz, cudaMemcpyDeviceToHost) );
+  }
 
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(l, labels_device_, d_sz_, cudaMemcpyDeviceToHost) );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(l, labels_device_, d_sz_, cudaMemcpyDeviceToHost) );
+  }
 }
 
 void KmeansStrategyGpuGlobalBase::swap() { std::swap(c_device_, old_c_device_); }
@@ -255,10 +282,10 @@ KmeansStrategyGpuGlobalBase::~KmeansStrategyGpuGlobalBase() {
 
 void KmeansStrategyGpuGlobalBase::getCentroids(double *host_c) {
   dbg << __func__ << '\n';
-  stats_.startGpuTimer();
-  gpuErrchk( cudaMemcpy(host_c, c_device_, sizeof(double)*c_sz_*dim_, cudaMemcpyDeviceToHost) );
-  float tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::MEMCPY, tm);
+  {
+    GPUEvent ev{GPUEvent::MEMCPY}; // RAII
+    gpuErrchk( cudaMemcpy(host_c, c_device_, sizeof(double)*c_sz_*dim_, cudaMemcpyDeviceToHost) );
+  }
 }
 
 void KmeansStrategyGpuBaseline::findNearestCentroids() {
@@ -266,16 +293,16 @@ void KmeansStrategyGpuBaseline::findNearestCentroids() {
   const unsigned NBLOCKS = Args::blocks_classify;
 
   dbg << "classify<<< " << NBLOCKS << ", " << NTHREADS << " >>>()\n";
-  stats_.startGpuTimer();
-  classify<<<NTHREADS, NBLOCKS>>>(labels_device_, 
-                        data_device_, 
-                        old_c_device_, 
-                        d_sz_, 
-                        c_sz_, 
-                        dim_);   
+  {
+    GPUEvent ev{GPUEvent::CLASSIFY}; // RAII
+    classify<<<NTHREADS, NBLOCKS>>>(labels_device_, 
+                          data_device_, 
+                          old_c_device_, 
+                          d_sz_, 
+                          c_sz_, 
+                          dim_);   
+  }
   gpuErrchk( cudaPeekAtLastError() );
-  float tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::CLASSIFY, tm);
 
   if(Args::debug){
     static std::unique_ptr<unsigned> labels {new unsigned[d_sz_]};
@@ -292,40 +319,38 @@ void KmeansStrategyGpuBaseline::averageLabeledCentroids()
   const unsigned NBLOCKS = Args::blocks_update;
 
   dbg <<  "update<<< " << NBLOCKS << ", " << NTHREADS << " >>>()\n";
-  stats_.startGpuTimer();
-  update<<<NBLOCKS, 
-          NTHREADS, 
-          sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_
-          >>> (tmp_c_device_, 
-              tmp_npts_device_,
-              data_device_, 
-              labels_device_, 
-              c_sz_, 
-              d_sz_, 
-              dim_);
-  gpuErrchk( cudaPeekAtLastError() );
+  {
+    GPUEvent ev{GPUEvent::UPDATE}; // RAII
+    update<<<NBLOCKS, 
+            NTHREADS, 
+            sizeof(unsigned)*c_sz_ + sizeof(double)*c_sz_*dim_
+            >>> (tmp_c_device_, 
+                tmp_npts_device_,
+                data_device_, 
+                labels_device_, 
+                c_sz_, 
+                d_sz_, 
+                dim_);
+    gpuErrchk( cudaPeekAtLastError() );
 
-  cudaDeviceSynchronize();
-  gpuErrchk( cudaPeekAtLastError() );
-
-  float tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::UPDATE, tm);
-
+    cudaDeviceSynchronize();
+    gpuErrchk( cudaPeekAtLastError() );
+  }
 
   // one thread is enough 
   dbg <<  "reduce<<< " << 1 << ", " << NBLOCKS << " >>>()\n";
-  stats_.startGpuTimer();
-  reduce<<<1, 
-	  NBLOCKS,    // this is intentional
-    sizeof(unsigned)*c_sz_*NBLOCKS + sizeof(double)*c_sz_*dim_*NBLOCKS
-	  >>> ( c_device_, 
-          tmp_c_device_, 
-          tmp_npts_device_, 
-          c_sz_, 
-          dim_);
+  {
+    GPUEvent ev{GPUEvent::REDUCE}; // RAII
+    reduce<<<1, 
+      NBLOCKS,    // this is intentional
+      sizeof(unsigned)*c_sz_*NBLOCKS + sizeof(double)*c_sz_*dim_*NBLOCKS
+      >>> ( c_device_, 
+            tmp_c_device_, 
+            tmp_npts_device_, 
+            c_sz_, 
+            dim_);
+  }
   gpuErrchk( cudaPeekAtLastError() );
-  tm = stats_.endGpuTimer();
-  stats_.registerTime(KmeansStrategyGpuGlobalBase::TimeStats::UPDATE, tm);
 
   {
     DoubleCentroids tmp_c{c_sz_, dim_};
