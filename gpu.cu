@@ -202,6 +202,8 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
     "REDUCE",
     "OTHERS", 
   };
+
+  kmeans::Stats stats;
 } // anonymous namespace
 
 
