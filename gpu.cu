@@ -178,7 +178,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
     ~GPUEvent() {
       auto tm = GPUTimer::inst().end();
       elapsed_time_ = tm;
-      kmeans::Stats::record(this);
+      kmeans::Stats::instance().record(this);
     }
 
     float count_ms() const override {return elapsed_time_;}
@@ -203,11 +203,15 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
     "OTHERS", 
   };
 
-  kmeans::Stats stats;
 } // anonymous namespace
 
 
 namespace kmeans {
+
+Stats & Stats::instance() {
+  static Stats inst;
+  return inst;
+}
 
 void Stats::record(const Event *ev) {
   event_times_.emplace_back(ev->clone());

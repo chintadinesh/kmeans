@@ -14,13 +14,16 @@ namespace kmeans {
   };
   inline Event::~Event() {}
 
+  // Singleton
   class Stats{
   public:
   private:
-    static inline std::vector<std::unique_ptr<const Event>> event_times_ {};
+    std::vector<std::unique_ptr<const Event>> event_times_;
+    Stats() {}
 
   public:
-    static void record(const Event *ev);
+    static Stats & instance();
+    void record(const Event *ev);
 
     ~Stats();
   };
