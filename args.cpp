@@ -83,8 +83,8 @@ void Args::parse_args(int argc, char* argv[]){
     } else if (arg == "-r") {
       r = true;
     } else if ((arg == "--gpu") && j + 1 < argc) {
-      gpu = argv[j+1];
-      if(gpu != "" || gpu != "baseline"){
+      gpu = argv[++j];
+      if(gpu != "" && gpu != "baseline"){
         cerr << "ERROR: invalid gpu option: " << gpu << '\n';
         cerr << "       Valid options are baseline\n";
         exit(EXIT_FAILURE);
