@@ -173,6 +173,8 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
 
     explicit GPUEvent(const EventType ev) : ev_{ev} { GPUTimer::inst().start(); }
 
+    GPUEvent * clone() const override {return new GPUEvent{*this};}
+
     ~GPUEvent() {
       auto tm = GPUTimer::inst().end();
       elapsed_time_ = tm;
@@ -193,23 +195,27 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
     float elapsed_time_ {};
   };
 
-    const std::string GPUEvent::event_names[] = {
-      "MEMCPY", 
-      "CLASSIFY", 
-      "UPDATE", 
-      "REDUCE",
-      "OTHERS", 
-    };
+  const std::string GPUEvent::event_names[] = {
+    "MEMCPY", 
+    "CLASSIFY", 
+    "UPDATE", 
+    "REDUCE",
+    "OTHERS", 
+  };
 } // anonymous namespace
 
 
 namespace kmeans {
 
+void Stats::record(const Event *ev) {
+  event_times_.emplace_back(ev->clone());
+}
+
 Stats::~Stats(){
   std::ofstream os {"time_stats.rpt"};
   os << "Event Times: \n";
   float total = 0;
-  for(const auto evp: event_times_){
+  for(const auto &evp: event_times_){
     evp->print(os);
     total += evp->count_ms();
   }
