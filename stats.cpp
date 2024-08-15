@@ -26,6 +26,7 @@ Stats::~Stats(){
     if(i < event_times_.size() -1) os << ",\n";
     total += evp->count_ms();
   }
-  os << "]}\n";
+  dbg << "Total time = " << total << '\n';
+  os << "\n]}";
 }
 }
