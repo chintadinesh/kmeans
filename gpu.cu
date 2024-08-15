@@ -207,27 +207,6 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
 
 
 namespace kmeans {
-
-Stats & Stats::instance() {
-  static Stats inst;
-  return inst;
-}
-
-void Stats::record(const Event *ev) {
-  event_times_.emplace_back(ev->clone());
-}
-
-Stats::~Stats(){
-  std::ofstream os {"time_stats.rpt"};
-  os << "Event Times: \n";
-  float total = 0;
-  for(const auto &evp: event_times_){
-    evp->print(os);
-    total += evp->count_ms();
-  }
-  os << "Total = " << total << '\n';
-}
-
 KmeansStrategyGpuGlobalBase::KmeansStrategyGpuGlobalBase(const size_t sz, const size_t k, const size_t dim)
   : d_sz_{sz}, c_sz_{k}, dim_{dim}
 {
