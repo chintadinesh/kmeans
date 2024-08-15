@@ -184,7 +184,7 @@ __global__ void reduce(double *c, const double *tmp_c, const unsigned *npts, con
     float count_ms() const override {return elapsed_time_;}
 
     std::ostream & print(std::ostream &os) const override {
-      os << "\t\t {" << event_names[ev_] << ": " << elapsed_time_ << "}";
+      os << "  {" << event_names[ev_] << ": " << elapsed_time_ << "}";
       return os;
     }
 

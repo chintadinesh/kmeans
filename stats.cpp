@@ -1,6 +1,9 @@
 #include <fstream>
 
 #include "stats.hpp"
+#include "utils.hpp"
+
+extern kmeans::DebugStream dbg;
 
 namespace kmeans {
 
@@ -15,8 +18,7 @@ void Stats::record(const Event *ev) {
 
 Stats::~Stats(){
   std::ofstream os {"time_stats.json"};
-  os  << "{ \"events\" : \n"
-      << "\t[\n" ;
+  os  << "{ \"events\" : [\n" ;
   float total = 0;
   for(int i = 0; i < event_times_.size(); i++){
     const auto &evp = event_times_[i];
@@ -24,7 +26,6 @@ Stats::~Stats(){
     if(i < event_times_.size() -1) os << ",\n";
     total += evp->count_ms();
   }
-  os << "\t]"
-      << "}";
+  os << "]}\n";
 }
 }
